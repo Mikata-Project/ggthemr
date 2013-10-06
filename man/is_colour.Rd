@@ -1,0 +1,57 @@
+\name{is_colour}
+\alias{is_colour}
+\alias{is_colour.character}
+\alias{is_colour.factor}
+\alias{is_colour.list}
+\alias{is_colour.logical}
+\alias{is_colour.numeric}
+\title{Is a valid colour}
+\usage{
+  is_colour(x)
+
+  \method{is_colour}{character} (x)
+
+  \method{is_colour}{numeric} (x)
+
+  \method{is_colour}{logical} (x)
+
+  \method{is_colour}{list} (x)
+
+  \method{is_colour}{factor} (x)
+}
+\arguments{
+  \item{x}{object to be tested.}
+}
+\value{
+  \code{NULL}
+
+  \code{NULL}
+
+  \code{NULL}
+
+  \code{NULL}
+
+  \code{NULL}
+}
+\description{
+  Colours in R can be represented by names (
+}
+\details{
+  Check a single character or vector of characters to see
+  if it is a valid colour.
+}
+\examples{
+is_colour('#ffffff')
+is_colour('white')
+is_colour('periwinkle blue')
+is_colour(4L)
+}
+\author{
+  Ciaran Tobin
+}
+\seealso{
+  \\code{\\link{colors}}"), index number (
+
+  \\code{\\link{palette}}") or a hexidecimal character.
+}
+
