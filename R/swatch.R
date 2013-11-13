@@ -8,9 +8,8 @@
 #' swatch(themr)
 #' @export
 
-swatch <- function(themr, preserve_object = FALSE) {
+swatch <- function(themr) {
   if (!is_ggthemr(themr))
     stop ('Cannot extract swatch since themr is not a ggthemr object.')
-  if (preserve_object) return (themr$palette$object$swatch)
-  else return (unclass(themr$palette$object$swatch))
+  return (themr$palette$object$swatch)
 }
