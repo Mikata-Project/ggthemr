@@ -6,10 +6,27 @@
 #' @examples
 #' themr <- ggthemr('pale')
 #' swatch(themr)
-#' @export
+#' @rdname swatch
+#' @export swatch
 
-swatch <- function(themr) {
-  if (!is_ggthemr(themr))
-    stop ('Cannot extract swatch since themr is not a ggthemr object.')
-  return (themr$palette$object$swatch)
+swatch <- function(x) 
+  UseMethod('swatch', x)
+
+#' @return \code{NULL}
+#'
+#' @rdname swatch
+#' @method swatch ggthemr
+#' @S3method swatch ggthemr
+swatch.ggthemr <- function(x) {
+  return (x$palette$object$swatch)
+}
+
+
+#' @return \code{NULL}
+#'
+#' @rdname swatch
+#' @method swatch ggthemr.palette
+#' @S3method swatch ggthemr.palette
+swatch.ggthemr.palette <- function(x) {
+  return (x$swatch)
 }
