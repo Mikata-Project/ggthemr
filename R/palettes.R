@@ -1,7 +1,7 @@
 palettes <- lapply(
 
   list(
-    
+      
 #     blank = list(
 #       background = '#', 
 #       text = list(inner = '#', outer = '#'), 
@@ -14,6 +14,20 @@ palettes <- lapply(
 #         '#', '#'),
 #       gradient = list(low = '#', high = '#')
 #     ),
+    
+    citrus = list(
+      background = '#fcd30d', 
+      text = c(inner = '#d22d24', outer = '#d22d24'), 
+      line = c(inner = '#BC9E0A', outer = '#BC9E0A'),
+      gridline = '#ffffff',
+      swatch = structure(c(
+        '#2C2C2C', 
+        '#d22d24', '#2fb797',
+        '#6a6959', '#008533', 
+        '#3D3303', '#104D85',
+        '#85120B', '#CDD93B'), class = 'ggthemr.swatch'),
+      gradient = c(low = '#2fb797', high = '#3D3303')
+    ),
     
     pale = list(
       background = '#ffffff', 
