@@ -5,7 +5,7 @@
 \alias{is_colour.list}
 \alias{is_colour.logical}
 \alias{is_colour.numeric}
-\title{Is a valid colour}
+\title{Is an object a valid colour?}
 \usage{
   is_colour(x)
 
@@ -22,23 +22,14 @@
 \arguments{
   \item{x}{object to be tested.}
 }
-\value{
-  \code{NULL}
-
-  \code{NULL}
-
-  \code{NULL}
-
-  \code{NULL}
-
-  \code{NULL}
-}
 \description{
-  Colours in R can be represented by names (
+  Check an object to see if it is a valid colour or set of
+  colours.
 }
 \details{
-  Check a single character or vector of characters to see
-  if it is a valid colour.
+  Colours in R can be represented by names
+  (\code{\link{colours}}), index number
+  (\code{\link{palette}}) or a hexidecimal character.
 }
 \examples{
 is_colour('#ffffff')
@@ -48,10 +39,5 @@ is_colour(4L)
 }
 \author{
   Ciaran Tobin
-}
-\seealso{
-  \\code{\\link{colors}}"), index number (
-
-  \\code{\\link{palette}}") or a hexidecimal character.
 }
 

@@ -27,7 +27,7 @@ colour_plot.character <- function(x)
 #' @method colour_plot ggthemr.palette
 #' @S3method colour_plot ggthemr.palette
 colour_plot.ggthemr.palette <- function(x) 
-  plot_colours(x$colours, x$background)
+  plot_colours(swatch(x), x$background)
 
 #' @return \code{NULL}
 #'
