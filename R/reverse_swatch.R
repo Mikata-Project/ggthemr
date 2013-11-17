@@ -1,12 +1,10 @@
-#'
-#' Reverse ggplot2 swatch colours
-#' 
+#' @title Reverse ggplot2 swatch colours
+#' @seealso \code{\link{swatch}}
 #' @param themr ggthemr object.
 #' @param static TRUE will return the new ggthemr object. FALSE will apply the changes and not return anything.
-#' 
 #' @author Ciaran Tobin
 #' @examples
-#' themr <- ggthemr('pale')
+#' themr <- ggthemr('sea')
 #' reverse_swatch(themr)
 #' @export
 
