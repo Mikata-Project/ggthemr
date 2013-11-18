@@ -6,7 +6,7 @@
 \usage{
   ggthemr(palette = "default", layout = "clear",
     spacing = 1.6, text_size = 12, type = "inner",
-    static = FALSE)
+    static = TRUE)
 }
 \arguments{
   \item{palette}{Colour scheme by name or ggtheme object.}
@@ -16,6 +16,8 @@
   \item{spacing}{A numeric value of how much space should
   exist on any given plot. Low values will result in more
   cramped plots, higher values will have more whitespace.}
+
+  \item{text_size}{base text size.}
 
   \item{type}{Set to 'inner' where the background colour
   should not extend past strictly the plot area (or "panel"

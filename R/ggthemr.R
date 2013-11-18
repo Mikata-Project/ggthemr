@@ -13,7 +13,7 @@
 #'  @examples 
 #'  ggthemr('pale', layout = 'scientific', spacing = 2, type = 'inner')
 
-ggthemr <- function(palette = 'default', layout = 'clear', spacing = 1.6, text_size = 12, type = 'inner', static = FALSE) {
+ggthemr <- function(palette = 'default', layout = 'clear', spacing = 1.6, text_size = 12, type = 'inner', static = TRUE) {
   
   palette_name <- ifelse(is.character(palette), palette, 'custom')
   layout_name <- ifelse(is.character(layout), layout, 'custom')
