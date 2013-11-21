@@ -21,6 +21,6 @@ preview_theme  <- function(themr = NULL, save_to = NULL) {
     }
   } 
   
-  do.call(gridExtra::arrangeGrob,  display)
+  do.call(gridExtra::grid.arrange,  display)
   
 }
