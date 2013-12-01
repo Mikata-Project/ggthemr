@@ -13,7 +13,7 @@
 #'  @examples 
 #'  ggthemr('pale', layout = 'scientific', spacing = 2, type = 'inner')
 
-ggthemr <- function(palette = 'default', layout = 'clear', spacing = 1.6, text_size = 12, type = 'inner', static = TRUE) {
+ggthemr <- function(palette = 'peach', layout = 'clear', spacing = 1.6, text_size = 12, type = 'inner', line_weight = 0.5, static = TRUE) {
   
   palette_name <- ifelse(is.character(palette), palette, 'custom')
   layout_name <- ifelse(is.character(layout), layout, 'custom')
@@ -36,7 +36,7 @@ ggthemr <- function(palette = 'default', layout = 'clear', spacing = 1.6, text_s
   ggplot2::theme_set(theme(
     line = element_line(
       colour = line_colour, 
-      size = 0.5, 
+      size = line_weight, 
       linetype = 1, 
       lineend = "butt"),   
     rect = element_rect(
@@ -45,7 +45,7 @@ ggthemr <- function(palette = 'default', layout = 'clear', spacing = 1.6, text_s
       size = 0.5, 
       linetype = 1), 
     text = element_text(
-      family = 'Helvetica', 
+      family = '', 
       face = "plain", 
       colour = text_colour, 
       size = text_size, 
@@ -110,7 +110,7 @@ ggthemr <- function(palette = 'default', layout = 'clear', spacing = 1.6, text_s
     panel.grid.minor = layout$panel.grid.minor(colour = palette$gridline), 
     panel.margin = grid::unit(0.5 * spacing, 'cm'), 
     strip.background = element_rect(
-      fill = "#ffffff", 
+      fill = ifelse(inner, 'white', palette$background), 
       colour = NA), 
     strip.text = layout$strip.text(colour=text_colour),
     strip.text.x = element_text(), 
@@ -127,7 +127,7 @@ ggthemr <- function(palette = 'default', layout = 'clear', spacing = 1.6, text_s
     complete = TRUE
   ))
   
-  theme_scales(palette)
+  theme_scales(palette, line_weight)
   
   if (static) {
     invisible() 
