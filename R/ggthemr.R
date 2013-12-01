@@ -113,9 +113,13 @@ ggthemr <- function(palette = 'peach', layout = 'clear', spacing = 1.6, text_siz
       fill = ifelse(inner, 'white', palette$background), 
       colour = NA), 
     strip.text = layout$strip.text(colour=text_colour),
-    strip.text.x = element_text(), 
+    strip.text.x = element_text(
+      size = rel(1.1), 
+      face = 'bold'), 
     strip.text.y = element_text(
-      angle = -90), 
+      angle = -90,
+      face = 'bold',
+      size = rel(1.1)), 
     plot.background = element_rect(
       colour = ifelse(inner, 'white', palette$background),
       fill = ifelse(inner, 'white', palette$background)), 
