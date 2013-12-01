@@ -135,6 +135,48 @@ palettes <- lapply(
 #       )
 #     ),
     
+    sky = list(
+      background = '#bfeaf8', 
+      text = c(inner = '#739EAB', outer = '#59595c'), 
+      line = c(inner = '#739EAB', outer = '#ffffff'),
+      gridline = '#ffffff',
+      swatch = structure(c(
+        '#59595c', 
+        '#739EAB', '#2C3639', 
+        '#36555E', '#f99e93', 
+        '#c43d31', '#', 
+        '#', '#'), class = 'ggthemr.swatch'),
+      gradient = c(low = '#f99e93', high = '#2C3639')
+    ),
+    
+    solarized = list(
+      background = '#fdf6e3', 
+      text = c(inner = '#586e75', outer = '#586e75'), 
+      line = c(inner = '#073642', outer = '#073642'),
+      gridline = '#eee8d5',
+      swatch = structure(c(
+        '#073642', 
+        '#268bd2', '#dc322f',
+        '#859900', '#d33682', 
+        '#cb4b16', '#2aa198',
+        '#859900', '#6c71c4'), class = 'ggthemr.swatch'),
+      gradient = c(low = '#dc322f', high = '#268bd2')
+    ),
+    
+    'solarized dark' = list(
+      background = '#073642', 
+      text = c(inner = '#586e75', outer = '#eee8d5'), 
+      line = c(inner = '#073642', outer = '#586e75'),
+      gridline = '#586e75',
+      swatch = structure(c(
+        '#fdf6e3', 
+        '#268bd2', '#dc322f',
+        '#859900', '#d33682', 
+        '#cb4b16', '#2aa198',
+        '#859900', '#6c71c4'), class = 'ggthemr.swatch'),
+      gradient = c(low = '#dc322f', high = '#268bd2')
+    ),
+    
     # Complete.
     grass = list(
       background = '#64a756', 
