@@ -31,7 +31,7 @@ palettes <- lapply(
     
     pale = list(
       background = '#ffffff', 
-      text = c(inner = '#666666', outer = '#d1d1d1'), 
+      text = c(inner = '#666666', outer = '#444444'), 
       line = c(inner = '#d1d1d1', outer = '#eaeaea'),
       gridline = '#eaeaea',
       swatch = structure(c(
