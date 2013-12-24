@@ -18,8 +18,6 @@
 #' 
 #' # Check that new colour is present.
 #' swatch(themr)
-#' 
-#' @export
 
 edit_swatch <- function(themr, new_colours) {
   themr$palette$object$swatch <- define_swatch(new_colours)

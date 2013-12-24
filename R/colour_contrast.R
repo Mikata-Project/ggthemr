@@ -11,7 +11,7 @@ validate_contrast <- function(amount)
 #' themr <- ggthemr('pale')
 #' darken_swatch(themr, 0.2)
 #' @author Ciaran Tobin
-#' @export
+
 darken_swatch <- function(themr, amount) {
   validate_contrast(amount)
   swatch_contrast(themr, -amount)
@@ -27,7 +27,7 @@ darken_swatch <- function(themr, amount) {
 #' themr <- ggthemr('pale')
 #' lighten_swatch(themr, 0.2)
 #' @author Ciaran Tobin
-#' @export
+
 lighten_swatch <- function(themr, amount) {
   validate_contrast(amount)
   swatch_contrast(themr, amount)  
@@ -43,7 +43,7 @@ lighten_swatch <- function(themr, amount) {
 #' themr <- ggthemr('pale')
 #' darken_gradient(themr, 0.2)
 #' @author Ciaran Tobin
-#' @export
+
 darken_gradient <- function(themr, amount) {
   validate_contrast(amount)
   gradient_contrast(themr, -amount)
@@ -59,7 +59,7 @@ darken_gradient <- function(themr, amount) {
 #' themr <- ggthemr('pale')
 #' lighten_gradient(themr, 0.2)
 #' @author Ciaran Tobin
-#' @export
+
 lighten_gradient <- function(themr, amount) {
   validate_contrast(amount)
   gradient_contrast(themr, amount)  
@@ -75,7 +75,7 @@ lighten_gradient <- function(themr, amount) {
 #' themr <- ggthemr('pale')
 #' darken_palette(themr, 0.2)
 #' @author Ciaran Tobin
-#' @export
+
 darken_palette <- function(themr, amount) {
   validate_contrast(amount)
   palette_contrast(themr, -amount)
@@ -91,7 +91,7 @@ darken_palette <- function(themr, amount) {
 #' themr <- ggthemr('pale')
 #' lighten_palette(themr, 0.2)
 #' @author Ciaran Tobin
-#' @export
+
 lighten_palette <- function(themr, amount) {
   validate_contrast(amount)
   palette_contrast(themr, amount)  

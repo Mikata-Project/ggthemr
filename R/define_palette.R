@@ -9,7 +9,6 @@
 #' @param gridline major and minor gridline colours.
 #' @param plot_colours vector of colours used for plotting data i.e. the main colours used in the plot.
 #' @param gradient vector of length two specifiying the lower and upper colours used for gradients.
-#' @export
 #' @author Ciaran Tobin
 
 define_palette <- function(background, text_inner, text_outer, line, gridline, plot_colours, gradient) {

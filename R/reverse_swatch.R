@@ -6,7 +6,6 @@
 #' @examples
 #' themr <- ggthemr('sea')
 #' reverse_swatch(themr)
-#' @export
 
 reverse_swatch <- function(themr, static = FALSE) {
   if (!is_ggthemr(themr))

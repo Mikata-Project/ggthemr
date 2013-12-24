@@ -9,7 +9,6 @@
 #' is_ggthemr(themr)
 #' 
 #' @author Ciaran Tobin
-#' @export
 
 is_ggthemr <- function(x)
   inherits(x, 'ggthemr')

@@ -10,7 +10,6 @@
 #' @examples
 #' themr <- ggthemr('pale')
 #' shuffle_swatch(themr)
-#' @export
 
 shuffle_swatch <- function(themr, static = FALSE) {
   if (!is_ggthemr(themr))

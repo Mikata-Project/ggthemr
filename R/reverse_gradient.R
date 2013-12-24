@@ -8,7 +8,6 @@
 #' @examples
 #' themr <- ggthemr('pale')
 #' reverse_gradient(themr)
-#' @export
 
 reverse_gradient <- function(themr, static = FALSE) {
   if (!is_ggthemr(themr))
