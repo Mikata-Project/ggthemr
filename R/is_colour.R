@@ -34,14 +34,6 @@ is_colour.numeric <- function(x)
 is_colour.logical <- function(x) 
   is.na(x)
 
-
-#' @rdname is_colour
-#' @method is_colour list
-#' @S3method is_colour list 
-is_colour.list <- function(x) 
-  sapply(x, is_colour)
-
-
 #' @rdname is_colour
 #' @method is_colour factor
 #' @S3method is_colour factor

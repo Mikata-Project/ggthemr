@@ -2,7 +2,6 @@
 \alias{is_colour}
 \alias{is_colour.character}
 \alias{is_colour.factor}
-\alias{is_colour.list}
 \alias{is_colour.logical}
 \alias{is_colour.numeric}
 \title{Is an object a valid colour?}
@@ -14,8 +13,6 @@
   \method{is_colour}{numeric} (x)
 
   \method{is_colour}{logical} (x)
-
-  \method{is_colour}{list} (x)
 
   \method{is_colour}{factor} (x)
 }
