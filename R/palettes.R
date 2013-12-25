@@ -218,19 +218,20 @@ palettes <- lapply(
         '#092639', '#C5430B',
         '#C5C40B', '#8acefb'), class = 'ggthemr.swatch'),
       gradient = c(low='#f0f0f0', high='#092639')
-    )
+    ),
     
-#     earth = list(
-#       background = '#4f4f4e', 
-#       text = list(inner = '#4f4f4e', outer = '#e5ca28'), 
-#       line = '#1f201f', 
-#       gridline = '#1f201f',
-#       swatch = c(
-#         '#6d9a58', '#e5ca28', 
-#         '#9b5949', '#f6f6f6', 
-#         '#c8cc9f', '#'),
-#       gradient = list(low='#E05D50', high='#da1f0c')
-#     ),
+    earth = list(
+      background = '#686848', 
+      text = list(inner = '#4f4f4e', outer = '#f6f6f6'), 
+      line = list(inner = '#1f201f', outer = '#353525'), 
+      gridline = '#4E4E36',
+      swatch = c(
+        '#F4F4A9', 
+        '#6d9a58', '#e5ca28', 
+        '#4E4E36', '#f6f6f6', 
+        '#c8cc9f', '#353525'),
+      gradient = list(low='#F4F4A9', high='#6d9a58')
+    )
 #     
 #     grey = list(
 #       background = '#eaeaea', 
