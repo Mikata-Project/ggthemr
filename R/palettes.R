@@ -88,7 +88,7 @@ palettes <- lapply(
 #     ),
     
     # Complete.
-    peach = list(
+    grape = list(
       background = '#e8ece5', 
       text = c(inner = '#6b3241', outer = '#6b3241'), 
       line = c(inner = '#bbb8ab', outer = '#bbb8ab'),
