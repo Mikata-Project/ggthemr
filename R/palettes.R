@@ -139,7 +139,7 @@ palettes <- lapply(
 #         '#56a076')
 #     ),
     
-    grey = list(
+    greyscale = list(
       background = '#ffffff', 
         text = c(inner = '#444444', outer = '#444444'), 
       line = c(inner = '#909090', outer = '#909090'),
@@ -238,7 +238,7 @@ palettes <- lapply(
       gradient = c(low='#f0f0f0', high='#092639')
     ),
     
-    earth = list(
+    camoflauge = list(
       background = '#686848', 
       text = list(inner = '#4f4f4e', outer = '#f6f6f6'), 
       line = list(inner = '#1f201f', outer = '#353525'), 
@@ -249,7 +249,7 @@ palettes <- lapply(
         '#4E4E36', '#f6f6f6', 
         '#c8cc9f', '#353525'),
       gradient = list(low='#F4F4A9', high='#6d9a58')
-    )
+    ),
 #     
 #     grey = list(
 #       background = '#eaeaea', 
@@ -263,18 +263,19 @@ palettes <- lapply(
 #       gradient = list(low='#E05D50', high='#da1f0c')
 #     ),
 #     
-#     rob = list(
-#       background = '#36312C', 
-#       text = list(inner = '#555555', outer = '#F8F8F0'), 
-#       line = '#F8F8F0', 
-#       gridline = '#7A7267',
-#       swatch = c(
-#         '#DB784D', '#95CC5E', 
-#         '#7A7267', '#E84646', 
-#         '#F8BB39', '#E1AA93', 
-#         '#2B338E'),
-#       gradient = list(low='#7A7267', high='#DB784D')
-#     ), #2A33A8 
+    earth = list(
+      background = '#36312C', 
+      text = list(inner = '#555555', outer = '#F8F8F0'), 
+      line = list(inner = '#ffffff', outer = '#827D77'),
+      gridline = '#504940',
+      swatch = c(
+        '#F8F8F0',
+        '#DB784D', '#95CC5E', 
+        '#E84646', '#F8BB39', 
+        '#7A7267', '#E1AA93', 
+        '#168E7F', '#2B338E'),
+      gradient = list(low='#7A7267', high='#DB784D')
+    )
 #     
 #     robl = list(
 #       background = '#ffffff', 
