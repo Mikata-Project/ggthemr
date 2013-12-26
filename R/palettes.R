@@ -243,11 +243,11 @@ palettes <- lapply(
       text = list(inner = '#4f4f4e', outer = '#f6f6f6'), 
       line = list(inner = '#1f201f', outer = '#353525'), 
       gridline = '#4E4E36',
-      swatch = c(
+      swatch = structure(c(
         '#F4F4A9', 
         '#6d9a58', '#e5ca28', 
         '#4E4E36', '#f6f6f6', 
-        '#c8cc9f', '#353525'),
+        '#c8cc9f', '#353525'), class = 'ggthemr.swatch'),
       gradient = list(low='#F4F4A9', high='#6d9a58')
     ),
 #     
@@ -268,27 +268,28 @@ palettes <- lapply(
       text = list(inner = '#555555', outer = '#F8F8F0'), 
       line = list(inner = '#ffffff', outer = '#827D77'),
       gridline = '#504940',
-      swatch = c(
+      swatch = structure(c(
         '#F8F8F0',
         '#DB784D', '#95CC5E', 
         '#E84646', '#F8BB39', 
         '#7A7267', '#E1AA93', 
-        '#168E7F', '#2B338E'),
+        '#168E7F', '#2B338E'), class = 'ggthemr.swatch'),
       gradient = list(low='#7A7267', high='#DB784D')
+    ),
+    
+    fresh = list(
+      background = '#ffffff', 
+      text = list(inner = '#555555', outer = '#111111'), 
+      line = list(inner = '#826A50', outer = '#362C21'),
+      gridline = '#eee4da',
+      swatch = structure(c(
+        '#111111',
+        '#65ADC2', '#233B43', 
+        '#E84646', '#C29365',
+        '#362C21', '#316675',
+        '#168E7F', '#109B37'), class = 'ggthemr.swatch'),
+      gradient = list(low='#65ADC2', high='#362C21')
     )
-#     
-#     robl = list(
-#       background = '#ffffff', 
-#       text = list(inner = '#555555', outer = '#F8F8F0'), 
-#       line = '#BAA188', 
-#       gridline = '#BAA188',
-#       swatch = c(
-#         a = '#448048', b = '#0E18A1', 
-#         c = '#D45C28', d = '#33111E', 
-#         e = '#7D6852', f = '#1EE69C', 
-#         g = '#80445B'),
-#       gradient = list(low='#7A7267', high='#DB784D')
-#     )
     
   ), function(x) {
     class(x) <- 'ggthemr.palette'
