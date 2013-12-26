@@ -40,7 +40,7 @@ palettes <- lapply(
         '#ffffff', '#B05D34', 
         '#6C4F41', '#EFAE90',
         '#109F92', '#47ECDD'), class = 'ggthemr.swatch'),
-      gradient = c(low = '#', high = '#')
+      gradient = c(low = '#FBE2D6', high = '#45764A')
     ),
     
     pale = list(
@@ -139,15 +139,19 @@ palettes <- lapply(
 #         '#56a076')
 #     ),
     
-#     book = list(
-#       background = '#ffffff',
-#       text = list(inner = '#000000', outer = '#000000'),
-#       line = '#000000',
-#       gridline = '#d0ae9a',
-#       swatch = c(
-#         a = '#000000'
-#       )
-#     ),
+    grey = list(
+      background = '#ffffff', 
+        text = c(inner = '#444444', outer = '#444444'), 
+      line = c(inner = '#909090', outer = '#909090'),
+      gridline = '#D0D0D0',
+      swatch = structure(c(
+        '#000000',
+        '#515151', '#909090', 
+        '#D0D0D0', '#444444', 
+        '#111111', '#eaeaea',  
+        '#666666', '#000000'), class = 'ggthemr.swatch'),
+      gradient = c(low = '#d0d0d0', high = '#000000')
+    ),
     
     sky = list(
       background = '#bfeaf8', 
