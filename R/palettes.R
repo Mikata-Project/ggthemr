@@ -33,7 +33,7 @@ palettes <- lapply(
     
     chalk = list(
       background = '#3c3c3c', 
-      text = c(inner = '#ffffff', outer = '#ffffff'), 
+      text = c(inner = '#3c3c3c', outer = '#ffffff'), 
       line = c(inner = '#ffffff', outer = '#ffffff'),
       gridline = '#777777',
       swatch = structure(c(
