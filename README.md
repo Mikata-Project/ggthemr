@@ -194,7 +194,8 @@ mpg_plot
 ![plot of chunk unnamed-chunk-32](figure/unnamed-chunk-32.png) 
 
 
-For some reason you decide you want to change those colours. Front-wheel drive vehicles should be purple. Rear-wheelers should be that orange colour. You could change the order of the levels of your fill variable, but you shouldn't have to do that. You just want to switch those colours but you have no idea what they are. *swatch()* will give you the colours in a ggthemr palette. 
+
+For some reason you decide you want to change those colours. Front-wheel drive vehicles should be red. Rear-wheelers should be that orange colour. You could change the order of the levels of your fill variable, but you shouldn't have to do that. You just want to switch those colours but you have no idea what they are. *swatch()* will give you the colours in a ggthemr palette. 
 
 
 ```r
@@ -220,4 +221,4 @@ mpg_plot + scale_fill_manual(values = rev(to_swap))
 ![plot of chunk unnamed-chunk-34](figure/unnamed-chunk-34.png) 
 
 
-**Note:** the first colour in a swatch is a special one. It is reserved for outlining boxplots, text etc. 
+**Note:** the first colour in a swatch is a special one. It is reserved for outlining boxplots, text etc. So that's why the second and third colours were swapped.
