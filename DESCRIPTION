@@ -5,7 +5,8 @@ Version: 0.1
 Author: Ciaran Tobin
 Depends:
     R (>= 3.0.0),
-    ggplot2
+    ggplot2,
+    grid
 License: MIT License
 LazyData: true
 Maintainer: 'Ciaran Tobin' <cttobin@hotmail.com>
@@ -42,3 +43,4 @@ Collate:
     'theme_scales.R'
     'validate_colours.R'
     'get_gradient.R'
+    'env.R'

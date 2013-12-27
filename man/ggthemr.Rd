@@ -4,9 +4,9 @@
 \alias{ggthemr-package}
 \title{Set theme for ggplot2}
 \usage{
-  ggthemr(palette = "default", layout = "clear",
+  ggthemr(palette = "dust", layout = "clear",
     spacing = 1.6, text_size = 12, type = "inner",
-    static = TRUE)
+    line_weight = 0.5, static = TRUE)
 }
 \arguments{
   \item{palette}{Colour scheme by name or ggtheme object.}

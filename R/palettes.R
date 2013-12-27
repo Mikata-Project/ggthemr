@@ -15,6 +15,62 @@ palettes <- lapply(
 #       gradient = list(low = '#', high = '#')
 #     ),
     
+    dust = list(
+      background = '#FAF7F2', 
+      text = c(inner = '#8d7a64', outer = '#8d7a64'), 
+      line = c(inner = '#8d7a64', outer = '#8d7a64'),
+      gridline = '#E3DDCC',
+      swatch = structure(c(
+        '#555555',
+        '#db735c', '#EFA86E', 
+        '#9A8A76', '#F3C57B', 
+        '#7A6752', '#2A91A2',
+        '#87F28A', '#6EDCEF'), class = 'ggthemr.swatch'),
+      gradient = c(low = '#F3C57B', high = '#7A6752')
+    ),
+    
+    # Complete.
+    light = list(
+      background = '#f6f1eb', 
+      text = c(inner = '#706f6f', outer = '#706f6f'), 
+      line = c(inner = '#dadada', outer = '#785d37'),
+      gridline = '#dadada',
+      swatch = structure(c(
+        '#785d37',
+        '#62bba5', '#ffb84d', 
+        '#aaa488', '#b2432f', 
+        '#3a6589', '#9b5672', 
+        '#908150', '#373634'), class = 'ggthemr.swatch'),
+      gradient = c(low = '#62bba5', high = '#373634')
+    ),
+    earth = list(
+      background = '#36312C', 
+      text = list(inner = '#555555', outer = '#F8F8F0'), 
+      line = list(inner = '#ffffff', outer = '#827D77'),
+      gridline = '#504940',
+      swatch = structure(c(
+        '#F8F8F0',
+        '#DB784D', '#95CC5E', 
+        '#E84646', '#F8BB39', 
+        '#7A7267', '#E1AA93', 
+        '#168E7F', '#2B338E'), class = 'ggthemr.swatch'),
+      gradient = list(low='#7A7267', high='#DB784D')
+    ),
+    
+    fresh = list(
+      background = '#ffffff', 
+      text = list(inner = '#555555', outer = '#111111'), 
+      line = list(inner = '#826A50', outer = '#362C21'),
+      gridline = '#eee4da',
+      swatch = structure(c(
+        '#111111',
+        '#65ADC2', '#233B43', 
+        '#E84646', '#C29365',
+        '#362C21', '#316675',
+        '#168E7F', '#109B37'), class = 'ggthemr.swatch'),
+      gradient = list(low='#65ADC2', high='#362C21')
+    ),
+    
     citrus = list(
       background = '#F1983C', 
       text = c(inner = '#d22d24', outer = '#d22d24'), 
@@ -88,19 +144,7 @@ palettes <- lapply(
       gradient = c(low = '#C8E370', high = '#de6757')
     ),
     
-    dust = list(
-      background = '#FAF7F2', 
-      text = c(inner = '#8d7a64', outer = '#8d7a64'), 
-      line = c(inner = '#8d7a64', outer = '#8d7a64'),
-      gridline = '#E3DDCC',
-      swatch = structure(c(
-        '#555555',
-        '#db735c', '#EFA86E', 
-        '#9A8A76', '#F3C57B', 
-        '#7A6752', '#2A91A2',
-        '#87F28A', '#6EDCEF'), class = 'ggthemr.swatch'),
-      gradient = c(low = '#F3C57B', high = '#7A6752')
-    ),
+    
     
     # Complete.
     copper = list(
@@ -158,20 +202,7 @@ palettes <- lapply(
 #       gradient = list(low='#', high='#')
 #     ),
     
-    # Complete.
-    light = list(
-      background = '#f6f1eb', 
-      text = c(inner = '#706f6f', outer = '#706f6f'), 
-      line = c(inner = '#dadada', outer = '#785d37'),
-      gridline = '#dadada',
-      swatch = structure(c(
-        '#785d37',
-        '#62bba5', '#ffb84d', 
-        '#aaa488', '#b2432f', 
-        '#3a6589', '#9b5672', 
-        '#908150', '#373634'), class = 'ggthemr.swatch'),
-      gradient = c(low = '#62bba5', high = '#373634')
-    ),
+    
     
 #     pink = list(
 #       background = '#ECE5CE',
@@ -293,47 +324,8 @@ palettes <- lapply(
         '#4E4E36', '#f6f6f6', 
         '#c8cc9f', '#353525'), class = 'ggthemr.swatch'),
       gradient = list(low='#F4F4A9', high='#6d9a58')
-    ),
-#     
-#     grey = list(
-#       background = '#eaeaea', 
-#       text = list(inner = '#555555', outer = '#555555'), 
-#       line = '#d1d1d1', 
-#       gridline = '#ffffff',
-#       swatch = c(
-#         '#6d9a58', '#e5ca28', 
-#         '#9b5949', '#f6f6f6', 
-#         '#c8cc9f', '#'),
-#       gradient = list(low='#E05D50', high='#da1f0c')
-#     ),
-#     
-    earth = list(
-      background = '#36312C', 
-      text = list(inner = '#555555', outer = '#F8F8F0'), 
-      line = list(inner = '#ffffff', outer = '#827D77'),
-      gridline = '#504940',
-      swatch = structure(c(
-        '#F8F8F0',
-        '#DB784D', '#95CC5E', 
-        '#E84646', '#F8BB39', 
-        '#7A7267', '#E1AA93', 
-        '#168E7F', '#2B338E'), class = 'ggthemr.swatch'),
-      gradient = list(low='#7A7267', high='#DB784D')
-    ),
-    
-    fresh = list(
-      background = '#ffffff', 
-      text = list(inner = '#555555', outer = '#111111'), 
-      line = list(inner = '#826A50', outer = '#362C21'),
-      gridline = '#eee4da',
-      swatch = structure(c(
-        '#111111',
-        '#65ADC2', '#233B43', 
-        '#E84646', '#C29365',
-        '#362C21', '#316675',
-        '#168E7F', '#109B37'), class = 'ggthemr.swatch'),
-      gradient = list(low='#65ADC2', high='#362C21')
     )
+
     
   ), function(x) {
     class(x) <- 'ggthemr.palette'

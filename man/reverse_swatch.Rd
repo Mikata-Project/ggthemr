@@ -14,10 +14,13 @@
   Reverse ggplot2 swatch colours
 }
 \examples{
-themr <- ggthemr('pale')
+themr <- ggthemr('sea')
 reverse_swatch(themr)
 }
 \author{
   Ciaran Tobin
+}
+\seealso{
+  \code{\link{swatch}}
 }
 
