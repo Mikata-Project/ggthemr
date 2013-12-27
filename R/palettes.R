@@ -31,6 +31,19 @@ palettes <- lapply(
       gradient = c(low = '#ffffff', high = '#d22d24')
     ),
     
+    chalk = list(
+      background = '#3c3c3c', 
+      text = c(inner = '#ffffff', outer = '#ffffff'), 
+      line = c(inner = '#ffffff', outer = '#ffffff'),
+      gridline = '#777777',
+      swatch = structure(c(
+        '#ffffff', 
+        '#c2c5be', '#d4dada', 
+        '#111111', '#6D8875', 
+        '#eaeaea', '#908a78'), class = 'ggthemr.swatch'),
+      gradient = c(low = '#ffffff', high = '#111111')
+    ),
+    
     carrot = list(
       background = '#EC7C47', 
       text = c(inner = '#6C3921', outer = '#222222'), 
