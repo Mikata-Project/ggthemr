@@ -44,6 +44,21 @@ palettes <- lapply(
       gradient = c(low = '#ffffff', high = '#111111')
     ),
     
+    lilac = list(
+      background = '#FFFDD0', 
+      text = c(inner = '#B2B080', outer = '#B2B080'), 
+      line = c(inner = '#B2B080', outer = '#B2B080'),
+      gridline = '#E5E4BB',
+      swatch = structure(c(
+        '#555555', 
+        '#886EB2', '#C29DFF', 
+        '#B2B06E', '#DDE8B2',
+        '#689940', '#B96CBF',
+        '#403F34', '#ffffff', 
+        '#473566', '#D2B6FF'), class = 'ggthemr.swatch'),
+      gradient = c(low = '#D2B6FF', high = '#555555')
+    ),
+    
     carrot = list(
       background = '#EC7C47', 
       text = c(inner = '#6C3921', outer = '#222222'), 
