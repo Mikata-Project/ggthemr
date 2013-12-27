@@ -26,6 +26,15 @@ This package is still under development and isn't too stable yet, but can be ins
 devtools::install_github('ggthemr', 'cttobin')
 ```
 
+Further Development
+-------------------------
+
+Features on the way:
+* More palettes and layouts.
+* Ability to create user palettes.
+* Methods to tweak existing palettes.
+* Options to control fonts.
+
 
 Palettes
 -------------------------

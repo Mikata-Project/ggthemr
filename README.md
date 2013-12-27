@@ -24,6 +24,15 @@ devtools::install_github("ggthemr", "cttobin")
 ```
 
 
+Further Development
+-------------------------
+
+Features on the way:
+* More palettes and layouts.
+* Ability to create user palettes.
+* Methods to tweak existing palettes.
+* Options to control fonts.
+
 
 Palettes
 -------------------------
@@ -195,7 +204,7 @@ mpg_plot
 
 
 
-For some reason you decide you want to change those colours. Front-wheel drive vehicles should be red. Rear-wheelers should be that orange colour. You could change the order of the levels of your fill variable, but you shouldn't have to do that. You just want to switch those colours but you have no idea what they are. *swatch()* will give you the colours in a ggthemr palette. 
+For some reason you decide you want to change those colours. Front-wheel drive vehicles should be orange. Rear-wheelers should be that red colour. You could change the order of the levels of your fill variable, but you shouldn't have to do that. You just want to switch those colours but you have no idea what they are. *swatch()* will give you the colours in a ggthemr palette. 
 
 
 ```r
