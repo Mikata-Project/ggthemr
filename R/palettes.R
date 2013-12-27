@@ -88,6 +88,20 @@ palettes <- lapply(
       gradient = c(low = '#C8E370', high = '#de6757')
     ),
     
+    dust = list(
+      background = '#FAF7F2', 
+      text = c(inner = '#8d7a64', outer = '#8d7a64'), 
+      line = c(inner = '#8d7a64', outer = '#8d7a64'),
+      gridline = '#E3DDCC',
+      swatch = structure(c(
+        '#555555',
+        '#db735c', '#EFA86E', 
+        '#9A8A76', '#F3C57B', 
+        '#7A6752', '#2A91A2',
+        '#87F28A', '#6EDCEF'), class = 'ggthemr.swatch'),
+      gradient = c(low = '#F3C57B', high = '#7A6752')
+    ),
+    
     # Complete.
     copper = list(
       background = '#e1965d', 
