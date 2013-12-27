@@ -16,17 +16,19 @@ palettes <- lapply(
 #     ),
     
     citrus = list(
-      background = '#fcd30d', 
+      background = '#F1983C', 
       text = c(inner = '#d22d24', outer = '#d22d24'), 
-      line = c(inner = '#BC9E0A', outer = '#BC9E0A'),
-      gridline = '#ffffff',
+      line = c(inner = '#ffffff', outer = '#71481C'),
+      gridline = '#D78836',
       swatch = structure(c(
         '#2C2C2C', 
+        '#ffffff', '#F9C431', 
+        '#F95D31', '#DA6B2B',
         '#d22d24', '#2fb797',
         '#6a6959', '#008533', 
         '#3D3303', '#104D85',
         '#85120B', '#CDD93B'), class = 'ggthemr.swatch'),
-      gradient = c(low = '#2fb797', high = '#3D3303')
+      gradient = c(low = '#ffffff', high = '#d22d24')
     ),
     
     carrot = list(
@@ -110,7 +112,7 @@ palettes <- lapply(
 #       swatch = c(
 #         '#87a46b', '#', 
 #         '#', '#', 
-#         '#', '#'),
+#         '#', '#'),#F1983C
 #       gradient = list(low='#', high='#')
 #     ),
     
