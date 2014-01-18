@@ -117,7 +117,7 @@ palettes <- lapply(
     
     carrot = list(
       background = '#EC7C47', 
-      text = c(inner = '#6C3921', outer = '#222222'), 
+      text = c(inner = '#6C3921', outer = '#ffffff'), 
       line = c(inner = '#AC5B34', outer = '#AC5B34'),
       gridline = '#D26F3F',
       swatch = structure(c(
@@ -149,7 +149,7 @@ palettes <- lapply(
     # Complete.
     copper = list(
       background = '#e1965d', 
-      text = c(inner = '#e1965d', outer = '#f2f0ee'), 
+      text = c(inner = '#614128', outer = '#0d0905'), 
       line = c(inner = '#614128', outer = '#f4d7c1'),
       gridline = '#e9b288',
       swatch = structure(c(
