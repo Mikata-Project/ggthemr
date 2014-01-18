@@ -73,17 +73,17 @@ palettes <- lapply(
     
     citrus = list(
       background = '#F1983C', 
-      text = c(inner = '#d22d24', outer = '#d22d24'), 
+      text = c(inner = '#222222', outer = '#222222'), 
       line = c(inner = '#ffffff', outer = '#71481C'),
       gridline = '#D78836',
       swatch = structure(c(
         '#2C2C2C', 
         '#ffffff', '#F9C431', 
-        '#F95D31', '#DA6B2B',
-        '#d22d24', '#2fb797',
+        '#F95D31', '#d22d24', 
         '#6a6959', '#008533', 
-        '#3D3303', '#104D85',
-        '#85120B', '#CDD93B'), class = 'ggthemr.swatch'),
+        '#104D85', '#3D3303', 
+        '#2fb797', '#85120B', 
+        '#CDD93B'), class = 'ggthemr.swatch'),
       gradient = c(low = '#ffffff', high = '#d22d24')
     ),
     
