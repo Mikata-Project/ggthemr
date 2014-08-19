@@ -12,7 +12,7 @@ swatch <- function(x) UseMethod('swatch', x)
 #' @rdname swatch
 #' @method swatch ggthemr
 #' @S3method swatch ggthemr
-swatch.ggthemr <- function(x) x$palette$object$swatch
+swatch.ggthemr <- function(x) x$palette$swatch
 
 
 #' @rdname swatch
