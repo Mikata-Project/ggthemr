@@ -1,20 +1,7 @@
 palettes <- lapply(
 
   list(
-      
-#     blank = list(
-#       background = '#', 
-#       text = list(inner = '#', outer = '#'), 
-#       line = '#',
-#       gridline = '#',
-#       swatch = c(
-#         '#', '#', 
-#         '#', '#', 
-#         '#', '#',
-#         '#', '#'),
-#       gradient = list(low = '#', high = '#')
-#     ),
-    
+     
     dust = list(
       background = '#FAF7F2', 
       text = c(inner = '#8d7a64', outer = '#8d7a64'), 
