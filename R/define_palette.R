@@ -15,11 +15,11 @@ define_palette <- function(background, text, line, gridline, swatch, gradient) {
   
   n_text <- length(text)
   if (n_text == 1L) {
-    warning('You should supply a vector of length for the text colour. The first element being the colour used for plots of type "inner". The second when for plots of type "outer".', call. = FALSE)
+    warning('You should supply a vector of length two for the text colour. The first element being the colour used for plots of type "inner". The second when for plots of type "outer".', call. = FALSE)
     text_inner <- text
     text_outer <- text
   } else if (n_text > 2L) {
-    warning('You have supplied two many colours for text colour. Only the first two will be used.', call. = FALSE)
+    warning('You have supplied two many colours for the text colour. Only the first two will be used.', call. = FALSE)
   } else {
     text_inner <- text[1L]
     text_outer <- text[2L]
@@ -27,7 +27,7 @@ define_palette <- function(background, text, line, gridline, swatch, gradient) {
   
   n_line <- length(line)
   if (n_line == 1L) {
-    warning('You should supply a vector of length for the axis line colour. The first element being the colour used for plots of type "inner". The second when for plots of type "outer".', call. = FALSE)
+    warning('You should supply a vector of length two for the axis line colour. The first element being the colour used for plots of type "inner". The second when for plots of type "outer".', call. = FALSE)
     line_inner <- line
     line_outer <- line
   } else if (n_line > 2L) {
