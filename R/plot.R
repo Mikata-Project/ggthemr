@@ -2,6 +2,14 @@
 #' @param x ggthemr palette object.
 #' @method plot ggthemr_palette
 #' @export
+plot.ggthemr <- function(x) 
+  colour_plot(x)
+
+
+#' Create colour plot of ggthemr palette
+#' @param x ggthemr palette object.
+#' @method plot ggthemr_palette
+#' @export
 plot.ggthemr_palette <- function(x) 
   colour_plot(x)
 

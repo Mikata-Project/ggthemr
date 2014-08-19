@@ -23,7 +23,7 @@ colour_plot.character <- function(x)
 #' @method colour_plot ggthemr
 #' @S3method colour_plot ggthemr
 colour_plot.ggthemr <- function(x) 
-  plot_colours(unclass(swatch(x)), x$palette$object$background)
+  plot_colours(unclass(swatch(x)), x$palette$background)
 
 
 #' @rdname colour_plot
