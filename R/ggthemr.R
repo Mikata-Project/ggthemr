@@ -24,8 +24,8 @@ ggthemr <- function(palette = 'dust', layout = 'clear', spacing = 1.6, text_size
   theme_scales(palette, line_weight)
   
   themr <- structure(list(
-    palette = list(),
-    layout = list(),
+    palette = palette,
+    layout = layout,
     text_size = text_size,
     spacing = spacing,
     type = type
