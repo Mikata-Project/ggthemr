@@ -71,21 +71,21 @@ palettes <- lapply(
       gradient = list(low='#65ADC2', high='#362C21')
     ),
     
-    citrus = list(
-      background = '#F1983C', 
-      text = c(inner = '#222222', outer = '#222222'), 
-      line = c(inner = '#ffffff', outer = '#71481C'),
-      gridline = '#D78836',
-      swatch = structure(c(
-        '#2C2C2C', 
-        '#ffffff', '#F9C431', 
-        '#F95D31', '#d22d24', 
-        '#6a6959', '#008533', 
-        '#104D85', '#3D3303', 
-        '#2fb797', '#85120B', 
-        '#CDD93B'), class = 'ggthemr_swatch'),
-      gradient = c(low = '#ffffff', high = '#d22d24')
-    ),
+#     citrus = list(
+#       background = '#F1983C', 
+#       text = c(inner = '#222222', outer = '#222222'), 
+#       line = c(inner = '#ffffff', outer = '#71481C'),
+#       gridline = '#D78836',
+#       swatch = structure(c(
+#         '#2C2C2C', 
+#         '#ffffff', '#F9C431', 
+#         '#F95D31', '#d22d24', 
+#         '#6a6959', '#008533', 
+#         '#104D85', '#3D3303', 
+#         '#2fb797', '#85120B', 
+#         '#CDD93B'), class = 'ggthemr_swatch'),
+#       gradient = c(low = '#ffffff', high = '#d22d24')
+#     ),
     
     chalk = list(
       background = '#3c3c3c', 
@@ -256,19 +256,19 @@ palettes <- lapply(
       gradient = c(low = '#dc322f', high = '#268bd2')
     ),
     
-    'solarized dark' = list(
-      background = '#073642', 
-      text = c(inner = '#586e75', outer = '#eee8d5'), 
-      line = c(inner = '#073642', outer = '#586e75'),
-      gridline = '#586e75',
-      swatch = structure(c(
-        '#fdf6e3', 
-        '#268bd2', '#dc322f',
-        '#859900', '#d33682', 
-        '#cb4b16', '#2aa198',
-        '#859900', '#6c71c4'), class = 'ggthemr_swatch'),
-      gradient = c(low = '#dc322f', high = '#268bd2')
-    ),
+#     'solarized dark' = list(
+#       background = '#073642', 
+#       text = c(inner = '#586e75', outer = '#eee8d5'), 
+#       line = c(inner = '#073642', outer = '#586e75'),
+#       gridline = '#586e75',
+#       swatch = structure(c(
+#         '#fdf6e3', 
+#         '#268bd2', '#dc322f',
+#         '#859900', '#d33682', 
+#         '#cb4b16', '#2aa198',
+#         '#859900', '#6c71c4'), class = 'ggthemr_swatch'),
+#       gradient = c(low = '#dc322f', high = '#268bd2')
+#     ),
     
     # Complete.
     grass = list(

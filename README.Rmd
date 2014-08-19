@@ -9,6 +9,7 @@ ggthemr
 ========================================================
 
 Themes for ggplot2. The idea of this package is that you can just set the theme and then forget about it. You shouldn't have to change any of your existing code. There are several parts to a theme:
+
 * Colour palette for the background, axes, gridlines, text etc. 
 * Layout of axes lines and gridlines.
 * Spacing around plot and between elements (i.e. axes titles to axes lines etc). You can set the spacing to determine how compact or spread out a plot is.
@@ -25,6 +26,23 @@ This package is still under development and isn't too stable yet, but can be ins
 ```{r eval=FALSE}
 devtools::install_github('ggthemr', 'cttobin')
 ```
+
+Usage
+-------------------------
+
+To just set the colour scheme:
+
+```{r eval=FALSE}
+ggthemr('dust')
+```
+
+That's it. Any ggplot you create from then on will have the theme applied. To set colour scheme, layout, spacing etc.:
+
+```{r eval=FALSE}
+ggthemr(palette = "dust", layout = "clear", spacing = 1.6,
+  text_size = 12, type = "inner", line_weight = 0.5)
+```
+
 
 Further Development
 -------------------------
@@ -49,108 +67,112 @@ There are a wide variety of themes in this package (and more on the way). Some o
   ggthemr('camoflauge', spacing = 0.5, type = 'inner')
   ggthemr:::preview_theme()
   ```
+  
 ### carrot
   
   ```{r fig.width=10, fig.height=6, echo=FALSE}
   ggthemr('carrot', spacing = 0.5, type = 'inner')
   ggthemr:::preview_theme()
   ```
+  
 ### chalk
   
   ```{r fig.width=10, fig.height=6, echo=FALSE}
   ggthemr('chalk', spacing = 0.5, type = 'inner')
   ggthemr:::preview_theme()
   ```
-### citrus
   
-  ```{r fig.width=10, fig.height=6, echo=FALSE}
-  ggthemr('citrus', spacing = 0.5, type = 'inner')
-  ggthemr:::preview_theme()
-  ```
 ### copper
   
   ```{r fig.width=10, fig.height=6, echo=FALSE}
   ggthemr('copper', spacing = 0.5, type = 'inner')
   ggthemr:::preview_theme()
   ```
+  
 ### dust
   
   ```{r fig.width=10, fig.height=6, echo=FALSE}
   ggthemr('dust', spacing = 0.5, type = 'inner')
   ggthemr:::preview_theme()
   ```
+  
 ### earth
   
   ```{r fig.width=10, fig.height=6, echo=FALSE}
   ggthemr('earth', spacing = 0.5, type = 'inner')
   ggthemr:::preview_theme()
   ```
+  
 ### fresh
   
   ```{r fig.width=10, fig.height=6, echo=FALSE}
   ggthemr('fresh', spacing = 0.5, type = 'inner')
   ggthemr:::preview_theme()
   ```
+  
 ### grape
   
   ```{r fig.width=10, fig.height=6, echo=FALSE}
   ggthemr('grape', spacing = 0.5, type = 'inner')
   ggthemr:::preview_theme()
   ```
+  
 ### grass
   
   ```{r fig.width=10, fig.height=6, echo=FALSE}
   ggthemr('grass', spacing = 0.5, type = 'inner')
   ggthemr:::preview_theme()
   ```
+  
 ### greyscale
   
   ```{r fig.width=10, fig.height=6, echo=FALSE}
   ggthemr('greyscale', spacing = 0.5, type = 'inner')
   ggthemr:::preview_theme()
   ```
+  
 ### light
   
   ```{r fig.width=10, fig.height=6, echo=FALSE}
   ggthemr('light', spacing = 0.5, type = 'inner')
   ggthemr:::preview_theme()
   ```
+  
 ### lilac
   
   ```{r fig.width=10, fig.height=6, echo=FALSE}
   ggthemr('lilac', spacing = 0.5, type = 'inner')
   ggthemr:::preview_theme()
   ```
+  
 ### pale
   
   ```{r fig.width=10, fig.height=6, echo=FALSE}
   ggthemr('pale', spacing = 0.5, type = 'inner')
   ggthemr:::preview_theme()
   ```
+  
 ### sea
   
   ```{r fig.width=10, fig.height=6, echo=FALSE}
   ggthemr('sea', spacing = 0.5, type = 'inner')
   ggthemr:::preview_theme()
   ```
+  
 ### sky
   
   ```{r fig.width=10, fig.height=6, echo=FALSE}
   ggthemr('sky', spacing = 0.5, type = 'inner')
   ggthemr:::preview_theme()
   ```
+  
 ### solarized
   
   ```{r fig.width=10, fig.height=6, echo=FALSE}
   ggthemr('solarized', spacing = 0.5, type = 'inner')
   ggthemr:::preview_theme()
   ```
-### solarized dark
   
-  ```{r fig.width=10, fig.height=6, echo=FALSE}
-  ggthemr('solarized dark', spacing = 0.5, type = 'inner')
-  ggthemr:::preview_theme()
-  ```
 
 Layouts
 -------------------------
@@ -163,12 +185,14 @@ The layout of a theme controls the appearance and position of the axes, gridline
   ggthemr('grape', layout = 'clean', spacing = 0.5)
   ggthemr:::preview_layout()
   ```
+  
 ### Clear
   
   ```{r fig.width=5.5, fig.height=3.5, echo=FALSE}
   ggthemr('grape', layout = 'clear', spacing = 0.5)
   ggthemr:::preview_layout()
   ```
+  
 ### Minimal
   
   ```{r fig.width=5.5, fig.height=3.5, echo=FALSE}
@@ -182,6 +206,7 @@ The layout of a theme controls the appearance and position of the axes, gridline
   ggthemr('grape', layout = 'plain', spacing = 0.5)
   ggthemr:::preview_layout()
   ```
+  
 ### Scientific
   
   ```{r fig.width=5.5, fig.height=3.5, echo=FALSE}
@@ -228,10 +253,10 @@ example_plot
 Adjustments
 -------------------------
 
-Most of the time you'll probably just want to set the theme and not worry about it. There may be times though where you'll want to make some small adjustment, or manually change what items appear as what colour in a plot. If you just set a theme using ggthemr() normally, it doesn't actually return anything. However, set the *static* parameter to *FALSE* and the theme will be returned:
+Most of the time you'll probably just want to set the theme and not worry about it. There may be times though where you'll want to make some small adjustment, or manually change what items appear as what colour in a plot. ggthemr() will return the theme silently, so you can assign it to variable like this:
 
 ```{r}
-themr <- ggthemr('dust', static = FALSE)
+themr <- ggthemr('dust')
 ```
 
 Now you can edit the theme stored in *themr*. For example, here's a plot:
