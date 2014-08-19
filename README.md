@@ -1,6 +1,5 @@
 
 
-
 ggthemr
 ========================================================
 
@@ -20,9 +19,8 @@ This package is still under development and isn't too stable yet, but can be ins
 
 
 ```r
-devtools::install_github("ggthemr", "cttobin")
+devtools::install_github('ggthemr', 'cttobin')
 ```
-
 
 Further Development
 -------------------------
@@ -43,76 +41,166 @@ There are a wide variety of themes in this package (and more on the way). Some o
 
 ### camoflauge
   
+  
+  ```
+  ## Warning: New theme missing the following elements: panel.margin.x,
+  ## panel.margin.y
+  ```
+  
   ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3.png) 
-
 ### carrot
   
+  
+  ```
+  ## Warning: New theme missing the following elements: panel.margin.x,
+  ## panel.margin.y
+  ```
+  
   ![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4.png) 
-
 ### chalk
   
+  
+  ```
+  ## Warning: New theme missing the following elements: panel.margin.x,
+  ## panel.margin.y
+  ```
+  
   ![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5.png) 
-
 ### citrus
   
+  
+  ```
+  ## Warning: New theme missing the following elements: panel.margin.x,
+  ## panel.margin.y
+  ```
+  
   ![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6.png) 
-
 ### copper
   
+  
+  ```
+  ## Warning: New theme missing the following elements: panel.margin.x,
+  ## panel.margin.y
+  ```
+  
   ![plot of chunk unnamed-chunk-7](figure/unnamed-chunk-7.png) 
-
 ### dust
   
+  
+  ```
+  ## Warning: New theme missing the following elements: panel.margin.x,
+  ## panel.margin.y
+  ```
+  
   ![plot of chunk unnamed-chunk-8](figure/unnamed-chunk-8.png) 
-
 ### earth
   
+  
+  ```
+  ## Warning: New theme missing the following elements: panel.margin.x,
+  ## panel.margin.y
+  ```
+  
   ![plot of chunk unnamed-chunk-9](figure/unnamed-chunk-9.png) 
-
 ### fresh
   
+  
+  ```
+  ## Warning: New theme missing the following elements: panel.margin.x,
+  ## panel.margin.y
+  ```
+  
   ![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10.png) 
-
 ### grape
   
+  
+  ```
+  ## Warning: New theme missing the following elements: panel.margin.x,
+  ## panel.margin.y
+  ```
+  
   ![plot of chunk unnamed-chunk-11](figure/unnamed-chunk-11.png) 
-
 ### grass
   
+  
+  ```
+  ## Warning: New theme missing the following elements: panel.margin.x,
+  ## panel.margin.y
+  ```
+  
   ![plot of chunk unnamed-chunk-12](figure/unnamed-chunk-12.png) 
-
 ### greyscale
   
+  
+  ```
+  ## Warning: New theme missing the following elements: panel.margin.x,
+  ## panel.margin.y
+  ```
+  
   ![plot of chunk unnamed-chunk-13](figure/unnamed-chunk-13.png) 
-
 ### light
   
+  
+  ```
+  ## Warning: New theme missing the following elements: panel.margin.x,
+  ## panel.margin.y
+  ```
+  
   ![plot of chunk unnamed-chunk-14](figure/unnamed-chunk-14.png) 
-
 ### lilac
   
+  
+  ```
+  ## Warning: New theme missing the following elements: panel.margin.x,
+  ## panel.margin.y
+  ```
+  
   ![plot of chunk unnamed-chunk-15](figure/unnamed-chunk-15.png) 
-
 ### pale
   
+  
+  ```
+  ## Warning: New theme missing the following elements: panel.margin.x,
+  ## panel.margin.y
+  ```
+  
   ![plot of chunk unnamed-chunk-16](figure/unnamed-chunk-16.png) 
-
 ### sea
   
+  
+  ```
+  ## Warning: New theme missing the following elements: panel.margin.x,
+  ## panel.margin.y
+  ```
+  
   ![plot of chunk unnamed-chunk-17](figure/unnamed-chunk-17.png) 
-
 ### sky
   
+  
+  ```
+  ## Warning: New theme missing the following elements: panel.margin.x,
+  ## panel.margin.y
+  ```
+  
   ![plot of chunk unnamed-chunk-18](figure/unnamed-chunk-18.png) 
-
 ### solarized
   
+  
+  ```
+  ## Warning: New theme missing the following elements: panel.margin.x,
+  ## panel.margin.y
+  ```
+  
   ![plot of chunk unnamed-chunk-19](figure/unnamed-chunk-19.png) 
-
 ### solarized dark
   
+  
+  ```
+  ## Warning: New theme missing the following elements: panel.margin.x,
+  ## panel.margin.y
+  ```
+  
   ![plot of chunk unnamed-chunk-20](figure/unnamed-chunk-20.png) 
-
 
 Layouts
 -------------------------
@@ -121,39 +209,79 @@ The layout of a theme controls the appearance and position of the axes, gridline
 
 ### Clean
   
+  
+  ```
+  ## Warning: New theme missing the following elements: panel.margin.x,
+  ## panel.margin.y
+  ```
+  
   ![plot of chunk unnamed-chunk-21](figure/unnamed-chunk-21.png) 
-
 ### Clear
   
+  
+  ```
+  ## Warning: New theme missing the following elements: panel.margin.x,
+  ## panel.margin.y
+  ```
+  
   ![plot of chunk unnamed-chunk-22](figure/unnamed-chunk-22.png) 
-
 ### Minimal
+  
+  
+  ```
+  ## Warning: New theme missing the following elements: panel.margin.x,
+  ## panel.margin.y
+  ```
   
   ![plot of chunk unnamed-chunk-23](figure/unnamed-chunk-23.png) 
 
-
 ### Plain
   
+  
+  ```
+  ## Warning: New theme missing the following elements: panel.margin.x,
+  ## panel.margin.y
+  ```
+  
   ![plot of chunk unnamed-chunk-24](figure/unnamed-chunk-24.png) 
-
 ### Scientific
   
+  
+  ```
+  ## Warning: New theme missing the following elements: panel.margin.x,
+  ## panel.margin.y
+  ```
+  
   ![plot of chunk unnamed-chunk-25](figure/unnamed-chunk-25.png) 
-
 
 Spacing
 -------------------------
 
 Plot margins and space between axes titles and lines etc. is controlled with the *spacing* parameter. Lower values will make plots more compact, higher values will give them more padding. Compare the plots below where the spacing has been set to 0, 1 and 2 respectively.
 
+
+```
+## Warning: New theme missing the following elements: panel.margin.x,
+## panel.margin.y
+```
+
 ![plot of chunk unnamed-chunk-26](figure/unnamed-chunk-26.png) 
 
+
+```
+## Warning: New theme missing the following elements: panel.margin.x,
+## panel.margin.y
+```
 
 ![plot of chunk unnamed-chunk-27](figure/unnamed-chunk-27.png) 
 
 
-![plot of chunk unnamed-chunk-28](figure/unnamed-chunk-28.png) 
+```
+## Warning: New theme missing the following elements: panel.margin.x,
+## panel.margin.y
+```
 
+![plot of chunk unnamed-chunk-28](figure/unnamed-chunk-28.png) 
 
 Type
 -------------------------
@@ -162,21 +290,35 @@ The *type* parameter can be set to either *inner* or *outer*. When *inner*, the 
 
 
 ```r
-ggthemr("sea", type = "inner")
+ggthemr('sea', type = 'inner')
+```
+
+```
+## Warning: New theme missing the following elements: panel.margin.x,
+## panel.margin.y
+```
+
+```r
 example_plot
 ```
 
 ![plot of chunk unnamed-chunk-29](figure/unnamed-chunk-29.png) 
 
 
+```r
+ggthemr('sea', type = 'outer')
+```
+
+```
+## Warning: New theme missing the following elements: panel.margin.x,
+## panel.margin.y
+```
 
 ```r
-ggthemr("sea", type = "outer")
 example_plot
 ```
 
 ![plot of chunk unnamed-chunk-30](figure/unnamed-chunk-30.png) 
-
 
 
 Adjustments
@@ -186,22 +328,25 @@ Most of the time you'll probably just want to set the theme and not worry about 
 
 
 ```r
-themr <- ggthemr("dust", static = FALSE)
+themr <- ggthemr('dust', static = FALSE)
 ```
 
+```
+## Warning: New theme missing the following elements: panel.margin.x,
+## panel.margin.y
+```
 
 Now you can edit the theme stored in *themr*. For example, here's a plot:
 
 
 ```r
-mpg_plot <- ggplot(mpg[mpg$drv != "4", ], aes(factor(cyl), cty, fill = drv)) + 
-    geom_boxplot() + labs(x = "Cylinders", y = "City MPG", fill = "Drive Type") + 
-    theme(legend.position = "bottom")
+mpg_plot <- ggplot(mpg[mpg$drv != '4', ], aes(factor(cyl), cty, fill = drv)) + 
+  geom_boxplot() + labs(x = 'Cylinders', y = 'City MPG', fill = 'Drive Type') +
+  theme(legend.position = 'bottom')
 mpg_plot
 ```
 
 ![plot of chunk unnamed-chunk-32](figure/unnamed-chunk-32.png) 
-
 
 
 For some reason you decide you want to change those colours. Front-wheel drive vehicles should be orange. Rear-wheelers should be that red colour. You could change the order of the levels of your fill variable, but you shouldn't have to do that. You just want to switch those colours but you have no idea what they are. *swatch()* will give you the colours in a ggthemr palette. 
@@ -218,7 +363,6 @@ swatch(themr)
 ## [1] "ggthemr.swatch"
 ```
 
-
 So you can manually swap the two colours around.
 
 
@@ -228,6 +372,5 @@ mpg_plot + scale_fill_manual(values = rev(to_swap))
 ```
 
 ![plot of chunk unnamed-chunk-34](figure/unnamed-chunk-34.png) 
-
 
 **Note:** the first colour in a swatch is a special one. It is reserved for outlining boxplots, text etc. So that's why the second and third colours were swapped.
