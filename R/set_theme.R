@@ -6,10 +6,10 @@ set_theme <- function (palette, layout, spacing, text_size, type, line_weight, i
   
   # Functions to define axes title distances' from axis (with sensible imnimum/maximum values).
   x_title_spacing <- function(spacing) 
-    max(-1.2, -(spacing/1.25) + 0.5)
+    max(-1.2, -(spacing / 1.25) + 0.5)
   
   y_title_spacing <- function(spacing) 
-    min(0.4, max(-0.2, 1 - (spacing/1.25) + 0.2))  
+    max(0.8, min(2.4, spacing))
     
   ggplot2::theme_set(theme(
     line = element_line(
