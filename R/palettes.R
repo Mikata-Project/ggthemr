@@ -30,6 +30,7 @@ palettes <- lapply(
         '#908150', '#373634'), class = 'ggthemr_swatch'),
       gradient = c(low = '#62bba5', high = '#373634')
     ),
+    
     earth = list(
       background = '#36312C', 
       text = list(inner = '#555555', outer = '#F8F8F0'), 
