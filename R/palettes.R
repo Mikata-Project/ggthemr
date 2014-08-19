@@ -25,7 +25,7 @@ palettes <- lapply(
         '#db735c', '#EFA86E', 
         '#9A8A76', '#F3C57B', 
         '#7A6752', '#2A91A2',
-        '#87F28A', '#6EDCEF'), class = 'ggthemr.swatch'),
+        '#87F28A', '#6EDCEF'), class = 'ggthemr_swatch'),
       gradient = c(low = '#F3C57B', high = '#7A6752')
     ),
     
@@ -40,7 +40,7 @@ palettes <- lapply(
         '#62bba5', '#ffb84d', 
         '#aaa488', '#b2432f', 
         '#3a6589', '#9b5672', 
-        '#908150', '#373634'), class = 'ggthemr.swatch'),
+        '#908150', '#373634'), class = 'ggthemr_swatch'),
       gradient = c(low = '#62bba5', high = '#373634')
     ),
     earth = list(
@@ -53,7 +53,7 @@ palettes <- lapply(
         '#DB784D', '#95CC5E', 
         '#E84646', '#F8BB39', 
         '#7A7267', '#E1AA93', 
-        '#168E7F', '#2B338E'), class = 'ggthemr.swatch'),
+        '#168E7F', '#2B338E'), class = 'ggthemr_swatch'),
       gradient = list(low='#7A7267', high='#DB784D')
     ),
     
@@ -67,7 +67,7 @@ palettes <- lapply(
         '#65ADC2', '#233B43', 
         '#E84646', '#C29365',
         '#362C21', '#316675',
-        '#168E7F', '#109B37'), class = 'ggthemr.swatch'),
+        '#168E7F', '#109B37'), class = 'ggthemr_swatch'),
       gradient = list(low='#65ADC2', high='#362C21')
     ),
     
@@ -83,7 +83,7 @@ palettes <- lapply(
         '#6a6959', '#008533', 
         '#104D85', '#3D3303', 
         '#2fb797', '#85120B', 
-        '#CDD93B'), class = 'ggthemr.swatch'),
+        '#CDD93B'), class = 'ggthemr_swatch'),
       gradient = c(low = '#ffffff', high = '#d22d24')
     ),
     
@@ -96,7 +96,7 @@ palettes <- lapply(
         '#ffffff', 
         '#c2c5be', '#d4dada', 
         '#111111', '#6D8875', 
-        '#eaeaea', '#908a78'), class = 'ggthemr.swatch'),
+        '#eaeaea', '#908a78'), class = 'ggthemr_swatch'),
       gradient = c(low = '#ffffff', high = '#111111')
     ),
     
@@ -111,7 +111,7 @@ palettes <- lapply(
         '#B2B06E', '#DDE8B2',
         '#689940', '#B96CBF',
         '#403F34', '#ffffff', 
-        '#473566', '#D2B6FF'), class = 'ggthemr.swatch'),
+        '#473566', '#D2B6FF'), class = 'ggthemr_swatch'),
       gradient = c(low = '#D2B6FF', high = '#555555')
     ),
     
@@ -125,7 +125,7 @@ palettes <- lapply(
         '#45764A', '#63AB5E',
         '#ffffff', '#B05D34', 
         '#6C4F41', '#EFAE90',
-        '#109F92', '#47ECDD'), class = 'ggthemr.swatch'),
+        '#109F92', '#47ECDD'), class = 'ggthemr_swatch'),
       gradient = c(low = '#FBE2D6', high = '#45764A')
     ),
     
@@ -140,7 +140,7 @@ palettes <- lapply(
         '#3262AB', '#FF8D7D', 
         '#C8E370', '#C45B4D',
         '#41a65c', '#5E2C25', 
-        '#78695F'), class = 'ggthemr.swatch'),
+        '#78695F'), class = 'ggthemr_swatch'),
       gradient = c(low = '#C8E370', high = '#de6757')
     ),
     
@@ -158,7 +158,7 @@ palettes <- lapply(
         '#f2f0ee', '#E6C1A4', 
         '#EE6C56', '#208794',
         '#37AE79', '#5DD2E1', 
-        '#4B37AE', '#78E676'), class = 'ggthemr.swatch'),
+        '#4B37AE', '#78E676'), class = 'ggthemr_swatch'),
       gradient = c(low = '#f2f0ee', high = '#614128')
     ),
     
@@ -186,7 +186,7 @@ palettes <- lapply(
         '#9b3950', '#f79b57', 
         '#6b3241', '#e65e62', 
         '#9e7587', '#4C8659',
-        '#6B6C69', '#0b0e0a'), class = 'ggthemr.swatch'),
+        '#6B6C69', '#0b0e0a'), class = 'ggthemr_swatch'),
       gradient = c(low='#e5c8cf', high='#6b3241')
     ),
     
@@ -224,7 +224,7 @@ palettes <- lapply(
         '#515151', '#909090', 
         '#D0D0D0', '#444444', 
         '#111111', '#eaeaea',  
-        '#666666', '#000000'), class = 'ggthemr.swatch'),
+        '#666666', '#000000'), class = 'ggthemr_swatch'),
       gradient = c(low = '#d0d0d0', high = '#000000')
     ),
     
@@ -238,7 +238,7 @@ palettes <- lapply(
         '#739EAB', '#2C3639', 
         '#36555E', '#f99e93', 
         '#c43d31', '#', 
-        '#', '#'), class = 'ggthemr.swatch'),
+        '#', '#'), class = 'ggthemr_swatch'),
       gradient = c(low = '#f99e93', high = '#2C3639')
     ),
     
@@ -252,7 +252,7 @@ palettes <- lapply(
         '#268bd2', '#dc322f',
         '#859900', '#d33682', 
         '#cb4b16', '#2aa198',
-        '#859900', '#6c71c4'), class = 'ggthemr.swatch'),
+        '#859900', '#6c71c4'), class = 'ggthemr_swatch'),
       gradient = c(low = '#dc322f', high = '#268bd2')
     ),
     
@@ -266,7 +266,7 @@ palettes <- lapply(
         '#268bd2', '#dc322f',
         '#859900', '#d33682', 
         '#cb4b16', '#2aa198',
-        '#859900', '#6c71c4'), class = 'ggthemr.swatch'),
+        '#859900', '#6c71c4'), class = 'ggthemr_swatch'),
       gradient = c(low = '#dc322f', high = '#268bd2')
     ),
     
@@ -280,7 +280,7 @@ palettes <- lapply(
         '#4A3D4F',
         '#CEF3C6', '#ded42f', 
         '#B45454', '#3E6735', 
-        '#be1d2d', '#57826F'), class = 'ggthemr.swatch'),
+        '#be1d2d', '#57826F'), class = 'ggthemr_swatch'),
       gradient = c(low='#ded42f', high='#B45454')
     ),
     
@@ -309,7 +309,7 @@ palettes <- lapply(
         '#135078', '#F94240', 
         '#cbe9fd', '#F9A765', 
         '#092639', '#C5430B',
-        '#C5C40B', '#8acefb'), class = 'ggthemr.swatch'),
+        '#C5C40B', '#8acefb'), class = 'ggthemr_swatch'),
       gradient = c(low='#f0f0f0', high='#092639')
     ),
     
@@ -322,7 +322,7 @@ palettes <- lapply(
         '#F4F4A9', 
         '#6d9a58', '#e5ca28', 
         '#4E4E36', '#f6f6f6', 
-        '#c8cc9f', '#353525'), class = 'ggthemr.swatch'),
+        '#c8cc9f', '#353525'), class = 'ggthemr_swatch'),
       gradient = list(low='#F4F4A9', high='#6d9a58')
     )
 

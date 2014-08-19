@@ -9,5 +9,5 @@ plot.ggthemr.palette <- function(x)
 #' @param x ggthemr swatch object.
 #' @method plot ggthemr.swatch
 #' @export
-plot.ggthemr.swatch <- function(x)
+plot.ggthemr_swatch <- function(x)
   colour_plot(x)

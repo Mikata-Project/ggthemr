@@ -34,7 +34,7 @@ colour_plot.ggthemr.palette <- function(x)
 
 
 #' @rdname colour_plot
-#' @method colour_plot ggthemr.swatch
-#' @S3method colour_plot ggthemr.swatch
-colour_plot.ggthemr.swatch <- function(x) 
+#' @method colour_plot ggthemr_swatch
+#' @S3method colour_plot ggthemr_swatch
+colour_plot.ggthemr_swatch <- function(x) 
   plot_colours(unclass(x))
