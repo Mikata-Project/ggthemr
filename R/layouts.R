@@ -62,7 +62,7 @@ layouts <- lapply(
       panel.grid.minor = function(...) element_blank()
     )
   ), function(x) {
-    class(x) <- 'ggthemr.layout'
+    class(x) <- 'ggthemr_layout'
     return (x)
   }
 )

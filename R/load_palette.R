@@ -10,5 +10,5 @@ load_palette.character <- function(palette) {
   return (palettes[[palette]])
 }
 
-load_palette.ggthemr.palette <- function(palette) 
+load_palette.ggthemr_palette <- function(palette) 
   return (palette)

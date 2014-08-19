@@ -10,5 +10,5 @@ load_layout.character <- function(layout) {
   return (layouts[[layout]])
 }
 
-load_layout.ggthemr.layout <- function(layout) 
+load_layout.ggthemr_layout <- function(layout) 
   return (layout)

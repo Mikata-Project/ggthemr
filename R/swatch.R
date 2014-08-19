@@ -16,6 +16,6 @@ swatch.ggthemr <- function(x) x$palette$swatch
 
 
 #' @rdname swatch
-#' @method swatch ggthemr.palette
-#' @S3method swatch ggthemr.palette
-swatch.ggthemr.palette <- function(x) x$swatch
+#' @method swatch ggthemr_palette
+#' @S3method swatch ggthemr_palette
+swatch.ggthemr_palette <- function(x) x$swatch

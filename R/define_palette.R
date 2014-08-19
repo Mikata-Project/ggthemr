@@ -47,7 +47,7 @@ define_palette <- function(background, text_inner, text_outer, line, gridline, p
   if (!all(sapply(unlist(palette), is.character)))
     stop('You must only supply colours as characters.')
   
-  class(palette) <- 'ggthemr.palette'
+  class(palette) <- 'ggthemr_palette'
   
   return (palette)
   

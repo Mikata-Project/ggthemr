@@ -328,6 +328,6 @@ palettes <- lapply(
 
     
   ), function(x) {
-    class(x) <- 'ggthemr.palette'
+    class(x) <- 'ggthemr_palette'
     x
   })

@@ -3,7 +3,7 @@
 \alias{plot.ggthemr_swatch}
 \title{Create colour plot of ggthemr swatch}
 \usage{
-\method{plot}{ggthemr.swatch}(x)
+\method{plot}{ggthemr_swatch}(x)
 }
 \arguments{
 \item{x}{ggthemr swatch object.}
