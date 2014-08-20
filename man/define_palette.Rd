@@ -3,8 +3,7 @@
 \alias{define_palette}
 \title{Create ggthemr palette.}
 \usage{
-define_palette(background, text_inner, text_outer, line, gridline, plot_colours,
-  gradient)
+define_palette(background, text, line, gridline, swatch, gradient)
 }
 \arguments{
 \item{background}{background colour.}
@@ -17,7 +16,7 @@ define_palette(background, text_inner, text_outer, line, gridline, plot_colours,
 
 \item{gridline}{major and minor gridline colours.}
 
-\item{plot_colours}{vector of colours used for plotting data i.e. the main colours used in the plot.}
+\item{swatch}{vector of colours used for plotting data i.e. the main colours used in the plot.}
 
 \item{gradient}{vector of length two specifiying the lower and upper colours used for gradients.}
 }
