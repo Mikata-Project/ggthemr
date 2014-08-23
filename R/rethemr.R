@@ -1,5 +1,5 @@
-rethemr <- function(themr, static = FALSE) {
+rethemr <- function(themr) {
   if (!is_ggthemr(themr))
     stop('themr is not a ggthemr object.')
-  with(themr, ggthemr(palette$object, layout$object, spacing, text_size, type, static))
+  with(themr, ggthemr(palette, layout, spacing, text_size, type))
 }
