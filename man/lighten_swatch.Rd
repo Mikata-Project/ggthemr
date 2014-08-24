@@ -3,12 +3,12 @@
 \alias{lighten_swatch}
 \title{Make ggthemr swatch lighter}
 \usage{
-lighten_swatch(themr, amount)
+lighten_swatch(x, amount)
 }
 \arguments{
-\item{themr}{ggthemr object.}
+\item{x}{ggthemr object.}
 
-\item{amount}{value between 0 and 1 indicating by how much the swatch colours should be lighter.}
+\item{amount}{value between 0 and 1 indicating by how much the swatch colours should be darker/lighter.}
 }
 \description{
 Update a ggthemr swatch so that colours are lighter by some specified amount.
