@@ -38,6 +38,7 @@ Collate:
     'plot_colours.R'
     'preview_layout.R'
     'preview_theme.R'
+    'random_swatch_colour.R'
     'rethemr.R'
     'reverse_gradient.R'
     'swatch.R'
