@@ -122,12 +122,14 @@ Custom Palettes
 ```r
 # Random colours that aren't white.
 random_colours <- sample(colors()[-c(1, 253, 361)], 10L)
+
 ugly <- define_palette(
-  swatch = sample(colors(), 10L),
-  gradient = c(lower = 'red', upper = 'green')
+  swatch = random_colours,
+  gradient = c(lower = random_colours[1L], upper = random_colours[2L])
 )
 
 ggthemr(ugly)
+
 example_plot + ggtitle(':(')
 ```
 
