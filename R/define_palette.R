@@ -1,16 +1,33 @@
 #' @title Create ggthemr palette
-#' @description Create a custom palette that can be used by ggthemr. Checks will be carried out to make sure colours are not duplicated and are appropriate (e.g. the text colour should not match the background colour of text will not be visible). 
-#' @param swatch Vector of colours used for plotting data i.e. the main colours used in the plot.
+#' @description Create a custom palette that can be used by ggthemr. Checks will be carried out to make sure colours are not duplicated and are appropriate (e.g. the text colour should not match the background colour or text will not be visible). 
+#' 
+#' Default colours for the background, text, axes lines and gridlines have been provided, but it is recommended that you overwrite these to make a nice theme.
+#' @param swatch Vector of colours used for plotting data i.e. the main colours used for the points in geom_point(), bars in geom_bar() etc.
 #' @param gradient Vector of length two specifiying the lower and upper colours used for gradients.
 #' @param background Background colour.
 #' @param text Text colour. This should be either a single colour or a vector of two colours (see details). 
 #' @param line Axes line colour. This should be either a single colour or a vector of two colours (see details).
 #' @param gridline Major and minor gridline colours.
-#' @details The text and axes line colours can both be provided as single colours or a vector of two colours. If only one colour is provided then the text and line colours will be identical regardless of the theme type (inner or outer, see (\code{\link{ggthemr}}) for more details). Where your palette doesn't really need different text/line colours for the theme type than it sufficient to supply only one colour but a warning will be issued.
+#' @details The text and axes line colours can both be provided as single 
+#' colours or vectors of two colours. If only one colour is provided then 
+#' the text and line colours will be identical regardless of the theme 
+#' type ("inner" or "outer", see \code{\link{ggthemr}} for more details). 
+#' Where your palette doesn't really need different text/line colours for 
+#' the theme type than it sufficient to supply only one colour but a 
+#' warning will be issued.
 #' 
-#' Vectors supplied for the text and line colours can have elements named "inner" and "outer". In the absense of these names, the first will be assumed to be the "inner" colour, the second will be the "outer" colour.
-#' @author Ciaran Tobin
+#' Vectors supplied for the text and line colours can have elements named "inner" and "outer". In the absence of these names, the first will be assumed to be the "inner" colour, the second will be the "outer" colour.
+#' @return Object of type ggthemr_palette that you can pass to ggthemr().
 #' @export
+#' @examples
+#' # Create ugly theme with primary colours.
+#' ugly <- define_palette(
+#'   swatch = c('black', 'red', 'green', 'blue', 'brown', 'purple', 'yellow'), 
+#'   gradient = c(lower = 'red', upper = 'green')
+#' )
+#'   
+#' ggthemr(ugly)
+#' @author Ciaran Tobin
 define_palette <- function(swatch, gradient,
   background = '#ffffff', 
   text = c('#444444', '#444444'), 
