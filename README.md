@@ -33,13 +33,7 @@ To just set the colour scheme:
 ggthemr('dust')
 ```
 
-That's it. Any ggplot you create from then on will have the theme applied. To set colour scheme, layout, spacing etc.:
-
-
-```r
-ggthemr(palette = "dust", layout = "clear", spacing = 1.6,
-  text_size = 12, type = "inner", line_weight = 0.5)
-```
+That's it. Any ggplot you create from then on will have the theme applied. 
 
 
 Further Development
@@ -47,78 +41,100 @@ Further Development
 
 Features on the way:
 * More palettes and layouts.
-* Ability to create user palettes.
-* Methods to tweak existing palettes.
 * Options to control fonts.
+* Ability to reset themes back to default. 
+* Theme modifiers (so you can do things like `plot + no_legend()`, `plot + no_axes()` etc.).
 
 
 Palettes
 -------------------------
 
-The palette determines the colours of everything in a plot including the background, layers, gridlines, title text, axes lines, axes text and axes titles. The *swatch* is the the name given to the set of colours strictly used in styling the geoms/layer elements (e.g. the points in *geom_point()*, bars in *geom_bar()* etc.). At least six colours have been supplied in each palette's swatch. 
+The palette determines the colours of everything in a plot including the background, layers, gridlines, title text, axes lines, axes text and axes titles. The *swatch* is the the name given to the set of colours strictly used in styling the geoms/layer elements (e.g. the points in `geom_point()`, bars in `geom_bar()` etc.). At least six colours have been supplied in each palette's swatch. 
 
 There are a wide variety of themes in this package (and more on the way). Some of them serious business... others are delibrately stylish and might not be that good for use in proper publications. 
 
 ### camoflauge
   
-  ![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5.png) 
+  ![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4.png) 
   
 ### chalk
   
-  ![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6.png) 
+  ![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5.png) 
   
 ### copper
   
-  ![plot of chunk unnamed-chunk-7](figure/unnamed-chunk-7.png) 
+  ![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6.png) 
   
 ### dust
   
-  ![plot of chunk unnamed-chunk-8](figure/unnamed-chunk-8.png) 
+  ![plot of chunk unnamed-chunk-7](figure/unnamed-chunk-7.png) 
   
 ### earth
   
-  ![plot of chunk unnamed-chunk-9](figure/unnamed-chunk-9.png) 
+  ![plot of chunk unnamed-chunk-8](figure/unnamed-chunk-8.png) 
   
 ### fresh
   
-  ![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10.png) 
+  ![plot of chunk unnamed-chunk-9](figure/unnamed-chunk-9.png) 
   
 ### grape
   
-  ![plot of chunk unnamed-chunk-11](figure/unnamed-chunk-11.png) 
+  ![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10.png) 
   
 ### grass
   
-  ![plot of chunk unnamed-chunk-12](figure/unnamed-chunk-12.png) 
+  ![plot of chunk unnamed-chunk-11](figure/unnamed-chunk-11.png) 
   
 ### greyscale
   
-  ![plot of chunk unnamed-chunk-13](figure/unnamed-chunk-13.png) 
+  ![plot of chunk unnamed-chunk-12](figure/unnamed-chunk-12.png) 
   
 ### light
   
-  ![plot of chunk unnamed-chunk-14](figure/unnamed-chunk-14.png) 
+  ![plot of chunk unnamed-chunk-13](figure/unnamed-chunk-13.png) 
   
 ### lilac
   
-  ![plot of chunk unnamed-chunk-15](figure/unnamed-chunk-15.png) 
+  ![plot of chunk unnamed-chunk-14](figure/unnamed-chunk-14.png) 
   
 ### pale
   
-  ![plot of chunk unnamed-chunk-16](figure/unnamed-chunk-16.png) 
+  ![plot of chunk unnamed-chunk-15](figure/unnamed-chunk-15.png) 
   
 ### sea
   
-  ![plot of chunk unnamed-chunk-17](figure/unnamed-chunk-17.png) 
+  ![plot of chunk unnamed-chunk-16](figure/unnamed-chunk-16.png) 
   
 ### sky
   
-  ![plot of chunk unnamed-chunk-18](figure/unnamed-chunk-18.png) 
+  ![plot of chunk unnamed-chunk-17](figure/unnamed-chunk-17.png) 
   
 ### solarized
   
-  ![plot of chunk unnamed-chunk-19](figure/unnamed-chunk-19.png) 
+  ![plot of chunk unnamed-chunk-18](figure/unnamed-chunk-18.png) 
   
+Custom Palettes
+-------------------------
+  
+`define_palette()` lets you make your own themes that can be passed to `ggthemr()` just like any of the palettes above. Here's an example of a (probably ugly) palette using random colours:
+
+
+```r
+# Random colours that aren't white.
+random_colours <- sample(colors()[-c(1, 253, 361)], 10L)
+ugly <- define_palette(
+  swatch = sample(colors(), 10L),
+  gradient = c(lower = 'red', upper = 'green')
+)
+
+ggthemr(ugly)
+example_plot + ggtitle(':(')
+```
+
+![plot of chunk unnamed-chunk-19](figure/unnamed-chunk-19.png) 
+
+You can define all elements of a palette using `define_palette()` including colours for the background, text, axes lines, swatch and gradients. 
+
 
 Layouts
 -------------------------
@@ -129,7 +145,7 @@ The layout of a theme controls the appearance and position of the axes, gridline
   
   ![plot of chunk unnamed-chunk-20](figure/unnamed-chunk-20.png) 
   
-### Clear
+### Clear (default)
   
   ![plot of chunk unnamed-chunk-21](figure/unnamed-chunk-21.png) 
   
@@ -163,7 +179,7 @@ The *type* parameter can be set to either *inner* or *outer*. When *inner*, the 
 
 
 ```r
-ggthemr('sea', type = 'inner')
+ggthemr('earth', type = 'inner')
 example_plot
 ```
 
@@ -171,17 +187,49 @@ example_plot
 
 
 ```r
-ggthemr('sea', type = 'outer')
+ggthemr('earth', type = 'outer')
 example_plot
 ```
 
 ![plot of chunk unnamed-chunk-29](figure/unnamed-chunk-29.png) 
 
 
-Adjustments
+Tweaking Themes
 -------------------------
 
-Most of the time you'll probably just want to set the theme and not worry about it. There may be times though where you'll want to make some small adjustment, or manually change what items appear as what colour in a plot. ggthemr() will return the theme silently, so you can assign it to variable like this:
+Squinting at a chart? Low on printer ink? ggthemr includes some methods to tweak charts to make them lighter or darker. Here's a standard theme:
+
+
+```r
+themr <- ggthemr('dust')
+example_plot
+```
+
+![plot of chunk unnamed-chunk-30](figure/unnamed-chunk-30.png) 
+
+Maybe that plot comes out a bit pale looking when you print it. Here's how you can add a bit more contrast to the swatch:
+
+
+```r
+darken_swatch(themr, amount = 0.3)
+example_plot
+```
+
+![plot of chunk unnamed-chunk-31](figure/unnamed-chunk-31.png) 
+
+The second parameter to `darken_swatch()` controls the degree to which the colours are made darker. Full list of methods with similar functionality:
+
+* `darken_swatch()` / `lighten_swatch()`: darker/lighter swatch colours.
+* `darken_gradient()` / `lighten_gradient()`: darker/lighter gradient colours.
+* `darken_palette()` / `lighten_palette()`: darker/lighter everything.
+
+I'll add methods to darken/lighten the axes lines and text soon too. 
+
+
+Plot Adjustments
+-------------------------
+
+Most of the time you'll probably just want to set the theme and not worry about it. There may be times though where you'll want to make some small adjustment, or manually change what items appear as what colour in a plot. `ggthemr()` will return the theme silently, so you can assign it to variable like this:
 
 
 ```r
@@ -198,10 +246,10 @@ mpg_plot <- ggplot(mpg[mpg$drv != '4', ], aes(factor(cyl), cty, fill = drv)) +
 mpg_plot
 ```
 
-![plot of chunk unnamed-chunk-31](figure/unnamed-chunk-31.png) 
+![plot of chunk unnamed-chunk-33](figure/unnamed-chunk-33.png) 
 
 
-For some reason you decide you want to change those colours. Front-wheel drive vehicles should be orange. Rear-wheelers should be that red colour. You could change the order of the levels of your fill variable, but you shouldn't have to do that. You just want to switch those colours but you have no idea what they are. *swatch()* will give you the colours in a ggthemr palette. 
+For some reason you decide you want to change those colours. Front-wheel drive vehicles should be orange. Rear-wheelers should be that red colour. You could change the order of the levels of your fill variable, but you shouldn't have to do that. You just want to switch those colours but you have no idea what they are. `swatch()` will give you the colours in a ggthemr palette. 
 
 
 ```r
@@ -223,6 +271,8 @@ to_swap <- swatch(themr)[2:3]
 mpg_plot + scale_fill_manual(values = rev(to_swap))
 ```
 
-![plot of chunk unnamed-chunk-33](figure/unnamed-chunk-33.png) 
+![plot of chunk unnamed-chunk-35](figure/unnamed-chunk-35.png) 
 
 **Note:** the first colour in a swatch is a special one. It is reserved for outlining boxplots, text etc. So that's why the second and third colours were swapped.
+
+
