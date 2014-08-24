@@ -3,25 +3,29 @@
 \alias{define_palette}
 \title{Create ggthemr palette.}
 \usage{
-define_palette(background, text, line, gridline, swatch, gradient)
+define_palette(swatch, gradient, background = "#ffffff", text = c("#444444",
+  "#444444"), line = c("#6e6e6e", "#6e6e6e"), gridline = "#7f7f7f")
 }
 \arguments{
-\item{background}{background colour.}
+\item{swatch}{Vector of colours used for plotting data i.e. the main colours used in the plot.}
 
-\item{text_inner}{text colour when type is 'inner' (see plot_theme).}
+\item{gradient}{Vector of length two specifiying the lower and upper colours used for gradients.}
 
-\item{text_outer}{text colour when type is 'outer' (see plot_theme).}
+\item{background}{Background colour.}
 
-\item{line}{axes line colour}
+\item{text}{Text colour. This should be either a single colour or a vector of two colours (see details).}
 
-\item{gridline}{major and minor gridline colours.}
+\item{line}{Axes line colour. This should be either a single colour or a vector of two colours (see details).}
 
-\item{swatch}{vector of colours used for plotting data i.e. the main colours used in the plot.}
-
-\item{gradient}{vector of length two specifiying the lower and upper colours used for gradients.}
+\item{gridline}{Major and minor gridline colours.}
 }
 \description{
-Create a custom palette that can be used by ggthemr.
+Create a custom palette that can be used by ggthemr. Checks will be carried out to make sure colours are not duplicated and are appropriate (e.g. the text colour should not match the background colour of text will not be visible).
+}
+\details{
+The text and axes line colours can both be provided as single colours or a vector of two colours. If only one colour is provided then the text and line colours will be identical regardless of the theme type (inner or outer, see (\code{\link{ggthemr}}) for more details). Where your palette doesn't really need different text/line colours for the theme type than it sufficient to supply only one colour but a warning will be issued.
+
+Vectors supplied for the text and line colours can have elements named "inner" and "outer". In the absense of these names, the first will be assumed to be the "inner" colour, the second will be the "outer" colour.
 }
 \author{
 Ciaran Tobin
