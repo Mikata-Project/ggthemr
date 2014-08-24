@@ -2,8 +2,9 @@ preview_layout <- function (x = NULL)
   UseMethod('preview_layout', x)
 
 preview_layout.default <- function (x = NULL) {
+  x_values <- c('One', 'Two', 'Three')
   blank_data <- data.frame(
-    x = c('One', 'Two', 'Three'),
+    x = factor(x_values, x_values),
     y = seq(1000, 3000, 1000),
     check.names = FALSE)
   ggplot(blank_data, aes(x, y)) + geom_blank() +
