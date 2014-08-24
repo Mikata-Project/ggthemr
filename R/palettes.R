@@ -225,8 +225,7 @@ palettes <- lapply(
         '#59595c', 
         '#739EAB', '#2C3639', 
         '#36555E', '#f99e93', 
-        '#c43d31', '#', 
-        '#', '#'), class = 'ggthemr_swatch'),
+        '#c43d31'), class = 'ggthemr_swatch'),
       gradient = c(low = '#f99e93', high = '#2C3639')
     ),
     
