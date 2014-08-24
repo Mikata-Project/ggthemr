@@ -4,7 +4,7 @@ palettes <- lapply(
      
     dust = list(
       background = '#FAF7F2', 
-      text = c(inner = '#8d7a64', outer = '#8d7a64'), 
+      text = c(inner = '#5b4f41', outer = '#5b4f41'), 
       line = c(inner = '#8d7a64', outer = '#8d7a64'),
       gridline = '#E3DDCC',
       swatch = structure(c(
@@ -90,7 +90,7 @@ palettes <- lapply(
     
     lilac = list(
       background = '#FFFDD0', 
-      text = c(inner = '#B2B080', outer = '#B2B080'), 
+      text = c(inner = '#5f5e3a', outer = '#5f5e3a'), 
       line = c(inner = '#B2B080', outer = '#B2B080'),
       gridline = '#E5E4BB',
       swatch = structure(c(
@@ -218,7 +218,7 @@ palettes <- lapply(
     
     sky = list(
       background = '#bfeaf8', 
-      text = c(inner = '#739EAB', outer = '#59595c'), 
+      text = c(inner = '#59595c', outer = '#59595c'), 
       line = c(inner = '#739EAB', outer = '#ffffff'),
       gridline = '#ffffff',
       swatch = structure(c(
