@@ -1,7 +1,7 @@
 # Needs some serious tidying.
 theme_scales <- function(palette, line_weight) {
   
-  colours <- swatch(palette)[-1]
+  colours <- palette$swatch[-1]
   
   updateGeoms <- function(geoms, parameters) 
     for (geom in geoms) update_geom_defaults(geom, parameters)
