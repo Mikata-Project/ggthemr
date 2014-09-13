@@ -33,7 +33,12 @@ To just set the colour scheme:
 ggthemr('dust')
 ```
 
-That's it. Any ggplot you create from then on will have the theme applied. 
+That's it. Any ggplot you create from then on will have the theme applied. You can clear the theme and return to ggplot2's default using:
+
+
+```r
+ggthemr_reset()
+```
 
 
 Further Development
@@ -55,63 +60,63 @@ There are a wide variety of themes in this package (and more on the way). Some o
 
 ### camoflauge
   
-  ![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4.png) 
+  ![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5.png) 
   
 ### chalk
   
-  ![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5.png) 
+  ![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6.png) 
   
 ### copper
   
-  ![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6.png) 
+  ![plot of chunk unnamed-chunk-7](figure/unnamed-chunk-7.png) 
   
 ### dust
   
-  ![plot of chunk unnamed-chunk-7](figure/unnamed-chunk-7.png) 
+  ![plot of chunk unnamed-chunk-8](figure/unnamed-chunk-8.png) 
   
 ### earth
   
-  ![plot of chunk unnamed-chunk-8](figure/unnamed-chunk-8.png) 
+  ![plot of chunk unnamed-chunk-9](figure/unnamed-chunk-9.png) 
   
 ### fresh
   
-  ![plot of chunk unnamed-chunk-9](figure/unnamed-chunk-9.png) 
+  ![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10.png) 
   
 ### grape
   
-  ![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10.png) 
+  ![plot of chunk unnamed-chunk-11](figure/unnamed-chunk-11.png) 
   
 ### grass
   
-  ![plot of chunk unnamed-chunk-11](figure/unnamed-chunk-11.png) 
+  ![plot of chunk unnamed-chunk-12](figure/unnamed-chunk-12.png) 
   
 ### greyscale
   
-  ![plot of chunk unnamed-chunk-12](figure/unnamed-chunk-12.png) 
+  ![plot of chunk unnamed-chunk-13](figure/unnamed-chunk-13.png) 
   
 ### light
   
-  ![plot of chunk unnamed-chunk-13](figure/unnamed-chunk-13.png) 
+  ![plot of chunk unnamed-chunk-14](figure/unnamed-chunk-14.png) 
   
 ### lilac
   
-  ![plot of chunk unnamed-chunk-14](figure/unnamed-chunk-14.png) 
+  ![plot of chunk unnamed-chunk-15](figure/unnamed-chunk-15.png) 
   
 ### pale
   
-  ![plot of chunk unnamed-chunk-15](figure/unnamed-chunk-15.png) 
+  ![plot of chunk unnamed-chunk-16](figure/unnamed-chunk-16.png) 
   
 ### sea
   
-  ![plot of chunk unnamed-chunk-16](figure/unnamed-chunk-16.png) 
+  ![plot of chunk unnamed-chunk-17](figure/unnamed-chunk-17.png) 
   
 ### sky
   
-  ![plot of chunk unnamed-chunk-17](figure/unnamed-chunk-17.png) 
+  ![plot of chunk unnamed-chunk-18](figure/unnamed-chunk-18.png) 
   
 ### solarized
   
-  ![plot of chunk unnamed-chunk-18](figure/unnamed-chunk-18.png) 
+  ![plot of chunk unnamed-chunk-19](figure/unnamed-chunk-19.png) 
   
 Custom Palettes
 -------------------------
@@ -133,7 +138,7 @@ ggthemr(ugly)
 example_plot + ggtitle(':(')
 ```
 
-![plot of chunk unnamed-chunk-19](figure/unnamed-chunk-19.png) 
+![plot of chunk unnamed-chunk-20](figure/unnamed-chunk-20.png) 
 
 You can define all elements of a palette using `define_palette()` including colours for the background, text, axes lines, swatch and gradients. 
 
@@ -145,34 +150,34 @@ The layout of a theme controls the appearance and position of the axes, gridline
 
 ### Clean
   
-  ![plot of chunk unnamed-chunk-20](figure/unnamed-chunk-20.png) 
+  ![plot of chunk unnamed-chunk-21](figure/unnamed-chunk-21.png) 
   
 ### Clear (default)
   
-  ![plot of chunk unnamed-chunk-21](figure/unnamed-chunk-21.png) 
+  ![plot of chunk unnamed-chunk-22](figure/unnamed-chunk-22.png) 
   
 ### Minimal
   
-  ![plot of chunk unnamed-chunk-22](figure/unnamed-chunk-22.png) 
+  ![plot of chunk unnamed-chunk-23](figure/unnamed-chunk-23.png) 
 
 ### Plain
   
-  ![plot of chunk unnamed-chunk-23](figure/unnamed-chunk-23.png) 
+  ![plot of chunk unnamed-chunk-24](figure/unnamed-chunk-24.png) 
   
 ### Scientific
   
-  ![plot of chunk unnamed-chunk-24](figure/unnamed-chunk-24.png) 
+  ![plot of chunk unnamed-chunk-25](figure/unnamed-chunk-25.png) 
 
 Spacing
 -------------------------
 
 Plot margins and space between axes titles and lines etc. is controlled with the *spacing* parameter. Lower values will make plots more compact, higher values will give them more padding. Compare the plots below where the spacing has been set to 0, 1 and 2 respectively.
 
-![plot of chunk unnamed-chunk-25](figure/unnamed-chunk-25.png) 
-
 ![plot of chunk unnamed-chunk-26](figure/unnamed-chunk-26.png) 
 
 ![plot of chunk unnamed-chunk-27](figure/unnamed-chunk-27.png) 
+
+![plot of chunk unnamed-chunk-28](figure/unnamed-chunk-28.png) 
 
 Type
 -------------------------
@@ -185,7 +190,7 @@ ggthemr('earth', type = 'inner')
 example_plot
 ```
 
-![plot of chunk unnamed-chunk-28](figure/unnamed-chunk-28.png) 
+![plot of chunk unnamed-chunk-29](figure/unnamed-chunk-29.png) 
 
 
 ```r
@@ -193,7 +198,7 @@ ggthemr('earth', type = 'outer')
 example_plot
 ```
 
-![plot of chunk unnamed-chunk-29](figure/unnamed-chunk-29.png) 
+![plot of chunk unnamed-chunk-30](figure/unnamed-chunk-30.png) 
 
 
 Tweaking Themes
@@ -207,7 +212,7 @@ themr <- ggthemr('dust')
 example_plot
 ```
 
-![plot of chunk unnamed-chunk-30](figure/unnamed-chunk-30.png) 
+![plot of chunk unnamed-chunk-31](figure/unnamed-chunk-31.png) 
 
 Maybe that plot comes out a bit pale looking when you print it. Here's how you can add a bit more contrast to the swatch:
 
@@ -217,7 +222,7 @@ darken_swatch(themr, amount = 0.3)
 example_plot
 ```
 
-![plot of chunk unnamed-chunk-31](figure/unnamed-chunk-31.png) 
+![plot of chunk unnamed-chunk-32](figure/unnamed-chunk-32.png) 
 
 The second parameter to `darken_swatch()` controls the degree to which the colours are made darker. Full list of methods with similar functionality:
 
@@ -248,7 +253,7 @@ mpg_plot <- ggplot(mpg[mpg$drv != '4', ], aes(factor(cyl), cty, fill = drv)) +
 mpg_plot
 ```
 
-![plot of chunk unnamed-chunk-33](figure/unnamed-chunk-33.png) 
+![plot of chunk unnamed-chunk-34](figure/unnamed-chunk-34.png) 
 
 
 For some reason you decide you want to change those colours. Front-wheel drive vehicles should be orange. Rear-wheelers should be that red colour. You could change the order of the levels of your fill variable, but you shouldn't have to do that. You just want to switch those colours but you have no idea what they are. `swatch()` will give you the colours in a ggthemr palette. 
@@ -273,7 +278,7 @@ to_swap <- swatch(themr)[2:3]
 mpg_plot + scale_fill_manual(values = rev(to_swap))
 ```
 
-![plot of chunk unnamed-chunk-35](figure/unnamed-chunk-35.png) 
+![plot of chunk unnamed-chunk-36](figure/unnamed-chunk-36.png) 
 
 **Note:** the first colour in a swatch is a special one. It is reserved for outlining boxplots, text etc. So that's why the second and third colours were swapped.
 
