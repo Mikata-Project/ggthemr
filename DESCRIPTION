@@ -25,6 +25,7 @@ Collate:
     'get_gradient.R'
     'ggthemr-package.r'
     'ggthemr.R'
+    'ggthemr_reset.R'
     'is_colour.R'
     'is_ggthemr.R'
     'layouts.R'

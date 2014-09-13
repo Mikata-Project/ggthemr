@@ -36,7 +36,11 @@ To just set the colour scheme:
 ggthemr('dust')
 ```
 
-That's it. Any ggplot you create from then on will have the theme applied. 
+That's it. Any ggplot you create from then on will have the theme applied. You can clear the theme and return to ggplot2's default using:
+
+```{r eval=FALSE}
+ggthemr_reset()
+```
 
 
 Further Development
