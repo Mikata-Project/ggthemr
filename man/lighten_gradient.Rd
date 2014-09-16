@@ -3,18 +3,16 @@
 \alias{lighten_gradient}
 \title{Make ggthemr gradient lighter}
 \usage{
-lighten_gradient(x, amount)
+lighten_gradient(amount)
 }
 \arguments{
-\item{x}{ggthemr object.}
-
 \item{amount}{value between 0 and 1 indicating by how much the swatch colours should be darker/lighter.}
 }
 \description{
 Update a ggthemr gradient so that colours are lighter by some specified amount.
 }
 \examples{
-themr <- ggthemr('pale')
+ggthemr('dust')
 lighten_gradient(themr, 0.2)
 }
 \author{

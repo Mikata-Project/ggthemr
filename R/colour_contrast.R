@@ -3,31 +3,29 @@ validate_contrast <- function(amount)
 
 #' @title Make ggthemr swatch darker
 #' @description Update a ggthemr swatch so that colours are darker by some specified amount. 
-#' @param x ggthemr object.
 #' @param amount value between 0 and 1 indicating by how much the swatch colours should be darker/lighter.
 #' @examples
-#' themr <- ggthemr('pale')
+#' ggthemr('dust')
 #' darken_swatch(themr, 0.2)
 #' @author Ciaran Tobin
 #' @export
-darken_swatch <- function(x, amount) {
+darken_swatch <- function(amount) {
   validate_contrast(amount)
-  swatch_contrast(x, -amount)
+  swatch_contrast(-amount)
 }
 
 
 #' @title Make ggthemr swatch lighter
 #' @description Update a ggthemr swatch so that colours are lighter by some specified amount.
-#' @param x ggthemr object.
 #' @inheritParams darken_swatch
 #' @examples
-#' themr <- ggthemr('pale')
+#' ggthemr('dust')
 #' lighten_swatch(themr, 0.2)
 #' @author Ciaran Tobin
 #' @export
-lighten_swatch <- function(x, amount) {
+lighten_swatch <- function(amount) {
   validate_contrast(amount)
-  swatch_contrast(x, amount)  
+  swatch_contrast(amount)  
 }
 
 
@@ -35,79 +33,78 @@ lighten_swatch <- function(x, amount) {
 #' @description Update a ggthemr gradient so that colours are darker by some specified amount.
 #' @inheritParams darken_swatch
 #' @examples
-#' themr <- ggthemr('pale')
-#' darken_gradient(themr, 0.2)
+#' ggthemr('dust')
+#' darken_gradient(0.2)
 #' @author Ciaran Tobin
 #' @export
-darken_gradient <- function(x, amount) {
+darken_gradient <- function(amount) {
   validate_contrast(amount)
-  gradient_contrast(x, -amount)
+  gradient_contrast(-amount)
 }
 
 #' @title Make ggthemr gradient lighter
 #' @description Update a ggthemr gradient so that colours are lighter by some specified amount.
 #' @inheritParams darken_swatch
 #' @examples
-#' themr <- ggthemr('pale')
+#' ggthemr('dust')
 #' lighten_gradient(themr, 0.2)
 #' @author Ciaran Tobin
 #' @export
-lighten_gradient <- function(x, amount) {
+lighten_gradient <- function(amount) {
   validate_contrast(amount)
-  gradient_contrast(x, amount)  
+  gradient_contrast(amount)  
 }
 
 #' @title Make ggthemr palette darker
 #' @description Update a ggthemr palette so that colours are darker by some specified amount. This includes everything (background, axes lines, swatch colours, gradient etc.).
 #' @examples
-#' themr <- ggthemr('pale')
+#' ggthemr('dust')
 #' darken_palette(themr, 0.2)
 #' @author Ciaran Tobin
 #' @export
-darken_palette <- function(x, amount) {
+darken_palette <- function(amount) {
   validate_contrast(amount)
-  palette_contrast(x, -amount)
+  palette_contrast(-amount)
 }
 
 #' @title Make ggthemr palette lighter
 #' @description Update a ggthemr palette so that colours are lighter by some specified amount. This includes everything (background, axes lines, swatch colours, gradient etc.).
 #' @inheritParams darken_swatch
 #' @examples
-#' themr <- ggthemr('pale')
+#' ggthemr('dust')
 #' lighten_palette(themr, 0.2)
 #' @author Ciaran Tobin
 #' @export
-lighten_palette <- function(x, amount) {
+lighten_palette <- function(amount) {
   validate_contrast(amount)
-  palette_contrast(x, amount)  
+  palette_contrast(amount)  
 }
 
 
-swatch_contrast <- function(x, amount) { 
-  verify_ggthemr(x)
-  swatch(x) <- colour_contrast(swatch(x), amount)
-  rethemr(x)
-}
+swatch_contrast <- function(amount)  
+  set_swatch(colour_contrast(swatch(), amount))
 
-palette_contrast <- function(x, amount) {
-  verify_ggthemr(x)
-  palette <- x$palette
+palette_contrast <- function(amount) {
+  themr <- get_themr()
+  palette <- themr$palette
   palette$swatch <- colour_contrast(palette$swatch, amount)
   palette$background <- colour_contrast(palette$background, amount)
   palette$line <- colour_contrast(palette$line, amount)
   palette$gridline <- colour_contrast(palette$gridline, amount)
   palette$text[['inner']] <- colour_contrast(palette$text[['inner']], amount)
   palette$text[['outer']] <- colour_contrast(palette$text[['outer']], amount)
-  x$palette <- palette
-  rethemr(x)
+  themr$palette <- palette
+  set_themr(themr)
+  rethemr()
 }
 
-gradient_contrast <- function(x, amount) {
-  verify_ggthemr(x)
-  gradient <- x$palette$gradient
+gradient_contrast <- function(amount) {
+  themr <- get_themr()
+  gradient <- themr$palette$gradient
   updated <- colour_contrast(gradient, amount)
-  x$palette$gradient <- updated
-  rethemr(x)
+  themr$palette$gradient <- updated
+  set_themr(themr)
+  rethemr()
 }
 
 colour_contrast <- function(x, amount) {

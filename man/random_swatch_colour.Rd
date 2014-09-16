@@ -3,11 +3,9 @@
 \alias{random_swatch_colour}
 \title{Random swatch colour}
 \usage{
-random_swatch_colour(x, limit = 4L)
+random_swatch_colour(limit = 4L)
 }
 \arguments{
-\item{x}{ggthemr object.}
-
 \item{limit}{How many colours from the swatch should be considered for sampling (see details).}
 }
 \description{
@@ -17,12 +15,12 @@ Gives a random colour from ggthemr swatch. This might be useful if you are produ
 The first colour of the swatch will never be returned as this is a special value. The first few colours are usually "better" as they are well suited to the theme and have good contrast with each other. The random colour is therefore limited by default to the first few colours.
 }
 \examples{
-themr <- ggthemr('dust')
+ggthemr('dust')
 ggplot(diamonds, aes(carat, price)) +
-  geom_point(colour = random_swatch_colour(themr))
+  geom_point(colour = random_swatch_colour())
 
-themr <- ggthemr('camoflauge')
-colorem <- random_swatch_colour(themr)
+ggthemr('camoflauge')
+colorem <- random_swatch_colour()
 ggplot(diamonds, aes(color, price)) +
   geom_boxplot(fill = colorem, outlier.colour = colorem)
 }

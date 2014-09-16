@@ -1,19 +1,12 @@
-#'
-#' Reverse ggplot2 gradient colours
-#' 
-#' @param themr ggthemr object.
-#' @param static TRUE will return the new ggthemr object. FALSE will apply the changes and not return anything.
-#' 
+#' @title Reverse ggthemr gradient colours
+#' @description Flip the colours in a ggthemr gradient.
 #' @author Ciaran Tobin
 #' @examples
-#' themr <- ggthemr('pale')
+#' ggthemr()
 #' reverse_gradient(themr)
-
-reverse_gradient <- function(themr, static = FALSE) {
-  if (!is_ggthemr(themr))
-    stop('Cannot reverse gradient because themr is not a ggthemr object.')
-  names(themr$palette$object$gradient) <- rev(names(themr$palette$object$gradient))
-  theme_scales(themr$palette$object)
-  themr$palette$name <- 'custom'
-  if (!static) return (themr)
+reverse_gradient <- function() {
+  themr <- get_themr()
+  names(themr$palette$gradient) <- rev(names(themr$palette$gradient))
+  set_themr(themr)
+  rethemr()
 }

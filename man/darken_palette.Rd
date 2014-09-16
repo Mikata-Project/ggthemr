@@ -3,13 +3,13 @@
 \alias{darken_palette}
 \title{Make ggthemr palette darker}
 \usage{
-darken_palette(x, amount)
+darken_palette(amount)
 }
 \description{
 Update a ggthemr palette so that colours are darker by some specified amount. This includes everything (background, axes lines, swatch colours, gradient etc.).
 }
 \examples{
-themr <- ggthemr('pale')
+ggthemr('dust')
 darken_palette(themr, 0.2)
 }
 \author{

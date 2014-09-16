@@ -3,19 +3,17 @@
 \alias{darken_gradient}
 \title{Make ggthemr gradient darker}
 \usage{
-darken_gradient(x, amount)
+darken_gradient(amount)
 }
 \arguments{
-\item{x}{ggthemr object.}
-
 \item{amount}{value between 0 and 1 indicating by how much the swatch colours should be darker/lighter.}
 }
 \description{
 Update a ggthemr gradient so that colours are darker by some specified amount.
 }
 \examples{
-themr <- ggthemr('pale')
-darken_gradient(themr, 0.2)
+ggthemr('dust')
+darken_gradient(0.2)
 }
 \author{
 Ciaran Tobin

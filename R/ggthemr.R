@@ -31,6 +31,6 @@ ggthemr <- function(palette = 'dust', layout = 'clear', spacing = 1.6, text_size
     type = type
   ), class = 'ggthemr')
   
-  invisible(themr)
+  set_themr(themr)
   
 }

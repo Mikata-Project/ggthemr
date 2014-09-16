@@ -3,10 +3,7 @@
 \alias{shuffle_swatch}
 \title{Shuffle ggthemr swatch colours}
 \usage{
-shuffle_swatch(x)
-}
-\arguments{
-\item{x}{ggthemr object.}
+shuffle_swatch()
 }
 \description{
 Randomly reorder plot swatch colours.

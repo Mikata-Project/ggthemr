@@ -3,7 +3,7 @@
 \alias{set_swatch}
 \title{Change the swatch colours in a ggthemr theme}
 \usage{
-set_swatch(x, new_colours)
+set_swatch(swatch_colours)
 }
 \arguments{
 \item{themr}{ggthemr object}
@@ -12,17 +12,5 @@ set_swatch(x, new_colours)
 }
 \description{
 Edit an existing theme's swatch. The swatch contains the main colours used in a ggplot outside of the colours for the title, axes text, axes lines, gridlines, background etc.
-}
-\examples{
-themr <- ggthemr('grass')
-
-# Completely replace existing swatch.
-themr <- set_swatch(themr, c('black', 'green', 'blue', 'white', 'pink', 'purple', 'red'))
-
-# Add another colour onto existing swatch.
-themr <- set_swatch(themr, c(swatch(themr), 'purple'))
-
-# Check that new colour is present.
-swatch(themr)
 }
 

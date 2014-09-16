@@ -3,18 +3,16 @@
 \alias{lighten_palette}
 \title{Make ggthemr palette lighter}
 \usage{
-lighten_palette(x, amount)
+lighten_palette(amount)
 }
 \arguments{
-\item{x}{ggthemr object.}
-
 \item{amount}{value between 0 and 1 indicating by how much the swatch colours should be darker/lighter.}
 }
 \description{
 Update a ggthemr palette so that colours are lighter by some specified amount. This includes everything (background, axes lines, swatch colours, gradient etc.).
 }
 \examples{
-themr <- ggthemr('pale')
+ggthemr('dust')
 lighten_palette(themr, 0.2)
 }
 \author{

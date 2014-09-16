@@ -6,18 +6,6 @@
 #' swatch(themr)
 #' @rdname swatch
 #' @export swatch
-swatch <- function(x) {
-  verify_ggthemr(x)
-  x$palette$swatch
-}
-
-
-
-#' @inheritParams swatch
-#' @rdname swatch
-#' @export 
-`swatch<-` <- function(x, value) {
-  verify_ggthemr(x)
-  x$palette$swatch <- define_swatch(value)
-  rethemr(x)
+swatch <- function() {
+  get_themr()$palette$swatch
 }

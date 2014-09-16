@@ -1,4 +1,4 @@
-rethemr <- function(x) {
-  verify_ggthemr(x)
-  with(x, ggthemr(palette, layout, spacing, text_size, type))
+rethemr <- function() {
+  themr <- get_themr()
+  with(themr, ggthemr(palette, layout, spacing, text_size, type))
 }
