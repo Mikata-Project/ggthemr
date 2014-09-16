@@ -3,7 +3,7 @@
 #' @export
 #' @author Kohske Takahashi, Ciaran Tobin
 ggthemr_reset <- function () {
-  if (active_themr()) {
+  if (ggthemr_active()) {
     detach('package:ggplot2', unload = TRUE, force = TRUE)
     scales <- expand.grid(c('colour', 'fill'), c('continuous', 'discrete', 'gradient'))
     rm(list = apply(scales, 1L, function (x) sprintf('scale_%s_%s', x[1L], x[2L])), envir = .GlobalEnv)

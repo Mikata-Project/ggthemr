@@ -19,7 +19,6 @@ ggthemr('dust')
 ggplot(diamonds, aes(carat, price)) +
   geom_point(colour = random_swatch_colour())
 
-ggthemr('camoflauge')
 colorem <- random_swatch_colour()
 ggplot(diamonds, aes(color, price)) +
   geom_boxplot(fill = colorem, outlier.colour = colorem)
