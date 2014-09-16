@@ -9,13 +9,12 @@
 #' ggplot(diamonds, aes(carat, price)) + 
 #'   geom_point(colour = random_swatch_colour())
 #' 
-#' ggthemr('camoflauge')
 #' colorem <- random_swatch_colour()
 #' ggplot(diamonds, aes(color, price)) + 
 #'   geom_boxplot(fill = colorem, outlier.colour = colorem)
 random_swatch_colour <- function (limit = 4L) {
-
-  sw <- swatch()[-1L]
+  
+  sw <- swatch(x)[-1L]
   
   if (limit < 0)
     stop('"limit" must be positive or zero.', call. = FALSE)
