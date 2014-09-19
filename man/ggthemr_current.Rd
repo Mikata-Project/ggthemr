@@ -6,16 +6,16 @@
 \format{\preformatted{List of 4
  $ get   :function ()  
   ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 6 11 12 5 11 5 6 12
-  .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000122ad358> 
+  .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000011fc47c8> 
  $ set   :function (value)  
   ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 13 11 16 5 11 5 13 16
-  .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000122ad358> 
+  .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000011fc47c8> 
  $ is_set:function ()  
   ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 17 14 19 5 14 5 17 19
-  .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000122ad358> 
+  .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000011fc47c8> 
  $ clear :function ()  
   ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 20 13 22 5 13 5 20 22
-  .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000122ad358> 
+  .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000011fc47c8> 
 }}
 \usage{
 ggthemr_current

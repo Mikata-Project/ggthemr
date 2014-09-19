@@ -7,7 +7,9 @@ theme_scales <- function(palette, line_weight) {
     for (geom in geoms) update_geom_defaults(geom, parameters)
   
   # Geoms that only require a default colour.
-  updateGeoms(c('abline', 'jitter', 'point', 'density', 'errorbar', 'errorbarh', 'freqpoly', 'hline', 'line', 'text'), list(colour = colours[1]))
+  updateGeoms(c('abline', 'jitter', 'point', 'density', 'errorbar', 'errorbarh', 'freqpoly', 'hline', 'line'), list(colour = colours[1]))
+  
+  update_geom_defaults('text', list(colour = palette$swatch[1]))
     
   # Geoms that only require a default fill.
   updateGeoms(c('area', 'bar', 'histogram', 'dotplot'), list(fill = colours[1]))
