@@ -8,6 +8,6 @@ define_swatch <- function(x) {
   if (n < 6) 
     warning('It is recommended that you provide at least seven colours for the swatch.', call. = FALSE)
   if (any(duplicated(sapply(x, unname_colour)))) 
-    warning('Duplicate colours in swatch.', call. = FALSE)
+    stop('Duplicate colours in swatch.', call. = FALSE)
   structure(x, class = 'ggthemr_swatch')
 }
