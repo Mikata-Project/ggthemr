@@ -2,6 +2,34 @@ palettes <- lapply(
 
   list(
      
+    flat = list(
+      background = '#ecf0f1', 
+      text = c(inner = '#34495e', outer = '#34495e'), 
+      line = c(inner = '#2c3e50', outer = '#7f8c8d'),
+      gridline = '#bdc3c7',
+      swatch = structure(c(
+        '#34495e',
+        '#3498db', '#2ecc71', 
+        '#f1c40f', '#e74c3c', 
+        '#9b59b6', '#1abc9c',
+        '#f39c12', '#d35400'), class = 'ggthemr_swatch'),
+      gradient = c(low = '#', high = '#')
+    ),
+    
+    'flat dark' = list(
+      background = '#34495e', 
+      text = c(inner = '#34495e', outer = '#ecf0f1'), 
+      line = c(inner = '#2c3e50', outer = '#7f8c8d'),
+      gridline = '#46627f',
+      swatch = structure(c(
+        '#ecf0f1',
+        '#3498db', '#2ecc71', 
+        '#f1c40f', '#e74c3c', 
+        '#9b59b6', '#1abc9c',
+        '#f39c12', '#d35400'), class = 'ggthemr_swatch'),
+      gradient = c(low = '#', high = '#')
+    ),
+    
     dust = list(
       background = '#FAF7F2', 
       text = c(inner = '#5b4f41', outer = '#5b4f41'), 
@@ -236,10 +264,9 @@ palettes <- lapply(
       gridline = '#eee8d5',
       swatch = structure(c(
         '#073642', 
-        '#268bd2', '#dc322f',
-        '#859900', '#d33682', 
-        '#cb4b16', '#2aa198',
-        '#859900', '#6c71c4'), class = 'ggthemr_swatch'),
+        '#268bd2', '#dc322f', 
+        '#2aa198', '#b58900',
+        '#6c71c4', '#d33682'), class = 'ggthemr_swatch'),
       gradient = c(low = '#dc322f', high = '#268bd2')
     ),
     

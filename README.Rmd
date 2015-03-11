@@ -60,6 +60,24 @@ The palette determines the colours of everything in a plot including the backgro
 
 There are a wide variety of themes in this package (and more on the way). Some of them serious business... others are delibrately stylish and might not be that good for use in proper publications. 
 
+### flat
+
+[Base 16](https://github.com/chriskempson/base16)
+
+  ```{r fig.width=10, fig.height=6, echo=FALSE}
+  ggthemr('flat', spacing = 0.5, type = 'inner')
+  ggthemr:::preview_theme()
+  ```
+
+### flat dark
+
+[Base 16](https://github.com/chriskempson/base16)
+  
+  ```{r fig.width=10, fig.height=6, echo=FALSE}
+  ggthemr('flat dark', spacing = 0.5, type = 'inner')
+  ggthemr:::preview_theme()
+  ```
+
 ### camoflauge
   
   ```{r fig.width=10, fig.height=6, echo=FALSE}
