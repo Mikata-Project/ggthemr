@@ -154,18 +154,7 @@ ugly <- define_palette(
   swatch = random_colours,
   gradient = c(lower = random_colours[1L], upper = random_colours[2L])
 )
-```
 
-```
-## Warning in define_palette(swatch = random_colours, gradient = c(lower =
-## random_colours[1L], : Duplicate plot colours.
-```
-
-```
-## Error: Duplicate colours in swatch.
-```
-
-```r
 ggthemr(ugly)
 
 example_plot + ggtitle(':(')
