@@ -270,14 +270,14 @@ Tweaking Themes
 Squinting at a chart? Low on printer ink? ggthemr includes some methods to tweak charts to make them lighter or darker. Here's a standard theme:
 
 ```{r fig.width=7, fig.height=6, echo=TRUE}
-themr <- ggthemr('dust')
+ggthemr('dust')
 example_plot
 ```
 
 Maybe that plot comes out a bit pale looking when you print it. Here's how you can add a bit more contrast to the swatch:
 
 ```{r fig.width=7, fig.height=6, echo=TRUE}
-darken_swatch(themr, amount = 0.3)
+darken_swatch(amount = 0.3)
 example_plot
 ```
 
@@ -293,15 +293,10 @@ I'll add methods to darken/lighten the axes lines and text soon too.
 Plot Adjustments
 -------------------------
 
-Most of the time you'll probably just want to set the theme and not worry about it. There may be times though where you'll want to make some small adjustment, or manually change what items appear as what colour in a plot. `ggthemr()` will return the theme silently, so you can assign it to variable like this:
-
-```{r}
-themr <- ggthemr('dust')
-```
-
-Now you can edit the theme stored in *themr*. For example, here's a plot:
+Most of the time you'll probably just want to set the theme and not worry about it. There may be times though where you'll want to make some small adjustment, or manually change what items appear as what colour in a plot.
 
 ```{r fig.width=7, fig.height=6, echo=TRUE}
+ggthemr('dust')
 mpg_plot <- ggplot(mpg[mpg$drv != '4', ], aes(factor(cyl), cty, fill = drv)) + 
   geom_boxplot() + labs(x = 'Cylinders', y = 'City MPG', fill = 'Drive Type') +
   theme(legend.position = 'bottom')
@@ -309,16 +304,16 @@ mpg_plot
 ```
 
 
-For some reason you decide you want to change those colours. Front-wheel drive vehicles should be orange. Rear-wheelers should be that red colour. You could change the order of the levels of your fill variable, but you shouldn't have to do that. You just want to switch those colours but you have no idea what they are. `swatch()` will give you the colours in a ggthemr palette. 
+For some reason you decide you want to change those colours. Front-wheel drive vehicles should be orange. Rear-wheelers should be that red colour. You could change the order of the levels of your fill variable, but you shouldn't have to do that. You just want to switch those colours but you have no idea what they are. `swatch()` will give you the colours in the currently active ggthemr palette. 
 
 ```{r}
-swatch(themr)
+swatch()
 ```
 
 So you can manually swap the two colours around.
 
 ```{r fig.width=7, fig.height=6, echo=TRUE}
-to_swap <- swatch(themr)[2:3]
+to_swap <- swatch()[2:3]
 mpg_plot + scale_fill_manual(values = rev(to_swap))
 ```
 
