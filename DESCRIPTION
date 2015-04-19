@@ -1,7 +1,7 @@
 Package: ggthemr
 Title: Themes for ggplot2
 Description: Colour schemes and layouts for ggplot2.
-Version: 0.1
+Version: 1.0.0
 Author: Ciaran Tobin
 Depends:
     R (>= 3.0.0),
