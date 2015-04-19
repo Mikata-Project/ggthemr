@@ -62,21 +62,11 @@ There are a wide variety of themes in this package (and more on the way). Some o
 
 [Base 16](https://github.com/chriskempson/base16)
 
-  
-  ```
-  ## Error: No palette named 'flat'. Please choose one of dust, light, earth, fresh, chalk, lilac, carrot, pale, copper, grape, greyscale, sky, solarized, grass, sea, camoflauge.
-  ```
-  
   ![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5-1.png) 
 
 ### flat dark
 
 [Base 16](https://github.com/chriskempson/base16)
-  
-  
-  ```
-  ## Error: No palette named 'flat dark'. Please choose one of dust, light, earth, fresh, chalk, lilac, carrot, pale, copper, grape, greyscale, sky, solarized, grass, sea, camoflauge.
-  ```
   
   ![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6-1.png) 
 
