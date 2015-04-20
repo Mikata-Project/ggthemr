@@ -13,7 +13,7 @@ palettes <- lapply(
         '#f1c40f', '#e74c3c', 
         '#9b59b6', '#1abc9c',
         '#f39c12', '#d35400'), class = 'ggthemr_swatch'),
-      gradient = c(low = '#', high = '#')
+      gradient = c(low = '#f1c40f', high = '#c0392b')
     ),
     
     'flat dark' = list(
@@ -27,7 +27,7 @@ palettes <- lapply(
         '#f1c40f', '#e74c3c', 
         '#9b59b6', '#1abc9c',
         '#f39c12', '#d35400'), class = 'ggthemr_swatch'),
-      gradient = c(low = '#', high = '#')
+      gradient = c(low = '#f1c40f', high = '#c0392b')
     ),
     
     dust = list(
