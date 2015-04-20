@@ -3,7 +3,8 @@
 #' @author Ciaran Tobin
 #' @examples
 #' ggthemr()
-#' reverse_gradient(themr)
+#' reverse_gradient()
+#' @export
 reverse_gradient <- function() {
   themr <- get_themr()
   names(themr$palette$gradient) <- rev(names(themr$palette$gradient))

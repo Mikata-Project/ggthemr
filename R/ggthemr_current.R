@@ -31,6 +31,7 @@ get_themr <- function ()
 
 #' @title Set Current Theme
 #' @description Set the current ggthemr theme.
+#' @param value ggthemr object.
 set_themr <- function (value) 
   ggthemr_current$set(value)
 

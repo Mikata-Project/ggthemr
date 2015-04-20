@@ -14,7 +14,7 @@
 #'   geom_boxplot(fill = colorem, outlier.colour = colorem)
 random_swatch_colour <- function (limit = 4L) {
   
-  sw <- swatch(x)[-1L]
+  sw <- swatch()[-1L]
   
   if (limit < 0)
     stop('"limit" must be positive or zero.', call. = FALSE)

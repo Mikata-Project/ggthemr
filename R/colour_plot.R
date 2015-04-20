@@ -4,7 +4,7 @@
 #' @export
 #' @author Ciaran Tobin
 #' @examples  
-#' colour_plot(c('#de6757', 'pink'))
+#' colour_plot(c('#14B294', 'coral'))
 #' colour_plot(ggthemr('sea'))
 #' @rdname colour_plot
 #' @export colour_plot
@@ -15,26 +15,26 @@ colour_plot <- function(x, ...)
 #' @rdname colour_plot
 #' @method colour_plot character
 #' @S3method colour_plot character
-colour_plot.character <- function(x) 
+colour_plot.character <- function(x)
   plot_colours(x)
 
 
 #' @rdname colour_plot
 #' @method colour_plot ggthemr
 #' @S3method colour_plot ggthemr
-colour_plot.ggthemr <- function(x) 
-  plot_colours(unclass(swatch(x)), x$palette$background)
+colour_plot.ggthemr <- function(x)
+  plot_colours(unclass(x$palette$swatch), x$palette$background)
 
 
 #' @rdname colour_plot
 #' @method colour_plot ggthemr_palette
 #' @S3method colour_plot ggthemr_palette
-colour_plot.ggthemr_palette <- function(x) 
-  plot_colours(unclass(swatch(x)), x$background)
+colour_plot.ggthemr_palette <- function(x)
+  plot_colours(unclass(x$swatch, x$background))
 
 
 #' @rdname colour_plot
 #' @method colour_plot ggthemr_swatch
 #' @S3method colour_plot ggthemr_swatch
-colour_plot.ggthemr_swatch <- function(x) 
+colour_plot.ggthemr_swatch <- function(x)
   plot_colours(unclass(x))

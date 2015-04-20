@@ -1,15 +1,15 @@
-validate_contrast <- function(amount)
+validate_contrast <- function (amount)
   if (amount < 0 | amount > 1) stop('"amount" must be between 0 and 1.', call. = FALSE)
 
 #' @title Make ggthemr swatch darker
 #' @description Update a ggthemr swatch so that colours are darker by some specified amount. 
-#' @param amount value between 0 and 1 indicating by how much the swatch colours should be darker/lighter.
+#' @param amount value between 0 and 1 indicating by how much the colours should be darker/lighter.
 #' @examples
 #' ggthemr('dust')
-#' darken_swatch(themr, 0.2)
+#' darken_swatch(0.2)
 #' @author Ciaran Tobin
 #' @export
-darken_swatch <- function(amount) {
+darken_swatch <- function (amount) {
   validate_contrast(amount)
   swatch_contrast(-amount)
 }
@@ -20,10 +20,10 @@ darken_swatch <- function(amount) {
 #' @inheritParams darken_swatch
 #' @examples
 #' ggthemr('dust')
-#' lighten_swatch(themr, 0.2)
+#' lighten_swatch(0.2)
 #' @author Ciaran Tobin
 #' @export
-lighten_swatch <- function(amount) {
+lighten_swatch <- function (amount) {
   validate_contrast(amount)
   swatch_contrast(amount)  
 }
@@ -37,7 +37,7 @@ lighten_swatch <- function(amount) {
 #' darken_gradient(0.2)
 #' @author Ciaran Tobin
 #' @export
-darken_gradient <- function(amount) {
+darken_gradient <- function (amount) {
   validate_contrast(amount)
   gradient_contrast(-amount)
 }
@@ -47,22 +47,23 @@ darken_gradient <- function(amount) {
 #' @inheritParams darken_swatch
 #' @examples
 #' ggthemr('dust')
-#' lighten_gradient(themr, 0.2)
+#' lighten_gradient(0.2)
 #' @author Ciaran Tobin
 #' @export
-lighten_gradient <- function(amount) {
+lighten_gradient <- function (amount) {
   validate_contrast(amount)
   gradient_contrast(amount)  
 }
 
 #' @title Make ggthemr palette darker
 #' @description Update a ggthemr palette so that colours are darker by some specified amount. This includes everything (background, axes lines, swatch colours, gradient etc.).
+#' @inheritParams darken_swatch
 #' @examples
 #' ggthemr('dust')
-#' darken_palette(themr, 0.2)
+#' darken_palette(0.2)
 #' @author Ciaran Tobin
 #' @export
-darken_palette <- function(amount) {
+darken_palette <- function (amount) {
   validate_contrast(amount)
   palette_contrast(-amount)
 }
@@ -72,19 +73,19 @@ darken_palette <- function(amount) {
 #' @inheritParams darken_swatch
 #' @examples
 #' ggthemr('dust')
-#' lighten_palette(themr, 0.2)
+#' lighten_palette(0.2)
 #' @author Ciaran Tobin
 #' @export
-lighten_palette <- function(amount) {
+lighten_palette <- function (amount) {
   validate_contrast(amount)
   palette_contrast(amount)  
 }
 
 
-swatch_contrast <- function(amount)  
+swatch_contrast <- function (amount)  
   set_swatch(colour_contrast(swatch(), amount))
 
-palette_contrast <- function(amount) {
+palette_contrast <- function (amount) {
   themr <- get_themr()
   palette <- themr$palette
   palette$swatch <- colour_contrast(palette$swatch, amount)
@@ -98,7 +99,7 @@ palette_contrast <- function(amount) {
   rethemr()
 }
 
-gradient_contrast <- function(amount) {
+gradient_contrast <- function (amount) {
   themr <- get_themr()
   gradient <- themr$palette$gradient
   updated <- colour_contrast(gradient, amount)
@@ -107,7 +108,7 @@ gradient_contrast <- function(amount) {
   rethemr()
 }
 
-colour_contrast <- function(x, amount) {
+colour_contrast <- function (x, amount) {
   rgbed <- grDevices::col2rgb(x) / 255
   rgbed <- rgbed + amount
   over_range <- rgbed > 1
