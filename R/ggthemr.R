@@ -7,6 +7,7 @@
 #'  @param spacing A numeric value of how much space should exist on any given plot. Low values will result in more cramped plots, higher values will have more whitespace.
 #'  @param text_size base text size.
 #'  @param type Set to 'inner' where the background colour should not extend past strictly the plot area (or "panel" in ggplot2 terminology). 'outer' will apply the background colour to the entire plot.
+#'  @param line_weight The thickness of axes lines and gridlines. Useful for saving plots at different resolutions.
 #'  @export
 #'  @author Ciaran Tobin
 #'  @examples 
@@ -20,7 +21,7 @@ ggthemr <- function(palette = 'dust', layout = 'clear', spacing = 1.6, text_size
   if (spacing < 0)
     stop('Spacing factor must be positive.', call. = FALSE)
 
-  set_theme(palette, layout, spacing, text_size, type, line_weight, inner)
+  set_theme(palette, layout, spacing, text_size, type, line_weight)
   theme_scales(palette, line_weight)
   
   themr <- structure(list(

@@ -3,10 +3,11 @@ Title: Themes for ggplot2
 Description: Colour schemes and layouts for ggplot2.
 Version: 1.0.0
 Author: Ciaran Tobin
+Imports: gridExtra, scales
 Depends:
     R (>= 3.0.0),
     ggplot2,
     grid
-License: MIT License
+License: GPL-3
 LazyData: true
 Maintainer: 'Ciaran Tobin' <cttobin@hotmail.com>

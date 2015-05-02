@@ -1,21 +1,25 @@
 #' Create colour plot of ggthemr palette
-#' @param x ggthemr palette object.
-#' @method plot ggthemr_palette
+#' @param x ggthemr object.
+#' @param ... other arguments to plot() (these will be ignored).
+#' @method plot ggthemr
 #' @export
-plot.ggthemr <- function(x) 
+plot.ggthemr <- function (x, ...) 
   colour_plot(x)
 
 
 #' Create colour plot of ggthemr palette
 #' @param x ggthemr palette object.
+#' @param ... other arguments to plot() (these will be ignored).
 #' @method plot ggthemr_palette
 #' @export
-plot.ggthemr_palette <- function(x) 
+plot.ggthemr_palette <- function (x, ...) 
   colour_plot(x)
+
 
 #' Create colour plot of ggthemr swatch
 #' @param x ggthemr swatch object.
+#' @param ... other arguments to plot() (these will be ignored).
 #' @method plot ggthemr_swatch
 #' @export
-plot.ggthemr_swatch <- function(x)
+plot.ggthemr_swatch <- function (x, ...)
   colour_plot(x)

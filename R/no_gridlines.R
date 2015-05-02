@@ -34,28 +34,32 @@ no_y_gridlines <- function ()
 #' @describeIn no_y_gridlines
 no_horizontal_gridlines <- no_y_gridlines
 
-
+#' @title Remove major gridlines
 #' @export
 no_major_gridlines <- function () 
   theme(panel.grid.major = element_blank())
 
-
+#' @title Remove minor gridlines
 #' @export
 no_minor_gridlines <- function () 
   theme(panel.grid.minor = element_blank())
 
+#' @title Remove major x gridlines
 #' @export
 no_major_x_gridlines <- function () 
   theme(panel.grid.major.x = element_blank())
 
+#' @title Remove minor x gridlines
 #' @export
 no_minor_x_gridlines <- function () 
   theme(panel.grid.minor.x = element_blank())
 
+#' @title Remove major y gridlines
 #' @export
 no_major_y_gridlines <- function () 
   theme(panel.grid.major.y = element_blank())
 
+#' @title Remove minor y gridlines
 #' @export
 no_minor_y_gridlines <- function () 
   theme(panel.grid.minor.y = element_blank())

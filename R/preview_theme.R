@@ -1,3 +1,5 @@
+#' @importFrom gridExtra grid.arrange
+#' @importFrom grid textGrob gpar
 preview_theme  <- function(themr = NULL, save_to = NULL) {
   
   if (!exists(".Random.seed", mode="numeric"))
@@ -10,8 +12,9 @@ preview_theme  <- function(themr = NULL, save_to = NULL) {
   usage <- as.numeric(WWWusage)[data_subset]
   times <- (1:100)[data_subset]
   www <- data.frame(Users = usage, Minute = times, Measure = 'Actual')
-  www <- rbind(www, transform(www, Users = jitter(Users, factor = 500) / 2, Measure = 'Jitter'))
-  www_plot <- ggplot(www, aes(Minute, Users, colour = Measure, shape = Measure)) + 
+  www <- rbind(www, data.frame(Users = jitter(www$Users, factor = 500) / 2, Measure = 'Jitter'))
+  
+  www_plot <- ggplot(www, aes_string(x = 'Minute', y = 'Users', colour = 'Measure', shape = 'Measure')) + 
     geom_line() + 
     geom_point(size = 3L, colour = get_themr()$palette$background) + 
     geom_point(size = 1.8) +
@@ -24,10 +27,10 @@ preview_theme  <- function(themr = NULL, save_to = NULL) {
   display_theme <- list(theme(legend.position = 'none'), scale_y_continuous(label = function(x) format(x, big.mark = ",", scientific = FALSE)))
 
   display <- list(
-    ggplot(diamonds, aes(price, fill = factor(cut))) + geom_histogram(binwidth = 850) + display_theme + xlab('Price (USD)') + ylab('Count') + scale_x_continuous(label = function(x) paste0(x / 1000, 'k')),
+    ggplot(diamonds, aes_string(x = 'price', fill = factor('cut'))) + geom_histogram(binwidth = 850) + display_theme + xlab('Price (USD)') + ylab('Count') + scale_x_continuous(label = function(x) paste0(x / 1000, 'k')),
     www_plot,
-    ggplot(drivers, aes(Year, Deaths)) + geom_boxplot(size = 0.25) + ylab('Monthly Deaths')+ display_theme + driver_x,
-    ggplot(mtcars, aes(mpg, fill = factor(cyl), colour = factor(cyl))) + geom_density(alpha = 0.75) + labs(fill = 'Cylinders', colour = 'Cylinders', x = 'MPG', y = 'Density') 
+    ggplot(drivers, aes_string(x = 'Year', y = 'Deaths')) + geom_boxplot(size = 0.25) + ylab('Monthly Deaths')+ display_theme + driver_x,
+    ggplot(mtcars, aes_string(x = 'mpg', fill = factor('cyl'), colour = factor('cyl'))) + geom_density(alpha = 0.75) + labs(fill = 'Cylinders', colour = 'Cylinders', x = 'MPG', y = 'Density') 
   )
   
   if (!is.null(themr)) {
@@ -39,6 +42,6 @@ preview_theme  <- function(themr = NULL, save_to = NULL) {
   } 
   
   assign(".Random.seed", old_seed, envir=globalenv())
-  do.call(gridExtra::grid.arrange,  display)
+  do.call(grid.arrange,  display)
   
 }

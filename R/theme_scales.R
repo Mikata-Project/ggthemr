@@ -1,4 +1,4 @@
-# Needs some serious tidying.
+#' @importFrom scales seq_gradient_pal
 theme_scales <- function(palette, line_weight) {
   
   colours <- palette$swatch[-1]
@@ -24,10 +24,10 @@ theme_scales <- function(palette, line_weight) {
   assign('scale_fill_discrete', function(...) discrete_scale('fill', 'ggthemr', discrete_colours(colours), ...), envir=.GlobalEnv)
   
   # Continuous scales.
-  assign('scale_colour_continuous', function(...) continuous_scale('colour', 'ggthemr', scales::seq_gradient_pal(palette$gradient[['low']], palette$gradient[['high']]), ...), envir=.GlobalEnv)
-  assign('scale_fill_continuous', function(...) continuous_scale('fill', 'ggthemr', scales::seq_gradient_pal(palette$gradient[['low']], palette$gradient[['high']]), ...), envir=.GlobalEnv)
+  assign('scale_colour_continuous', function(...) continuous_scale('colour', 'ggthemr', seq_gradient_pal(palette$gradient[['low']], palette$gradient[['high']]), ...), envir=.GlobalEnv)
+  assign('scale_fill_continuous', function(...) continuous_scale('fill', 'ggthemr', seq_gradient_pal(palette$gradient[['low']], palette$gradient[['high']]), ...), envir=.GlobalEnv)
   
   # Gradient scales.
-  assign('scale_colour_gradient', function(...) continuous_scale('colour', 'ggthemr', scales::seq_gradient_pal(palette$gradient[['low']], palette$gradient[['high']]), ...), envir=.GlobalEnv)
-  assign('scale_fill_gradient', function(...) continuous_scale('fill', 'ggthemr', scales::seq_gradient_pal(palette$gradient[['low']], palette$gradient[['high']]), ...), envir=.GlobalEnv)
+  assign('scale_colour_gradient', function(...) continuous_scale('colour', 'ggthemr', seq_gradient_pal(palette$gradient[['low']], palette$gradient[['high']]), ...), envir=.GlobalEnv)
+  assign('scale_fill_gradient', function(...) continuous_scale('fill', 'ggthemr', seq_gradient_pal(palette$gradient[['low']], palette$gradient[['high']]), ...), envir=.GlobalEnv)
 }

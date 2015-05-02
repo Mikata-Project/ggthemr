@@ -4,10 +4,12 @@
 \alias{plot.ggthemr}
 \title{Create colour plot of ggthemr palette}
 \usage{
-\method{plot}{ggthemr_palette}(x)
+\method{plot}{ggthemr}(x, ...)
 }
 \arguments{
-\item{x}{ggthemr palette object.}
+\item{x}{ggthemr object.}
+
+\item{...}{other arguments to plot() (these will be ignored).}
 }
 \description{
 Create colour plot of ggthemr palette

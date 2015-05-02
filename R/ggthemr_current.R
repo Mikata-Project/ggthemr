@@ -35,8 +35,7 @@ get_themr <- function ()
 set_themr <- function (value) 
   ggthemr_current$set(value)
 
-#' @export
-ggthemr_active <- function () 
+is_ggthemr_active <- function () 
   ggthemr_current$is_set()
 
 clear_themr <- function () 

@@ -8,7 +8,7 @@
 \alias{colour_plot.ggthemr_swatch}
 \title{Plot colours}
 \usage{
-colour_plot(x, ...)
+colour_plot(x)
 
 \method{colour_plot}{character}(x)
 

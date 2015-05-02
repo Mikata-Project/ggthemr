@@ -6,6 +6,9 @@
 \usage{
 rotate_y_text(angle)
 }
+\arguments{
+\item{angle}{The angle of rotation.}
+}
 \description{
 Rotate the x-axis labels/text by a given angle.
 }

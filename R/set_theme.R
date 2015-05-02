@@ -1,4 +1,4 @@
-set_theme <- function (palette, layout, spacing, text_size, type, line_weight, inner) {
+set_theme <- function (palette, layout, spacing, text_size, type, line_weight) {
   
   inner <- type == 'inner'
   text_colour <- palette$text[[match.arg(type, names(palette$text))]]
