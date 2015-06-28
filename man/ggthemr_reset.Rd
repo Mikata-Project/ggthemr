@@ -10,6 +10,6 @@ ggthemr_reset()
 Remove ggthemr theme and restore the ggplot2 default.
 }
 \author{
-Kohske Takahashi, Ciaran Tobin
+Ciaran Tobin
 }
 

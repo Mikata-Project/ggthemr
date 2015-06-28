@@ -11,7 +11,7 @@ set_theme <- function (palette, layout, spacing, text_size, type, line_weight) {
   y_title_spacing <- function(spacing) 
     max(0.8, min(2.4, spacing))
     
-  ggplot2::theme_set(theme(
+  theme_set(theme(
     line = element_line(
       colour = line_colour, 
       size = line_weight, 

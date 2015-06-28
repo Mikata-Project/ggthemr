@@ -7,7 +7,8 @@
 \title{Style ggplot2}
 \usage{
 ggthemr(palette = "dust", layout = "clear", spacing = 1.6,
-  text_size = 12, type = "inner", line_weight = 0.5)
+  text_size = 12, type = "inner", line_weight = 0.5, pos = 1,
+  envir = as.environment(pos))
 }
 \arguments{
 \item{palette}{Colour scheme by name or ggtheme object.}
@@ -21,6 +22,10 @@ ggthemr(palette = "dust", layout = "clear", spacing = 1.6,
 \item{type}{Set to 'inner' where the background colour should not extend past strictly the plot area (or "panel" in ggplot2 terminology). 'outer' will apply the background colour to the entire plot.}
 
 \item{line_weight}{The thickness of axes lines and gridlines. Useful for saving plots at different resolutions.}
+
+\item{pos}{Where the new scales are stored.}
+
+\item{envir}{The environment where the new scales are stored.}
 }
 \description{
 ggthemr provides colour schemes and layouts for ggplot2.

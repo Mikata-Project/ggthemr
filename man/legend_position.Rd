@@ -17,8 +17,20 @@ legend_right()
 }
 \description{
 Move a ggplot2 legend to the bottom of the plot.
+
+Move a ggplot2 legend to the top of the plot.
+
+Move a ggplot2 legend to the left of the plot.
+
+Move a ggplot2 legend to the right of the plot.
 }
 \author{
+Ciaran Tobin
+
+Ciaran Tobin
+
+Ciaran Tobin
+
 Ciaran Tobin
 }
 
