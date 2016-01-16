@@ -121,6 +121,8 @@ set_theme <- function (palette, layout, spacing, text_size, type, line_weight) {
       angle = -90,
       face = 'bold',
       size = rel(1.1)), 
+    strip.switch.pad.grid = grid::unit(0, 'cm'),
+    strip.switch.pad.wrap = grid::unit(0, 'cm'),
     plot.background = element_rect(
       colour = ifelse(inner, 'white', palette$background),
       fill = ifelse(inner, 'white', palette$background)), 
