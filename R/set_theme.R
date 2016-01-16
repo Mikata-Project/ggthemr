@@ -106,6 +106,7 @@ set_theme <- function (palette, layout, spacing, text_size, type, line_weight) {
     panel.margin = grid::unit(0.5 * spacing, 'cm'), 
     panel.margin.x = NULL, 
     panel.margin.y = NULL, 
+    panel.ontop = FALSE,
     strip.background = element_rect(
       fill = ifelse(inner, 'white', palette$background), 
       colour = NA), 
