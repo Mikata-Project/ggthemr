@@ -23,6 +23,7 @@ set_theme <- function (palette, layout, spacing, text_size, type, line_weight) {
       size = 0.5, 
       linetype = 1), 
     text = element_text(
+      debug=FALSE,
       margin=margin(),
       family = '', 
       face = "plain", 
@@ -33,10 +34,12 @@ set_theme <- function (palette, layout, spacing, text_size, type, line_weight) {
       angle = 0, 
       lineheight = 0.9), 
     axis.text = element_text(
+      debug=FALSE,
       margin=margin(),
       size = rel(0.8), 
       colour = text_colour), 
     strip.text = element_text(
+      debug=FALSE,
       margin=margin(),
       size = rel(0.8)), 
     axis.line = element_line(
@@ -44,11 +47,13 @@ set_theme <- function (palette, layout, spacing, text_size, type, line_weight) {
     axis.line.x = layout$axis.line.x(colour = line_colour),
     axis.line.y = layout$axis.line.y(colour = line_colour),
     axis.text.x = element_text(
+      debug=FALSE,
       margin=margin(0.1 * spacing, 0.1 * spacing, 0.1 * spacing, 0.1 * spacing, unit = 'cm'),
       vjust = 1, 
       colour = text_colour, 
       face='bold'), 
     axis.text.y = element_text(
+      debug=FALSE,
       margin=margin(0.1 * spacing, 0.1 * spacing, 0.1 * spacing, 0.1 * spacing, unit = 'cm'),
       hjust = 1, 
       colour = text_colour, 
@@ -56,9 +61,11 @@ set_theme <- function (palette, layout, spacing, text_size, type, line_weight) {
     axis.ticks = layout$axis.ticks(colour = line_colour),
     axis.title = layout$axis.title(colour = text_colour),
     axis.title.x = element_text(
+      debug=FALSE,
       margin=margin(),
       vjust=x_title_spacing(spacing)), 
     axis.title.y = element_text(
+      debug=FALSE,
       margin=margin(),
       angle = 90, 
       vjust=y_title_spacing(spacing)), 
@@ -75,10 +82,12 @@ set_theme <- function (palette, layout, spacing, text_size, type, line_weight) {
     legend.key.height = NULL,
     legend.key.width = NULL, 
     legend.text = element_text(
+      debug=FALSE,
       margin=margin(),
       size = rel(0.8)), 
     legend.text.align = NULL, 
     legend.title = element_text(
+      debug=FALSE,
       margin=margin(),
       size = rel(0.8), 
       face = "bold", 
@@ -102,10 +111,12 @@ set_theme <- function (palette, layout, spacing, text_size, type, line_weight) {
       colour = NA), 
     strip.text = layout$strip.text(colour=text_colour),
     strip.text.x = element_text(
+      debug=FALSE,
       margin=margin(),
       size = rel(1.1), 
       face = 'bold'), 
     strip.text.y = element_text(
+      debug=FALSE,
       margin=margin(),
       angle = -90,
       face = 'bold',
@@ -114,6 +125,7 @@ set_theme <- function (palette, layout, spacing, text_size, type, line_weight) {
       colour = ifelse(inner, 'white', palette$background),
       fill = ifelse(inner, 'white', palette$background)), 
     plot.title = element_text(
+      debug=FALSE,
       margin=margin(),
       size = rel(1.2), 
       vjust = spacing + 0.2, 
