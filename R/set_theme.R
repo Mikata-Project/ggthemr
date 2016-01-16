@@ -41,10 +41,12 @@ set_theme <- function (palette, layout, spacing, text_size, type, line_weight) {
     axis.line.x = layout$axis.line.x(colour = line_colour),
     axis.line.y = layout$axis.line.y(colour = line_colour),
     axis.text.x = element_text(
+      margin=margin(0.1 * spacing, 0.1 * spacing, 0.1 * spacing, 0.1 * spacing, unit = 'cm'),
       vjust = 1, 
       colour = text_colour, 
       face='bold'), 
     axis.text.y = element_text(
+      margin=margin(0.1 * spacing, 0.1 * spacing, 0.1 * spacing, 0.1 * spacing, unit = 'cm'),
       hjust = 1, 
       colour = text_colour, 
       face='bold'), 
@@ -56,7 +58,6 @@ set_theme <- function (palette, layout, spacing, text_size, type, line_weight) {
       angle = 90, 
       vjust=y_title_spacing(spacing)), 
     axis.ticks.length = grid::unit(0.15, "cm"), 
-    axis.ticks.margin = grid::unit(0.1 * spacing, 'cm'), 
     legend.background = element_rect(
       colour = ifelse(inner, 'white', palette$background),
       fill = ifelse(inner, 'white', palette$background)), 
