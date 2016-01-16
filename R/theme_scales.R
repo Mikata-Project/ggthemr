@@ -7,12 +7,12 @@ theme_scales <- function(palette, line_weight, pos, envir) {
     for (geom in geoms) update_geom_defaults(geom, parameters)
   
   # Geoms that only require a default colour.
-  updateGeoms(c('abline', 'jitter', 'point', 'density', 'errorbar', 'errorbarh', 'freqpoly', 'hline', 'line'), list(colour = colours[1]))
+  updateGeoms(c('abline', 'point', 'density', 'errorbar', 'errorbarh', 'hline', 'line'), list(colour = colours[1]))
   
   update_geom_defaults('text', list(colour = palette$swatch[1]))
     
   # Geoms that only require a default fill.
-  updateGeoms(c('area', 'bar', 'histogram', 'dotplot'), list(fill = colours[1]))
+  updateGeoms(c('area', 'bar', 'dotplot'), list(fill = colours[1]))
   
   # Special geoms.
   update_geom_defaults('boxplot', list(colour = palette$swatch[1], fill = colours[1], outlier.colour = palette$swatch[1], size = line_weight))
