@@ -20,7 +20,7 @@ This package is still under development and isn't too stable yet, but can be ins
 
 
 ```r
-devtools::install_github('ggthemr', 'cttobin')
+devtools::install_github('cttobin/ggthemr')
 ```
 
 Usage
