@@ -1,0 +1,11 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+.Rhistory
+.gitignore
+.git
+^\.travis\.yml$
+^README\.Rmd$
+^README-.*\.png$
+^cran-comments\.md$
+^appveyor\.yml$
+^NEWS\.md$
