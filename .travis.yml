@@ -1,0 +1,15 @@
+language: R
+r: release
+cache: packages
+
+warnings_are_errors: true
+
+r_packages:
+  - rmarkdown
+  - ggplot2
+
+r_github_packages:
+  - jimhester/covr
+
+after_success:
+  - Rscript -e 'covr::codecov()'
