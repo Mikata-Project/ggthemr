@@ -9,5 +9,4 @@
 ^README-.*\.png$
 ^cran-comments\.md$
 ^appveyor\.yml$
-^NEWS\.md$
 ^scripts/*
