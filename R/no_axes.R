@@ -32,6 +32,7 @@ no_y_axis <- function ()
 
 
 #' @title Remove ggplot2 x-axis line
+#' @description Do not show x-axis line
 #' @author Ciaran Tobin
 #' @seealso \code{\link{no_y_line}}
 #' @export
@@ -40,6 +41,7 @@ no_x_line <- function ()
 
 
 #' @title Remove ggplot2 y-axis line
+#' @description Do not show y-axis line
 #' @author Ciaran Tobin
 #' @seealso \code{\link{no_x_line}}
 #' @export
@@ -48,6 +50,7 @@ no_y_line <- function ()
 
 
 #' @title Remove ggplot2 x-axis text/labels
+#' @description Do not show x-axis text/labels
 #' @author Ciaran Tobin
 #' @seealso \code{\link{no_y_text}}
 #' @export
@@ -56,6 +59,7 @@ no_x_text <- function ()
 
 
 #' @title Remove ggplot2 y-axis text/labels
+#' @description Do not show y-axis text/labels
 #' @author Ciaran Tobin
 #' @seealso \code{\link{no_x_text}}
 #' @export
@@ -64,6 +68,7 @@ no_y_text <- function ()
 
 
 #' @title Remove ggplot2 tick marks
+#' @description Do not show tick marks for all axes
 #' @author Ciaran Tobin
 #' @seealso \code{\link{no_x_ticks}}, \code{\link{no_y_ticks}}
 #' @export
@@ -72,6 +77,7 @@ no_ticks <- function ()
 
 
 #' @title Remove ggplot2 x-axis tick marks
+#' @description Do not show tick marks for x-axis
 #' @author Ciaran Tobin
 #' @seealso \code{\link{no_ticks}}, \code{\link{no_y_ticks}}
 #' @export
@@ -80,6 +86,7 @@ no_x_ticks <- function ()
 
 
 #' @title Remove ggplot2 y-axis tick marks
+#' @description Do not show tick marks for y-axis
 #' @author Ciaran Tobin
 #' @seealso \code{\link{no_ticks}}, \code{\link{no_x_ticks}}
 #' @export
@@ -88,6 +95,7 @@ no_y_ticks <- function ()
 
 
 #' @title Remove ggplot2 axes titles
+#' @description Do not show titles for all axes
 #' @author Ciaran Tobin
 #' @seealso \code{\link{no_x_title}}, \code{\link{no_y_title}}
 #' @export
@@ -96,6 +104,7 @@ no_axes_titles <- function ()
 
 
 #' @title Remove ggplot2 x-axis titles
+#' @description Do not show x-axis title
 #' @author Ciaran Tobin
 #' @seealso \code{\link{no_axes_titles}}, \code{\link{no_y_title}}
 #' @export
@@ -104,6 +113,7 @@ no_x_title <- function ()
 
 
 #' @title Remove ggplot2 y-axis titles
+#' @description Do not show y-axis title
 #' @author Ciaran Tobin
 #' @seealso \code{\link{no_axes_titles}}, \code{\link{no_x_title}}
 #' @export
