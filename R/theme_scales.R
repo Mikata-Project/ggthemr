@@ -15,7 +15,7 @@ theme_scales <- function(palette, line_weight, pos, envir) {
   updateGeoms(c('area', 'bar', 'dotplot'), list(fill = colours[1]))
   
   # Special geoms.
-  update_geom_defaults('boxplot', list(colour = palette$swatch[1], fill = colours[1], outlier.colour = palette$swatch[1], size = line_weight))
+  update_geom_defaults('boxplot', list(colour = palette$swatch[1], fill = colours[1], size = line_weight)) #, outlier.colour = palette$swatch[1]
   update_geom_defaults('smooth', list(colour = colours[2], fill = colours[2]))
   update_geom_defaults('dotplot', list(colour = colours[1], fill = colours[1]))
   
