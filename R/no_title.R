@@ -1,4 +1,5 @@
 #' @title Remove ggplot2 title
+#' @description Remove the plot title
 #' @export
 #' @author Ciaran Tobin
 no_title <- function () 
