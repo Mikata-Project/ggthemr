@@ -1,0 +1,396 @@
+Updating ggthemr documentation
+Loading ggthemr
+Writing NAMESPACE
+Warning: @inheritParams: can't find topic rotate_x_labels
+Writing align_title_left.Rd
+Writing align_title_right.Rd
+Writing darken_swatch.Rd
+Writing lighten_swatch.Rd
+Writing darken_gradient.Rd
+Writing lighten_gradient.Rd
+Writing darken_palette.Rd
+Writing lighten_palette.Rd
+Writing colour_plot.Rd
+Writing define_palette.Rd
+Writing ggthemr.Rd
+Writing ggthemr_current.Rd
+Writing get_themr.Rd
+Writing set_themr.Rd
+Writing ggthemr_reset.Rd
+Writing is_colour.Rd
+Writing is_ggthemr.Rd
+Writing move_legend.Rd
+Writing legend_position.Rd
+Writing no_axes.Rd
+Writing no_x_axis.Rd
+Writing no_y_axis.Rd
+Writing no_x_line.Rd
+Writing no_y_line.Rd
+Writing no_x_text.Rd
+Writing no_y_text.Rd
+Writing no_ticks.Rd
+Writing no_x_ticks.Rd
+Writing no_y_ticks.Rd
+Writing no_axes_titles.Rd
+Writing no_x_title.Rd
+Writing no_y_title.Rd
+Writing no_gridlines.Rd
+Writing no_x_gridlines.Rd
+Writing no_y_gridlines.Rd
+Writing no_legend.Rd
+Writing no_legend_title.Rd
+Writing no_title.Rd
+Writing plot.ggthemr.Rd
+Writing plot.ggthemr_palette.Rd
+Writing plot.ggthemr_swatch.Rd
+Writing random_swatch_colour.Rd
+Writing reverse_gradient.Rd
+Writing rotate_axes_text.Rd
+Writing rotate_x_text.Rd
+Writing rotate_y_text.Rd
+Writing set_swatch.Rd
+Writing shuffle_swatch.Rd
+Writing swatch.Rd
+'/Library/Frameworks/R.framework/Resources/bin/R' --vanilla CMD build '/Users/tobin/Documents/ggthemr'  \
+  --no-manual --no-resave-data 
+
+* checking for file ‘/Users/tobin/Documents/ggthemr/DESCRIPTION’ ... OK
+* preparing ‘ggthemr’:
+* checking DESCRIPTION meta-information ... OK
+* checking for LF line-endings in source and make files
+* checking for empty or unneeded directories
+* building ‘ggthemr_1.0.0.tar.gz’
+
+pdflatex not found! Not building PDF manual or vignettes.
+If you are planning to release this package, please run a check with manual and vignettes beforehand.
+
+'/Library/Frameworks/R.framework/Resources/bin/R' --vanilla CMD check  \
+  '/var/folders/j9/br0cs2nn5mbgq8n1j22hqrc80000gn/T//RtmpPN6yJn/ggthemr_1.0.0.tar.gz' --timings  \
+  --no-build-vignettes --no-manual 
+
+* using log directory ‘/private/var/folders/j9/br0cs2nn5mbgq8n1j22hqrc80000gn/T/RtmpPN6yJn/ggthemr.Rcheck’
+* using R version 3.1.2 (2014-10-31)
+* using platform: x86_64-apple-darwin13.4.0 (64-bit)
+* using session charset: UTF-8
+* using option ‘--no-build-vignettes’
+* checking for file ‘ggthemr/DESCRIPTION’ ... OK
+* this is package ‘ggthemr’ version ‘1.0.0’
+* checking package namespace information ... OK
+* checking package dependencies ... OK
+* checking if this is a source package ... OK
+* checking if there is a namespace ... OK
+* checking for executable files ... OK
+* checking for hidden files and directories ... OK
+* checking for portable file names ... OK
+* checking for sufficient/correct file permissions ... OK
+* checking whether package ‘ggthemr’ can be installed ... OK
+* checking installed package size ... OK
+* checking package directory ... OK
+* checking DESCRIPTION meta-information ... NOTE
+License components which are templates and need '+ file LICENSE':
+  MIT License
+* checking top-level files ... NOTE
+Non-standard files/directories found at top level:
+  ‘README.Rmd’ ‘README.html’ ‘figure’ ‘misc’
+* checking for left-over files ... OK
+* checking index information ... OK
+* checking package subdirectories ... OK
+* checking R files for non-ASCII characters ... OK
+* checking R files for syntax errors ... OK
+* checking whether the package can be loaded ... OK
+* checking whether the package can be loaded with stated dependencies ... OK
+* checking whether the package can be unloaded cleanly ... OK
+* checking whether the namespace can be loaded with stated dependencies ... OK
+* checking whether the namespace can be unloaded cleanly ... OK
+* checking dependencies in R code ... WARNING
+'::' or ':::' imports not declared from:
+  ‘gridExtra’ ‘scales’
+'library' or 'require' call to ‘ggplot2’ which was already attached by Depends.
+  Please remove these calls from your code.
+Packages in Depends field not imported from:
+  ‘ggplot2’ ‘grid’
+  These packages need to be imported from (in the NAMESPACE file)
+  for when this namespace is loaded but not attached.
+See the information on DESCRIPTION files in the chapter ‘Creating R
+packages’ of the ‘Writing R Extensions’ manual.
+* checking S3 generic/method consistency ... WARNING
+colour_plot:
+  function(x, ...)
+colour_plot.character:
+  function(x)
+
+colour_plot:
+  function(x, ...)
+colour_plot.ggthemr:
+  function(x)
+
+colour_plot:
+  function(x, ...)
+colour_plot.ggthemr_palette:
+  function(x)
+
+colour_plot:
+  function(x, ...)
+colour_plot.ggthemr_swatch:
+  function(x)
+
+plot:
+  function(x, ...)
+plot.ggthemr_palette:
+  function(x)
+
+plot:
+  function(x, ...)
+plot.ggthemr_swatch:
+  function(x)
+
+See section ‘Generic functions and methods’ of the ‘Writing R
+Extensions’ manual.
+* checking replacement functions ... OK
+* checking foreign function calls ... OK
+* checking R code for possible problems ... NOTE
+align_title_left: no visible global function definition for ‘theme’
+align_title_left: no visible global function definition for
+  ‘element_text’
+align_title_right: no visible global function definition for ‘theme’
+align_title_right: no visible global function definition for
+  ‘element_text’
+colour_plot.ggthemr: possible error in swatch(x): unused argument (x)
+colour_plot.ggthemr_palette: possible error in swatch(x): unused
+  argument (x)
+ggthemr: no visible binding for global variable ‘inner’
+move_legend: no visible global function definition for ‘theme’
+no_axes: no visible global function definition for ‘theme’
+no_axes: no visible global function definition for ‘element_blank’
+no_axes_titles: no visible global function definition for ‘theme’
+no_axes_titles: no visible global function definition for
+  ‘element_blank’
+no_gridlines: no visible global function definition for ‘theme’
+no_gridlines: no visible global function definition for ‘element_blank’
+no_horizontal_gridlines: no visible global function definition for
+  ‘theme’
+no_horizontal_gridlines: no visible global function definition for
+  ‘element_blank’
+no_legend_title: no visible global function definition for ‘theme’
+no_legend_title: no visible global function definition for
+  ‘element_blank’
+no_major_gridlines: no visible global function definition for ‘theme’
+no_major_gridlines: no visible global function definition for
+  ‘element_blank’
+no_major_x_gridlines: no visible global function definition for ‘theme’
+no_major_x_gridlines: no visible global function definition for
+  ‘element_blank’
+no_major_y_gridlines: no visible global function definition for ‘theme’
+no_major_y_gridlines: no visible global function definition for
+  ‘element_blank’
+no_minor_gridlines: no visible global function definition for ‘theme’
+no_minor_gridlines: no visible global function definition for
+  ‘element_blank’
+no_minor_x_gridlines: no visible global function definition for ‘theme’
+no_minor_x_gridlines: no visible global function definition for
+  ‘element_blank’
+no_minor_y_gridlines: no visible global function definition for ‘theme’
+no_minor_y_gridlines: no visible global function definition for
+  ‘element_blank’
+no_ticks: no visible global function definition for ‘theme’
+no_ticks: no visible global function definition for ‘element_blank’
+no_title: no visible global function definition for ‘theme’
+no_title: no visible global function definition for ‘element_text’
+no_vertical_gridlines: no visible global function definition for
+  ‘theme’
+no_vertical_gridlines: no visible global function definition for
+  ‘element_blank’
+no_x_axis: no visible global function definition for ‘theme’
+no_x_axis: no visible global function definition for ‘element_blank’
+no_x_gridlines: no visible global function definition for ‘theme’
+no_x_gridlines: no visible global function definition for
+  ‘element_blank’
+no_x_line: no visible global function definition for ‘theme’
+no_x_line: no visible global function definition for ‘element_blank’
+no_x_text: no visible global function definition for ‘theme’
+no_x_text: no visible global function definition for ‘element_blank’
+no_x_ticks: no visible global function definition for ‘theme’
+no_x_ticks: no visible global function definition for ‘element_blank’
+no_x_title: no visible global function definition for ‘theme’
+no_x_title: no visible global function definition for ‘element_blank’
+no_y_axis: no visible global function definition for ‘theme’
+no_y_axis: no visible global function definition for ‘element_blank’
+no_y_gridlines: no visible global function definition for ‘theme’
+no_y_gridlines: no visible global function definition for
+  ‘element_blank’
+no_y_line: no visible global function definition for ‘theme’
+no_y_line: no visible global function definition for ‘element_blank’
+no_y_text: no visible global function definition for ‘theme’
+no_y_text: no visible global function definition for ‘element_blank’
+no_y_ticks: no visible global function definition for ‘theme’
+no_y_ticks: no visible global function definition for ‘element_blank’
+no_y_title: no visible global function definition for ‘theme’
+no_y_title: no visible global function definition for ‘element_blank’
+plot_colours: no visible global function definition for ‘ggplot’
+plot_colours: no visible global function definition for ‘aes’
+plot_colours: no visible binding for global variable ‘Colours’
+plot_colours: no visible global function definition for ‘geom_tile’
+plot_colours: no visible global function definition for
+  ‘scale_fill_manual’
+plot_colours: no visible global function definition for ‘geom_text’
+plot_colours: no visible global function definition for ‘theme’
+plot_colours: no visible global function definition for ‘element_blank’
+plot_colours: no visible global function definition for ‘element_rect’
+preview_layout: no visible global function definition for ‘ggplot’
+preview_layout: no visible global function definition for ‘aes’
+preview_layout: no visible binding for global variable ‘x’
+preview_layout: no visible binding for global variable ‘y’
+preview_layout: no visible global function definition for ‘geom_blank’
+preview_layout: no visible global function definition for
+  ‘scale_y_continuous’
+preview_layout: no visible global function definition for ‘labs’
+preview_theme: no visible binding for global variable ‘Users’
+preview_theme: no visible global function definition for ‘ggplot’
+preview_theme: no visible global function definition for ‘aes’
+preview_theme: no visible binding for global variable ‘Minute’
+preview_theme: no visible binding for global variable ‘Measure’
+preview_theme: no visible global function definition for ‘geom_line’
+preview_theme: no visible global function definition for ‘geom_point’
+preview_theme: no visible global function definition for
+  ‘scale_shape_manual’
+preview_theme: no visible global function definition for
+  ‘scale_x_discrete’
+preview_theme: no visible global function definition for ‘theme’
+preview_theme: no visible global function definition for
+  ‘scale_y_continuous’
+preview_theme: no visible binding for global variable ‘diamonds’
+preview_theme: no visible binding for global variable ‘price’
+preview_theme: no visible global function definition for
+  ‘geom_histogram’
+preview_theme: no visible global function definition for ‘xlab’
+preview_theme: no visible global function definition for ‘ylab’
+preview_theme: no visible global function definition for
+  ‘scale_x_continuous’
+preview_theme: no visible binding for global variable ‘Year’
+preview_theme: no visible binding for global variable ‘Deaths’
+preview_theme: no visible global function definition for ‘geom_boxplot’
+preview_theme: no visible binding for global variable ‘mpg’
+preview_theme: no visible binding for global variable ‘cyl’
+preview_theme: no visible global function definition for ‘geom_density’
+preview_theme: no visible global function definition for ‘labs’
+preview_theme: no visible global function definition for ‘textGrob’
+preview_theme: no visible global function definition for ‘gpar’
+random_swatch_colour: possible error in swatch(x): unused argument (x)
+random_swatch_colour: no visible binding for global variable ‘x’
+rotate_axes_text: no visible global function definition for ‘theme’
+rotate_axes_text: no visible global function definition for
+  ‘element_text’
+rotate_x_text: no visible global function definition for ‘theme’
+rotate_x_text: no visible global function definition for ‘element_text’
+rotate_y_text: no visible global function definition for ‘theme’
+rotate_y_text: no visible global function definition for ‘element_text’
+set_theme: no visible global function definition for ‘theme’
+set_theme: no visible global function definition for ‘element_line’
+set_theme: no visible global function definition for ‘element_rect’
+set_theme: no visible global function definition for ‘element_text’
+set_theme: no visible global function definition for ‘rel’
+set_theme: no visible global function definition for ‘element_blank’
+theme_scales : updateGeoms: no visible global function definition for
+  ‘update_geom_defaults’
+theme_scales: no visible global function definition for
+  ‘update_geom_defaults’
+theme_scales : <anonymous>: no visible global function definition for
+  ‘discrete_scale’
+theme_scales : <anonymous>: no visible global function definition for
+  ‘continuous_scale’
+
+Found the following assignments to the global environment:
+File ‘ggthemr/R/theme_scales.R’:
+  assign("scale_colour_discrete", function(...) discrete_scale("colour", 
+    "ggthemr", discrete_colours(colours), ...), envir = .GlobalEnv)
+  assign("scale_fill_discrete", function(...) discrete_scale("fill", 
+    "ggthemr", discrete_colours(colours), ...), envir = .GlobalEnv)
+  assign("scale_colour_continuous", function(...) continuous_scale("colour", 
+    "ggthemr", scales::seq_gradient_pal(palette$gradient[["low"]], 
+        palette$gradient[["high"]]), ...), envir = .GlobalEnv)
+  assign("scale_fill_continuous", function(...) continuous_scale("fill", 
+    "ggthemr", scales::seq_gradient_pal(palette$gradient[["low"]], 
+        palette$gradient[["high"]]), ...), envir = .GlobalEnv)
+  assign("scale_colour_gradient", function(...) continuous_scale("colour", 
+    "ggthemr", scales::seq_gradient_pal(palette$gradient[["low"]], 
+        palette$gradient[["high"]]), ...), envir = .GlobalEnv)
+  assign("scale_fill_gradient", function(...) continuous_scale("fill", 
+    "ggthemr", scales::seq_gradient_pal(palette$gradient[["low"]], 
+        palette$gradient[["high"]]), ...), envir = .GlobalEnv)
+* checking Rd files ... OK
+* checking Rd metadata ... OK
+* checking Rd line widths ... OK
+* checking Rd cross-references ... OK
+* checking for missing documentation entries ... WARNING
+Undocumented code objects:
+  ‘ggthemr_active’ ‘no_major_gridlines’ ‘no_major_x_gridlines’
+  ‘no_major_y_gridlines’ ‘no_minor_gridlines’ ‘no_minor_x_gridlines’
+  ‘no_minor_y_gridlines’
+All user-level objects in a package should have documentation entries.
+See the chapter ‘Writing R documentation files’ in the ‘Writing R
+Extensions’ manual.
+* checking for code/documentation mismatches ... WARNING
+Functions or methods with usage in documentation object 'plot.ggthemr.swatch' but not in code:
+  plot.ggthemr.swatch
+
+* checking Rd \usage sections ... WARNING
+Undocumented arguments in documentation object 'colour_plot'
+  ‘...’
+
+Undocumented arguments in documentation object 'darken_palette'
+  ‘amount’
+
+Undocumented arguments in documentation object 'ggthemr'
+  ‘line_weight’
+
+Objects in \usage without \alias in documentation object 'plot.ggthemr':
+  ‘plot.ggthemr_palette’
+
+Undocumented arguments in documentation object 'rotate_y_text'
+  ‘angle’
+
+Undocumented arguments in documentation object 'set_swatch'
+  ‘swatch_colours’
+Documented arguments not in \usage in documentation object 'set_swatch':
+  ‘themr’ ‘new_swatch’
+
+Undocumented arguments in documentation object 'set_themr'
+  ‘value’
+
+Documented arguments not in \usage in documentation object 'swatch':
+  ‘x’
+
+Functions with \usage entries need to have the appropriate \alias
+entries, and all their arguments documented.
+The \usage entries must correspond to syntactically valid R code.
+See the chapter ‘Writing R documentation files’ in the ‘Writing R
+Extensions’ manual.
+* checking Rd contents ... OK
+* checking for unstated dependencies in examples ... OK
+* checking examples ... ERROR
+Running examples in ‘ggthemr-Ex.R’ failed
+The error most likely occurred in:
+
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: colour_plot
+> ### Title: Plot colours
+> ### Aliases: colour_plot colour_plot.character colour_plot.ggthemr
+> ###   colour_plot.ggthemr_palette colour_plot.ggthemr_swatch
+> 
+> ### ** Examples
+> 
+> colour_plot(c('#de6757', 'pink'))
+> colour_plot(ggthemr('sea'))
+Error in swatch(x) : unused argument (x)
+Calls: colour_plot -> colour_plot.ggthemr -> plot_colours -> swatch
+Execution halted
+Error: Command failed (1)
+In addition: Warning messages:
+1: @S3method is deprecated. Please use @export instead 
+2: @S3method is deprecated. Please use @export instead 
+3: @S3method is deprecated. Please use @export instead 
+4: @S3method is deprecated. Please use @export instead 
+5: @S3method is deprecated. Please use @export instead 
+6: @S3method is deprecated. Please use @export instead 
+7: @S3method is deprecated. Please use @export instead 
+8: @S3method is deprecated. Please use @export instead 

@@ -1,0 +1,1 @@
+cp -r NAMESPACE DESCRIPTION R man misc/pre-build
