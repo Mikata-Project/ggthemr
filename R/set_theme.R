@@ -129,9 +129,9 @@ set_theme <- function (palette, layout, spacing, text_size, type, line_weight) {
       fill = ifelse(inner, 'white', palette$background)), 
     plot.title = element_text(
       debug=FALSE,
-      margin=margin(),
-      size = rel(1.2), 
-      vjust = spacing + 0.2, 
+      margin=margin(0, 0, 6.6, 0),
+      size = rel(1.2),
+      vjust = spacing,
       face='bold'), 
     plot.margin = grid::unit(c(0.625, 0.625, 0.625, 0.625) * spacing, 'cm'), 
     complete = TRUE
