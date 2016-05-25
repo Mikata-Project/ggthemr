@@ -10,7 +10,8 @@
 # produced vignettes
 vignettes/*.html
 vignettes/*.pdf
-# misc
+misc/builds
+misc/pre-build
 .Rdata
 core
 inst/doc
