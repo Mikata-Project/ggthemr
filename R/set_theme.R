@@ -38,10 +38,6 @@ set_theme <- function (palette, layout, spacing, text_size, type, line_weight) {
       margin=margin(),
       size = rel(0.8), 
       colour = text_colour), 
-    strip.text = element_text(
-      debug=FALSE,
-      margin=margin(),
-      size = rel(0.8)), 
     axis.line = element_line(
       colour = line_colour),
     axis.line.x = layout$axis.line.x(colour = line_colour),
