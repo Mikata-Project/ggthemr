@@ -99,9 +99,9 @@ set_theme <- function (palette, layout, spacing, text_size, type, line_weight) {
     panel.border = element_blank(), 
     panel.grid.major = layout$panel.grid.major(colour = palette$gridline), 
     panel.grid.minor = layout$panel.grid.minor(colour = palette$gridline), 
-    panel.margin = grid::unit(0.5 * spacing, 'cm'), 
-    panel.margin.x = NULL, 
-    panel.margin.y = NULL, 
+    panel.spacing = grid::unit(0.5 * spacing, 'cm'), 
+    panel.spacing.x = NULL, 
+    panel.spacing.y = NULL, 
     panel.ontop = FALSE,
     strip.background = element_rect(
       fill = ifelse(inner, 'white', palette$background), 
