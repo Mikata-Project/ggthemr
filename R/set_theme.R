@@ -38,6 +38,8 @@ set_theme <- function (palette, layout, spacing, text_size, type, line_weight) {
       margin=margin(),
       size = rel(0.8), 
       colour = text_colour), 
+    axis.text.x.top = NULL,
+    axis.text.y.right = NULL,
     axis.line = element_line(
       colour = line_colour),
     axis.line.x = layout$axis.line.x(colour = line_colour),
@@ -59,20 +61,25 @@ set_theme <- function (palette, layout, spacing, text_size, type, line_weight) {
     axis.title.x = element_text(
       debug=FALSE,
       margin=margin(),
-      vjust=x_title_spacing(spacing)), 
+      vjust=x_title_spacing(spacing)),
+    axis.title.x.top = NULL,
     axis.title.y = element_text(
       debug=FALSE,
       margin=margin(),
       angle = 90, 
       vjust=y_title_spacing(spacing)), 
+    axis.title.y.right = NULL,
     axis.ticks.length = grid::unit(0.15, "cm"), 
     legend.background = element_rect(
       colour = ifelse(inner, 'white', palette$background),
       fill = ifelse(inner, 'white', palette$background)), 
+    legend.margin = NULL,
     legend.spacing = grid::unit(0.2 * spacing, "cm"), 
     legend.key = element_rect(
       colour = ifelse(inner, 'white', palette$background),
       fill = palette$background), 
+    legend.spacing.x = NULL,
+    legend.spacing.y = NULL,
     legend.key.size = grid::unit(
       1.2, "lines"), 
     legend.key.height = NULL,
@@ -93,6 +100,9 @@ set_theme <- function (palette, layout, spacing, text_size, type, line_weight) {
     legend.direction = NULL, 
     legend.justification = "center", 
     legend.box = NULL, 
+    legend.box.margin = NULL,
+    legend.box.background = NULL,
+    legend.box.spacing = NULL,
     panel.background = element_rect(
       fill = palette$background, 
       colour = NA), 
@@ -120,6 +130,7 @@ set_theme <- function (palette, layout, spacing, text_size, type, line_weight) {
       size = rel(1.1)), 
     strip.switch.pad.grid = grid::unit(0, 'cm'),
     strip.switch.pad.wrap = grid::unit(0, 'cm'),
+    strip.placement = NULL,
     plot.background = element_rect(
       colour = ifelse(inner, 'white', palette$background),
       fill = ifelse(inner, 'white', palette$background)), 
@@ -129,6 +140,8 @@ set_theme <- function (palette, layout, spacing, text_size, type, line_weight) {
       size = rel(1.2),
       vjust = spacing,
       face='bold'), 
+    plot.subtitle = NULL,
+    plot.caption = NULL,
     plot.margin = grid::unit(c(0.625, 0.625, 0.625, 0.625) * spacing, 'cm'), 
     complete = TRUE
   ))
