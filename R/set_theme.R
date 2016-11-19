@@ -69,7 +69,7 @@ set_theme <- function (palette, layout, spacing, text_size, type, line_weight) {
     legend.background = element_rect(
       colour = ifelse(inner, 'white', palette$background),
       fill = ifelse(inner, 'white', palette$background)), 
-    legend.margin = grid::unit(0.2 * spacing, "cm"), 
+    legend.spacing = grid::unit(0.2 * spacing, "cm"), 
     legend.key = element_rect(
       colour = ifelse(inner, 'white', palette$background),
       fill = palette$background), 
