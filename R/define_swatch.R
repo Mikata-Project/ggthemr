@@ -1,3 +1,7 @@
+#' @title Create a ggthemr_swatch object
+#' @description Given a vectors of colors, checks will be carried out to make sure colours are not duplicated and are valid. See \code{\link{define_palette}} for more details.
+#' @param x Vector of colours
+#' @return Object of type ggthemr_swatch
 define_swatch <- function(x) {
   n <- length(x)
   if (n < 1) 
@@ -11,3 +15,7 @@ define_swatch <- function(x) {
     stop('Duplicate colours in swatch.', call. = FALSE)
   structure(x, class = 'ggthemr_swatch')
 }
+
+#' @export
+#' @rdname define_swatch
+ggthemr_swatch <- define_swatch
