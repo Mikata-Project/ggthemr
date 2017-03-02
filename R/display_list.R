@@ -1,4 +1,4 @@
-
+#' @importFrom utils head
 display_list <- function(x, last = 'and') {
   n <- length(x)
   if (n == 1) return (x)

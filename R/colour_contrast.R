@@ -108,6 +108,7 @@ gradient_contrast <- function (amount) {
   rethemr()
 }
 
+#' @importFrom grDevices rgb
 colour_contrast <- function (x, amount) {
   rgbed <- grDevices::col2rgb(x) / 255
   rgbed <- rgbed + amount

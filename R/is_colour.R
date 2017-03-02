@@ -15,8 +15,8 @@ is_colour <- function(x)
 
 
 #' @rdname is_colour
-#' @method is_colour character
-#' @S3method is_colour character
+#' @export
+#' @importFrom grDevices colors
 is_colour.character <- function(x)
   grepl('#[a-f0-9]{6}', x, TRUE) | x %in% colors() | is.na(x) 
 

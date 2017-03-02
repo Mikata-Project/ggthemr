@@ -1,3 +1,4 @@
+#' @importFrom graphics layout
 define_layout <- function(plot_title, axis_title, strip_text, axis_line_x, axis_line_y, axis_ticks, panel_grid_major, panel_grid_minor) {
   
   if (!is.list(layout))

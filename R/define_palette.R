@@ -101,6 +101,7 @@ clash_warning_any <- function(warning_message, m_colour, s_colour) {
     warning(warning_message, call. = FALSE)
 }
 
+#' @importFrom grDevices rgb col2rgb
 unname_colour <- function(x) 
   do.call(rgb, as.list(col2rgb(x) / 255))  
 
