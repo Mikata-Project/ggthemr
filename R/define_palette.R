@@ -89,6 +89,10 @@ define_palette <- function(swatch, gradient,
   
 }
 
+#' @rdname define_palette
+#' @export
+ggthemr_palette <- define_palette
+
 colour_clash <- function(...) {
   x <- c(...)
   named_colours <- !grepl('#[a-z0-9]{6}', x, TRUE)
