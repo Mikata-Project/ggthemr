@@ -8,8 +8,7 @@
 #' is_colour('white')
 #' is_colour('periwinkle blue')
 #' is_colour(4L)
-#' @rdname is_colour
-#' @export is_colour
+#' @export
 is_colour <- function(x) 
   UseMethod('is_colour', x)
 
@@ -22,20 +21,17 @@ is_colour.character <- function(x)
 
 
 #' @rdname is_colour
-#' @method is_colour numeric
-#' @S3method is_colour numeric
+#' @export
 is_colour.numeric <- function(x) 
   x %in% seq_along(grDevices::palette())
 
 
 #' @rdname is_colour
-#' @method is_colour logical
-#' @S3method is_colour logical
+#' @export
 is_colour.logical <- function(x) 
   is.na(x)
 
 #' @rdname is_colour
-#' @method is_colour factor
-#' @S3method is_colour factor
+#' @export
 is_colour.factor <- function(x) 
   is_colour.character(as.character(x))
