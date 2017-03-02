@@ -9,4 +9,3 @@ no_minor_x_gridlines()
 \description{
 Do not show minor gridlines for x-axis
 }
-

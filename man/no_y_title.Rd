@@ -9,10 +9,9 @@ no_y_title()
 \description{
 Do not show y-axis title
 }
-\author{
-Ciaran Tobin
-}
 \seealso{
 \code{\link{no_axes_titles}}, \code{\link{no_x_title}}
 }
-
+\author{
+Ciaran Tobin
+}

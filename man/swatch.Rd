@@ -12,4 +12,3 @@ The swatch is the main set of colours used for plotting data in a ggplot2 plot. 
 \examples{
 ggthemr('dust')
 }
-

@@ -19,4 +19,3 @@ lighten_swatch(0.2)
 \author{
 Ciaran Tobin
 }
-

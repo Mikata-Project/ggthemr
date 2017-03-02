@@ -9,4 +9,3 @@ no_major_gridlines()
 \description{
 Do not show major gridlines
 }
-

@@ -14,4 +14,3 @@ Edit an existing theme's swatch. The swatch contains the main colours used in a 
 
 The first colour of the swatch is separate from the others. It is used in special cases e.g. the outline colour for geom_boxplot(). This colour should have good contrast with at least the second colour of the swatch.
 }
-

@@ -19,4 +19,3 @@ darken_gradient(0.2)
 \author{
 Ciaran Tobin
 }
-

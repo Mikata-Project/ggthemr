@@ -3,9 +3,9 @@
 \name{is_colour}
 \alias{is_colour}
 \alias{is_colour.character}
-\alias{is_colour.factor}
-\alias{is_colour.logical}
 \alias{is_colour.numeric}
+\alias{is_colour.logical}
+\alias{is_colour.factor}
 \title{Is an object a valid colour?}
 \usage{
 is_colour(x)
@@ -36,4 +36,3 @@ is_colour(4L)
 \author{
 Ciaran Tobin
 }
-

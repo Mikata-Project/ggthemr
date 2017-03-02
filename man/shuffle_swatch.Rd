@@ -16,4 +16,3 @@ shuffle_swatch()
 \author{
 Ciaran Tobin
 }
-

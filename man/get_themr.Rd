@@ -9,4 +9,3 @@ get_themr()
 \description{
 Get the current ggthemr theme.
 }
-

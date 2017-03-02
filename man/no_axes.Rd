@@ -12,4 +12,3 @@ Remove both axes from a ggplot2 including the axes lines, titles, labels and tic
 \author{
 Ciaran Tobin
 }
-

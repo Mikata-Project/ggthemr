@@ -15,4 +15,3 @@ Rotate both axes labels by a given angle.
 \author{
 Ciaran Tobin
 }
-

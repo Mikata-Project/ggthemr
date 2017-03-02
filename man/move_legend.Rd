@@ -12,4 +12,3 @@ move_legend(position)
 \description{
 move legend to given location.
 }
-

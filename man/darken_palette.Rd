@@ -19,4 +19,3 @@ darken_palette(0.2)
 \author{
 Ciaran Tobin
 }
-

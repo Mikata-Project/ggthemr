@@ -4,6 +4,7 @@
 \name{ggthemr}
 \alias{ggthemr}
 \alias{ggthemr-package}
+\alias{ggthemr}
 \title{Style ggplot2}
 \usage{
 ggthemr(palette = "dust", layout = "clear", spacing = 1.6,
@@ -38,4 +39,3 @@ Set theme to be applied to all subsequent ggplots.
 \author{
 Ciaran Tobin
 }
-

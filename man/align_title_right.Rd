@@ -9,4 +9,3 @@ align_title_right()
 \description{
 Align ggplot2 title to the right.
 }
-
