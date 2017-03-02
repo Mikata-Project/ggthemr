@@ -27,4 +27,3 @@ ggplot(diamonds, aes(color, price)) +
 \author{
 Ciaran Tobin
 }
-

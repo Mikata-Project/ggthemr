@@ -32,4 +32,3 @@ colour_plot(ggthemr('sea'))
 \author{
 Ciaran Tobin
 }
-

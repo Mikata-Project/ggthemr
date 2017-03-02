@@ -12,4 +12,3 @@ Remove all vertical and horizontal gridlines (major and minor) from a ggplot2 pl
 \author{
 Ciaran Tobin
 }
-

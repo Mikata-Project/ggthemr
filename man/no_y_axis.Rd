@@ -12,4 +12,3 @@ Remove the y-axis from a ggplot2 including the axis lines, titles, labels and ti
 \author{
 Ciaran Tobin
 }
-

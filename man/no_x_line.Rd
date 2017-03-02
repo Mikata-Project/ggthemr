@@ -9,10 +9,9 @@ no_x_line()
 \description{
 Do not show x-axis line
 }
-\author{
-Ciaran Tobin
-}
 \seealso{
 \code{\link{no_y_line}}
 }
-
+\author{
+Ciaran Tobin
+}

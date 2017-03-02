@@ -14,4 +14,3 @@
 \description{
 Create colour plot of ggthemr swatch
 }
-

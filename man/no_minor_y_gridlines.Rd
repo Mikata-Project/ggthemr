@@ -9,4 +9,3 @@ no_minor_y_gridlines()
 \description{
 Do not show minor gridlines for y-axis
 }
-

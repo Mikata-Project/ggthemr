@@ -12,4 +12,3 @@ set_themr(value)
 \description{
 Set the current ggthemr theme.
 }
-

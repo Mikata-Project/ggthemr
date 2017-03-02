@@ -15,4 +15,3 @@ Rotate the x-axis labels/text by a given angle.
 \author{
 Ciaran Tobin
 }
-

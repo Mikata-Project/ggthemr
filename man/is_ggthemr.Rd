@@ -15,4 +15,3 @@ Test an object to determine if it is of class ggthemr.
 \author{
 Ciaran Tobin
 }
-

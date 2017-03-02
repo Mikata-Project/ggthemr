@@ -12,4 +12,3 @@ Remove the plot title
 \author{
 Ciaran Tobin
 }
-

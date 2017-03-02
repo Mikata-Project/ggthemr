@@ -12,4 +12,3 @@ ggthemr_current
 Store ggthemr theme.
 }
 \keyword{datasets}
-

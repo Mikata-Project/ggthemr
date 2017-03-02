@@ -9,10 +9,9 @@ no_axes_titles()
 \description{
 Do not show titles for all axes
 }
-\author{
-Ciaran Tobin
-}
 \seealso{
 \code{\link{no_x_title}}, \code{\link{no_y_title}}
 }
-
+\author{
+Ciaran Tobin
+}

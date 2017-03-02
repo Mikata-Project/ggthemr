@@ -2,9 +2,9 @@
 % Please edit documentation in R/move_legend.R
 \name{legend_bottom}
 \alias{legend_bottom}
+\alias{legend_top}
 \alias{legend_left}
 \alias{legend_right}
-\alias{legend_top}
 \title{ggplot2 Legend Position}
 \usage{
 legend_bottom()
@@ -33,4 +33,3 @@ Ciaran Tobin
 
 Ciaran Tobin
 }
-

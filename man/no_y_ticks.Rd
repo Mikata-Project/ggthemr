@@ -9,10 +9,9 @@ no_y_ticks()
 \description{
 Do not show tick marks for y-axis
 }
-\author{
-Ciaran Tobin
-}
 \seealso{
 \code{\link{no_ticks}}, \code{\link{no_x_ticks}}
 }
-
+\author{
+Ciaran Tobin
+}

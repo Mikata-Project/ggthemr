@@ -16,4 +16,3 @@ reverse_gradient()
 \author{
 Ciaran Tobin
 }
-

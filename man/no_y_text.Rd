@@ -9,10 +9,9 @@ no_y_text()
 \description{
 Do not show y-axis text/labels
 }
-\author{
-Ciaran Tobin
-}
 \seealso{
 \code{\link{no_x_text}}
 }
-
+\author{
+Ciaran Tobin
+}

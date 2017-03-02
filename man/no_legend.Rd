@@ -12,4 +12,3 @@ Remove the legend from a ggplot2 plot.
 \author{
 Ciaran Tobin
 }
-

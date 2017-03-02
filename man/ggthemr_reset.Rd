@@ -12,4 +12,3 @@ Remove ggthemr theme and restore the ggplot2 default.
 \author{
 Ciaran Tobin
 }
-
