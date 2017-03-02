@@ -8,7 +8,9 @@ Imports:
 Depends:
     R (>= 3.0.0),
     ggplot2
+Suggests:
+    testthat
 License: GPL-3
 LazyData: true
 Maintainer: 'Ciaran Tobin' <cttobin@hotmail.com>
-RoxygenNote: 5.0.1
+RoxygenNote: 6.0.1
