@@ -1,36 +1,15 @@
 -   [ggthemr](#ggthemr)
     -   [Installation](#installation)
     -   [Usage](#usage)
-    -   [Further Development](#further-development)
     -   [Palettes](#palettes)
-        -   [flat](#flat)
-        -   [flat dark](#flat-dark)
-        -   [camoflauge](#camoflauge)
-        -   [chalk](#chalk)
-        -   [copper](#copper)
-        -   [dust](#dust)
-        -   [earth](#earth)
-        -   [fresh](#fresh)
-        -   [grape](#grape)
-        -   [grass](#grass)
-        -   [greyscale](#greyscale)
-        -   [light](#light)
-        -   [lilac](#lilac)
-        -   [pale](#pale)
-        -   [sea](#sea)
-        -   [sky](#sky)
-        -   [solarized](#solarized)
     -   [Custom Palettes](#custom-palettes)
     -   [Layouts](#layouts)
-        -   [Clean](#clean)
-        -   [Clear (default)](#clear-default)
-        -   [Minimal](#minimal)
-        -   [Plain](#plain)
-        -   [Scientific](#scientific)
     -   [Spacing](#spacing)
     -   [Type](#type)
     -   [Tweaking Themes](#tweaking-themes)
     -   [Plot Adjustments](#plot-adjustments)
+    -   [A note about theme setting](#a-note-about-theme-setting)
+    -   [License](#license)
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 ggthemr
@@ -48,7 +27,7 @@ There are a number of preset palettes and layouts, and methods to create your ow
 Installation
 ------------
 
-This package is still under development and isn't too stable yet, but can be installed using [devtools](http://cran.r-project.org/web/packages/devtools/index.html).
+This package is still under development, but can be installed using [devtools](http://cran.r-project.org/web/packages/devtools/index.html).
 
 ``` r
 devtools::install_github('cttobin/ggthemr')
@@ -68,16 +47,6 @@ That's it. Any ggplot you create from then on will have the theme applied. You c
 ``` r
 ggthemr_reset()
 ```
-
-Further Development
--------------------
-
-Features on the way:
-
--   More palettes and layouts.
--   Options to control fonts.
--   Ability to reset themes back to default.
--   Theme modifiers (so you can do things like `plot + no_legend()`, `plot + no_axes()` etc.).
 
 Palettes
 --------
@@ -302,3 +271,46 @@ mpg_plot + scale_fill_manual(values = rev(to_swap))
 ![](README_files/figure-markdown_github/unnamed-chunk-37-1.png)
 
 **Note:** the first colour in a swatch is a special one. It is reserved for outlining boxplots, text etc. So that's why the second and third colours were swapped.
+
+A note about theme setting
+--------------------------
+
+ggthemr does three different things while setting a theme.
+
+1.  It updates the default ggplot2 theme with the specified ggthemr theme by using the `ggplot2::theme_set()` function.
+2.  It modifies the aesthetic defaults for all geoms using the `ggplot2::update_geom_defaults()` function.
+3.  It creates functions for all the different scales in the global environment.
+
+In case, if you do not want to set the theme this way, use the `set_theme = FALSE` option while using the `ggthemr` function. An example of setting theme, geom aesthetic defaults and scales manually:
+
+``` r
+ggthemr_reset()
+dust_theme <- ggthemr('dust', set_theme = FALSE)
+example_plot
+```
+
+![](README_files/figure-markdown_github/unnamed-chunk-38-1.png)
+
+``` r
+example_plot + dust_theme$theme
+```
+
+![](README_files/figure-markdown_github/unnamed-chunk-38-2.png)
+
+``` r
+example_plot + dust_theme$theme + dust_theme$scales$scale_fill_discrete()
+```
+
+![](README_files/figure-markdown_github/unnamed-chunk-38-3.png)
+
+``` r
+do.call(what = ggplot2::update_geom_defaults, args = dust_theme$geom_defaults$bar)
+ggplot(diamonds, aes(price)) + geom_histogram(binwidth = 850) + dust_theme$theme
+```
+
+![](README_files/figure-markdown_github/unnamed-chunk-38-4.png)
+
+License
+-------
+
+Released under GPL-3.
