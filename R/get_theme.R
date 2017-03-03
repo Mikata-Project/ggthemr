@@ -1,4 +1,4 @@
-set_theme <- function (palette, layout, spacing, text_size, type, line_weight) {
+get_theme <- function (palette, layout, spacing, text_size, type, line_weight) {
   
   inner <- type == 'inner'
   text_colour <- palette$text[[match.arg(type, names(palette$text))]]
@@ -10,8 +10,8 @@ set_theme <- function (palette, layout, spacing, text_size, type, line_weight) {
   
   y_title_spacing <- function(spacing) 
     max(0.8, min(2.4, spacing))
-    
-  theme_set(theme(
+  
+  theme(
     line = element_line(
       colour = line_colour, 
       size = line_weight, 
@@ -144,6 +144,6 @@ set_theme <- function (palette, layout, spacing, text_size, type, line_weight) {
     plot.caption = NULL,
     plot.margin = grid::unit(c(0.625, 0.625, 0.625, 0.625) * spacing, 'cm'), 
     complete = TRUE
-  ))
+  )
   
 }
