@@ -22,7 +22,9 @@ ggthemr <- function(palette = 'dust', layout = 'clear',
   if (spacing < 0)
     stop('Spacing factor must be positive.', call. = FALSE)
 
-  set_theme(palette, layout, spacing, text_size, type, line_weight)
+  this_theme <- get_theme(palette, layout, spacing, text_size, type, line_weight)
+  theme_set(this_theme)
+  
   theme_scales(palette, line_weight, pos, envir)
   
   themr <- structure(list(
