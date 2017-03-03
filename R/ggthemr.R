@@ -18,15 +18,29 @@ ggthemr <- function(palette = 'dust', layout = 'clear',
   
   palette <- load_palette(palette)
   layout  <- load_layout(layout)
-    
+  
   if (spacing < 0)
     stop('Spacing factor must be positive.', call. = FALSE)
-
-  this_theme <- get_theme(palette, layout, spacing, text_size, type, line_weight)
+  
+  this_theme  <- get_theme(palette, layout, spacing, text_size, type, line_weight)
+  this_geoms  <- theme_geoms(palette, line_weight)
+  this_scales <- theme_scales(palette)
+  
+  # setting the theme
   theme_set(this_theme)
   
-  theme_scales(palette, line_weight, pos, envir)
+  # setting the geoms
+  for (one_geom_defaults in this_geoms) do.call(what = update_geom_defaults, args = one_geom_defaults)
   
+  # setting the scales
+  Map(
+    function (name, f) assign(name, f, envir = envir), 
+    names(this_scales),
+    this_scales
+  )
+  
+  
+  # saving the inputs for future reference
   themr <- structure(list(
     palette   = palette,
     layout    = layout,
