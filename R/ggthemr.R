@@ -17,7 +17,7 @@ ggthemr <- function(palette = 'dust', layout = 'clear',
                     line_weight = 0.5, pos = 1, envir = as.environment(pos)) {
   
   palette <- load_palette(palette)
-  layout <- load_layout(layout)
+  layout  <- load_layout(layout)
     
   if (spacing < 0)
     stop('Spacing factor must be positive.', call. = FALSE)
@@ -28,11 +28,11 @@ ggthemr <- function(palette = 'dust', layout = 'clear',
   theme_scales(palette, line_weight, pos, envir)
   
   themr <- structure(list(
-    palette = palette,
-    layout = layout,
+    palette   = palette,
+    layout    = layout,
     text_size = text_size,
-    spacing = spacing,
-    type = type
+    spacing   = spacing,
+    type      = type
   ), class = 'ggthemr')
   
   set_themr(themr)

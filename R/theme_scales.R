@@ -15,17 +15,17 @@ theme_scales <- function(palette, line_weight, pos, envir) {
   updateGeoms(c('area', 'bar', 'dotplot'), list(fill = colours[1]))
   
   # Special geoms.
-  update_geom_defaults('boxplot', list(colour = palette$swatch[1], fill = colours[1], size = line_weight)) #, outlier.colour = palette$swatch[1]
-  update_geom_defaults('smooth', list(colour = colours[2], fill = colours[2]))
-  update_geom_defaults('dotplot', list(colour = colours[1], fill = colours[1]))
+  update_geom_defaults('boxplot', list(colour = palette$swatch[1], fill = colours[1], size = line_weight))
+  update_geom_defaults('smooth',  list(colour = colours[2],        fill = colours[2]))
+  update_geom_defaults('dotplot', list(colour = colours[1],        fill = colours[1]))
   
   scale_updates <- list(
-    scale_colour_discrete = function(...) discrete_scale('colour', 'ggthemr', discrete_colours(colours), ...),
-    scale_fill_discrete = function(...) discrete_scale('fill', 'ggthemr', discrete_colours(colours), ...),
+    scale_colour_discrete   = function(...) discrete_scale(  'colour', 'ggthemr', discrete_colours(colours), ...),
+    scale_fill_discrete     = function(...) discrete_scale(  'fill',   'ggthemr', discrete_colours(colours), ...),
     scale_colour_continuous = function(...) continuous_scale('colour', 'ggthemr', seq_gradient_pal(palette$gradient[['low']], palette$gradient[['high']]), ...),
-    scale_fill_continuous = function(...) continuous_scale('fill', 'ggthemr', seq_gradient_pal(palette$gradient[['low']], palette$gradient[['high']]), ...),
-    scale_colour_gradient = function(...) continuous_scale('colour', 'ggthemr', seq_gradient_pal(palette$gradient[['low']], palette$gradient[['high']]), ...),
-    scale_fill_gradient = function(...) continuous_scale('fill', 'ggthemr', seq_gradient_pal(palette$gradient[['low']], palette$gradient[['high']]), ...)
+    scale_fill_continuous   = function(...) continuous_scale('fill',   'ggthemr', seq_gradient_pal(palette$gradient[['low']], palette$gradient[['high']]), ...),
+    scale_colour_gradient   = function(...) continuous_scale('colour', 'ggthemr', seq_gradient_pal(palette$gradient[['low']], palette$gradient[['high']]), ...),
+    scale_fill_gradient     = function(...) continuous_scale('fill',   'ggthemr', seq_gradient_pal(palette$gradient[['low']], palette$gradient[['high']]), ...)
   )
   
   Map(

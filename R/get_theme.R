@@ -5,145 +5,167 @@ get_theme <- function (palette, layout, spacing, text_size, type, line_weight) {
   line_colour <- ifelse(inner, palette$line[['inner']], palette$line[['outer']])
   
   # Functions to define axes title distances' from axis (with sensible imnimum/maximum values).
-  x_title_spacing <- function(spacing) 
-    max(-1.2, -(spacing / 1.25) + 0.5)
+  x_title_spacing <- function(spacing) max(-1.2, -(spacing / 1.25) + 0.5)
   
-  y_title_spacing <- function(spacing) 
-    max(0.8, min(2.4, spacing))
+  y_title_spacing <- function(spacing) max(0.8, min(2.4, spacing))
   
   theme(
+    
     line = element_line(
-      colour = line_colour, 
-      size = line_weight, 
-      linetype = 1, 
-      lineend = "butt"),   
+      colour   = line_colour,
+      size     = line_weight,
+      linetype = 1,
+      lineend  = "butt"),
+    
     rect = element_rect(
-      fill = "white", 
-      colour = text_colour, 
-      size = 0.5, 
-      linetype = 1), 
+      fill     = "white",
+      colour   = text_colour,
+      size     = 0.5,
+      linetype = 1),
+    
     text = element_text(
-      debug=FALSE,
-      margin=margin(),
-      family = '', 
-      face = "plain", 
-      colour = text_colour, 
-      size = text_size, 
-      hjust = 0.5, 
-      vjust = 0.5, 
-      angle = 0, 
-      lineheight = 0.9), 
+      debug      = FALSE,
+      margin     = margin(),
+      family     = '',
+      face       = "plain",
+      colour     = text_colour,
+      size       = text_size,
+      hjust      = 0.5,
+      vjust      = 0.5,
+      angle      = 0,
+      lineheight = 0.9),
+    
     axis.text = element_text(
-      debug=FALSE,
-      margin=margin(),
-      size = rel(0.8), 
-      colour = text_colour), 
-    axis.text.x.top = NULL,
+      debug  = FALSE,
+      margin = margin(),
+      size   = rel(0.8),
+      colour = text_colour),
+    
+    axis.text.x.top   = NULL,
     axis.text.y.right = NULL,
-    axis.line = element_line(
-      colour = line_colour),
-    axis.line.x = layout$axis.line.x(colour = line_colour),
-    axis.line.y = layout$axis.line.y(colour = line_colour),
+    axis.line         = element_line(colour = line_colour),
+    axis.line.x       = layout$axis.line.x(colour = line_colour),
+    axis.line.y       = layout$axis.line.y(colour = line_colour),
+    
     axis.text.x = element_text(
-      debug=FALSE,
-      margin=margin(0.1 * spacing, 0.1 * spacing, 0.1 * spacing, 0.1 * spacing, unit = 'cm'),
-      vjust = 1, 
-      colour = text_colour, 
-      face='bold'), 
+      debug  = FALSE,
+      margin = margin(0.1 * spacing, 0.1 * spacing, 0.1 * spacing, 0.1 * spacing, unit = 'cm'),
+      vjust  = 1,
+      colour = text_colour,
+      face   = 'bold'),
+    
     axis.text.y = element_text(
-      debug=FALSE,
-      margin=margin(0.1 * spacing, 0.1 * spacing, 0.1 * spacing, 0.1 * spacing, unit = 'cm'),
-      hjust = 1, 
-      colour = text_colour, 
-      face='bold'), 
+      debug  = FALSE,
+      margin = margin(0.1 * spacing, 0.1 * spacing, 0.1 * spacing, 0.1 * spacing, unit = 'cm'),
+      hjust  = 1,
+      colour = text_colour,
+      face   = 'bold'),
+    
     axis.ticks = layout$axis.ticks(colour = line_colour),
     axis.title = layout$axis.title(colour = text_colour),
+    
     axis.title.x = element_text(
-      debug=FALSE,
-      margin=margin(),
-      vjust=x_title_spacing(spacing)),
+      debug  = FALSE,
+      margin = margin(),
+      vjust  = x_title_spacing(spacing)),
+    
     axis.title.x.top = NULL,
+    
     axis.title.y = element_text(
-      debug=FALSE,
-      margin=margin(),
-      angle = 90, 
-      vjust=y_title_spacing(spacing)), 
+      debug  = FALSE,
+      margin = margin(),
+      angle  = 90,
+      vjust  = y_title_spacing(spacing)),
+    
     axis.title.y.right = NULL,
-    axis.ticks.length = grid::unit(0.15, "cm"), 
+    axis.ticks.length  = grid::unit(0.15, "cm"),
+    
     legend.background = element_rect(
       colour = ifelse(inner, 'white', palette$background),
-      fill = ifelse(inner, 'white', palette$background)), 
-    legend.margin = NULL,
-    legend.spacing = grid::unit(0.2 * spacing, "cm"), 
+      fill   = ifelse(inner, 'white', palette$background)),
+    
+    legend.margin  = NULL,
+    legend.spacing = grid::unit(0.2 * spacing, "cm"),
+    
     legend.key = element_rect(
       colour = ifelse(inner, 'white', palette$background),
-      fill = palette$background), 
-    legend.spacing.x = NULL,
-    legend.spacing.y = NULL,
-    legend.key.size = grid::unit(
-      1.2, "lines"), 
+      fill   = palette$background),
+    
+    legend.spacing.x  = NULL,
+    legend.spacing.y  = NULL,
+    legend.key.size   = grid::unit(1.2, "lines"),
     legend.key.height = NULL,
-    legend.key.width = NULL, 
+    legend.key.width  = NULL,
+    
     legend.text = element_text(
-      debug=FALSE,
-      margin=margin(),
-      size = rel(0.8)), 
+      debug  = FALSE,
+      margin = margin(),
+      size   = rel(0.8)),
+    
     legend.text.align = NULL, 
+    
     legend.title = element_text(
-      debug=FALSE,
-      margin=margin(),
-      size = rel(0.8), 
-      face = "bold", 
-      hjust = 0), 
-    legend.title.align = NULL, 
-    legend.position = "right", 
-    legend.direction = NULL, 
-    legend.justification = "center", 
-    legend.box = NULL, 
-    legend.box.margin = NULL,
+      debug  = FALSE,
+      margin = margin(),
+      size   = rel(0.8),
+      face   = "bold",
+      hjust  = 0),
+    
+    legend.title.align    = NULL,
+    legend.position       = "right",
+    legend.direction      = NULL,
+    legend.justification  = "center",
+    legend.box            = NULL,
+    legend.box.margin     = NULL,
     legend.box.background = NULL,
-    legend.box.spacing = NULL,
-    panel.background = element_rect(
-      fill = palette$background, 
-      colour = NA), 
-    panel.border = element_blank(), 
-    panel.grid.major = layout$panel.grid.major(colour = palette$gridline), 
-    panel.grid.minor = layout$panel.grid.minor(colour = palette$gridline), 
-    panel.spacing = grid::unit(0.5 * spacing, 'cm'), 
-    panel.spacing.x = NULL, 
-    panel.spacing.y = NULL, 
-    panel.ontop = FALSE,
+    legend.box.spacing    = NULL,
+    panel.background      = element_rect(fill = palette$background, colour = NA),
+    panel.border          = element_blank(),
+    panel.grid.major      = layout$panel.grid.major(colour = palette$gridline),
+    panel.grid.minor      = layout$panel.grid.minor(colour = palette$gridline),
+    panel.spacing         = grid::unit(0.5 * spacing, 'cm'),
+    panel.spacing.x       = NULL,
+    panel.spacing.y       = NULL,
+    panel.ontop           = FALSE,
+    
     strip.background = element_rect(
-      fill = ifelse(inner, 'white', palette$background), 
-      colour = NA), 
+      fill   = ifelse(inner, 'white', palette$background),
+      colour = NA),
+    
     strip.text = layout$strip.text(colour=text_colour),
+    
     strip.text.x = element_text(
-      debug=FALSE,
-      margin=margin(),
-      size = rel(1.1), 
-      face = 'bold'), 
+      debug  = FALSE,
+      margin = margin(),
+      size   = rel(1.1),
+      face   = 'bold'),
+    
     strip.text.y = element_text(
-      debug=FALSE,
-      margin=margin(),
-      angle = -90,
-      face = 'bold',
-      size = rel(1.1)), 
+      debug  = FALSE,
+      margin = margin(),
+      angle  = -90,
+      face   = 'bold',
+      size   = rel(1.1)),
+    
     strip.switch.pad.grid = grid::unit(0, 'cm'),
     strip.switch.pad.wrap = grid::unit(0, 'cm'),
     strip.placement = NULL,
+    
     plot.background = element_rect(
       colour = ifelse(inner, 'white', palette$background),
-      fill = ifelse(inner, 'white', palette$background)), 
+      fill   = ifelse(inner, 'white', palette$background)),
+    
     plot.title = element_text(
-      debug=FALSE,
-      margin=margin(0, 0, 6.6, 0),
-      size = rel(1.2),
-      vjust = spacing,
-      face='bold'), 
+      debug  = FALSE,
+      margin = margin(0, 0, 6.6, 0),
+      size   = rel(1.2),
+      vjust  = spacing,
+      face   = 'bold'),
+    
     plot.subtitle = NULL,
-    plot.caption = NULL,
-    plot.margin = grid::unit(c(0.625, 0.625, 0.625, 0.625) * spacing, 'cm'), 
-    complete = TRUE
+    plot.caption  = NULL,
+    plot.margin   = grid::unit(c(0.625, 0.625, 0.625, 0.625) * spacing, 'cm'),
+    complete      = TRUE
   )
   
 }
