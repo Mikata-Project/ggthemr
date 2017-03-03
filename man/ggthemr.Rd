@@ -9,7 +9,7 @@
 \usage{
 ggthemr(palette = "dust", layout = "clear", spacing = 1.6,
   text_size = 12, type = "inner", line_weight = 0.5, pos = 1,
-  envir = as.environment(pos))
+  envir = as.environment(pos), set_theme = TRUE)
 }
 \arguments{
 \item{palette}{Colour scheme by name or ggtheme object.}
@@ -27,6 +27,11 @@ ggthemr(palette = "dust", layout = "clear", spacing = 1.6,
 \item{pos}{Where the new scales are stored.}
 
 \item{envir}{The environment where the new scales are stored.}
+
+\item{set_theme}{If TRUE (default), the default theme, geoms and scales are updated.}
+}
+\value{
+Returns a list with a ggplot2 theme object, aesthetic parameters for geoms, scale functions and input parameters
 }
 \description{
 ggthemr provides colour schemes and layouts for ggplot2.

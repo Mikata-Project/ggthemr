@@ -8,13 +8,21 @@
 #' @param line_weight The thickness of axes lines and gridlines. Useful for saving plots at different resolutions.
 #' @param pos Where the new scales are stored.
 #' @param envir The environment where the new scales are stored.
+#' @param set_theme If TRUE (default), the default theme, geoms and scales are updated.
+#' @return Returns a list with a ggplot2 theme object, aesthetic parameters for geoms, scale functions and input parameters
 #' @export
 #' @author Ciaran Tobin
 #' @examples 
 #'  ggthemr('pale', layout = 'scientific', spacing = 2, type = 'inner')
-ggthemr <- function(palette = 'dust', layout = 'clear', 
-                    spacing = 1.6, text_size = 12, type = 'inner', 
-                    line_weight = 0.5, pos = 1, envir = as.environment(pos)) {
+ggthemr <- function(palette     = 'dust',
+                    layout      = 'clear', 
+                    spacing     = 1.6,
+                    text_size   = 12,
+                    type        = 'inner', 
+                    line_weight = 0.5,
+                    pos         = 1,
+                    envir       = as.environment(pos),
+                    set_theme   = TRUE) {
   
   palette <- load_palette(palette)
   layout  <- load_layout(layout)
@@ -25,6 +33,19 @@ ggthemr <- function(palette = 'dust', layout = 'clear',
   this_theme  <- get_theme(palette, layout, spacing, text_size, type, line_weight)
   this_geoms  <- theme_geoms(palette, line_weight)
   this_scales <- theme_scales(palette)
+  
+  themr <- structure(list(
+    theme         = this_theme,
+    geom_defaults = this_geoms,
+    scales        = this_scales,
+    palette       = palette,
+    layout        = layout,
+    text_size     = text_size,
+    spacing       = spacing,
+    type          = type
+  ), class = 'ggthemr')
+  
+  if (!set_theme) return(themr) 
   
   # setting the theme
   theme_set(this_theme)
@@ -39,16 +60,7 @@ ggthemr <- function(palette = 'dust', layout = 'clear',
     this_scales
   )
   
-  
   # saving the inputs for future reference
-  themr <- structure(list(
-    palette   = palette,
-    layout    = layout,
-    text_size = text_size,
-    spacing   = spacing,
-    type      = type
-  ), class = 'ggthemr')
-  
   set_themr(themr)
   
 }
