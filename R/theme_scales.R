@@ -35,6 +35,7 @@ theme_geoms <- function(palette, line_weight) {
     # Geoms that only require a default fill.
     list(geom = 'area',      new = list(fill   = colours[1])),
     list(geom = 'bar',       new = list(fill   = colours[1])),
+    list(geom = 'col',       new = list(fill   = colours[1])),
     list(geom = 'dotplot',   new = list(fill   = colours[1])),
     
     # Special geoms.
