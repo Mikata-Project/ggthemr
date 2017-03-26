@@ -28,12 +28,14 @@ theme_geoms <- function(palette, line_weight) {
     list(geom = 'errorbar',  new = list(colour = colours[1])),
     list(geom = 'errorbarh', new = list(colour = colours[1])),
     list(geom = 'hline',     new = list(colour = colours[1])),
+    list(geom = 'vline',     new = list(colour = colours[1])),
     list(geom = 'line',      new = list(colour = colours[1])),
     
     list(geom = 'text',      new = list(colour = palette$swatch[1])),
     
     # Geoms that only require a default fill.
     list(geom = 'area',      new = list(fill   = colours[1])),
+    list(geom = 'ribbon',    new = list(fill   = colours[1])),
     list(geom = 'bar',       new = list(fill   = colours[1])),
     list(geom = 'col',       new = list(fill   = colours[1])),
     list(geom = 'dotplot',   new = list(fill   = colours[1])),
