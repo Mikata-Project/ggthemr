@@ -51,7 +51,7 @@ ggthemr <- function(palette     = 'dust',
   theme_set(this_theme)
   
   # setting the geoms
-  for (one_geom_defaults in this_geoms) do.call(what = update_geom_defaults, args = one_geom_defaults)
+  for (one_geom_defaults in this_geoms$new) do.call(what = update_geom_defaults, args = one_geom_defaults)
   
   # setting the scales
   Map(
