@@ -48,5 +48,11 @@ theme_geoms <- function(palette, line_weight) {
   
   names(new_geom_defaults) <- vapply(new_geom_defaults, function(x) x$geom, 'temp', USE.NAMES = FALSE)
   
-  new_geom_defaults
+  orig_geom_defaults <- lapply(names(new_geom_defaults), function(x) {
+    list(geom = x,
+         new  = get(paste0('geom_', x))()$geom$default_aes)
+  })
+  names(orig_geom_defaults) <- names(new_geom_defaults)
+  
+  list(orig = orig_geom_defaults, new = new_geom_defaults)
 }
