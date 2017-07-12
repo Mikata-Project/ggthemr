@@ -304,7 +304,7 @@ example_plot + dust_theme$theme + dust_theme$scales$scale_fill_discrete()
 ![](README_files/figure-markdown_github/unnamed-chunk-38-3.png)
 
 ``` r
-do.call(what = ggplot2::update_geom_defaults, args = dust_theme$geom_defaults$bar)
+do.call(what = ggplot2::update_geom_defaults, args = dust_theme$geom_defaults$new$bar)
 ggplot(diamonds, aes(price)) + geom_histogram(binwidth = 850) + dust_theme$theme
 ```
 

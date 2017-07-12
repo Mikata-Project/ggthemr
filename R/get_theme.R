@@ -4,7 +4,7 @@ get_theme <- function (palette, layout, spacing, text_size, type, line_weight) {
   text_colour <- palette$text[[match.arg(type, names(palette$text))]]
   line_colour <- ifelse(inner, palette$line[['inner']], palette$line[['outer']])
   
-  # Functions to define axes title distances' from axis (with sensible imnimum/maximum values).
+  # Functions to define axes title distances' from axis (with sensible minimum/maximum values).
   x_title_spacing <- function(spacing) max(-1.2, -(spacing / 1.25) + 0.5)
   
   y_title_spacing <- function(spacing) max(0.8, min(2.4, spacing))
@@ -66,14 +66,14 @@ get_theme <- function (palette, layout, spacing, text_size, type, line_weight) {
     
     axis.title.x = element_text(
       debug  = FALSE,
-      margin = margin(),
+      margin = margin(0.1 * spacing, 0.1 * spacing, 0.1 * spacing, 0.1 * spacing, unit = 'cm'),
       vjust  = x_title_spacing(spacing)),
     
     axis.title.x.top = NULL,
     
     axis.title.y = element_text(
       debug  = FALSE,
-      margin = margin(),
+      margin = margin(0.1 * spacing, 0.1 * spacing, 0.1 * spacing, 0.1 * spacing, unit = 'cm'),
       angle  = 90,
       vjust  = y_title_spacing(spacing)),
     
@@ -157,13 +157,23 @@ get_theme <- function (palette, layout, spacing, text_size, type, line_weight) {
     
     plot.title = element_text(
       debug  = FALSE,
-      margin = margin(0, 0, 6.6, 0),
+      margin = margin(0.1 * spacing, 0.1 * spacing, 0.1 * spacing, 0.1 * spacing, unit = 'cm'),
       size   = rel(1.2),
       vjust  = spacing,
       face   = 'bold'),
     
-    plot.subtitle = NULL,
-    plot.caption  = NULL,
+    plot.subtitle = element_text(
+      debug  = FALSE,
+      margin = margin(0.1 * spacing, 0.1 * spacing, 0.1 * spacing, 0.1 * spacing, unit = 'cm'),
+      size   = rel(1),
+      vjust  = spacing),
+    
+    plot.caption  = element_text(
+      debug  = FALSE,
+      margin = margin(0.1 * spacing, 0.1 * spacing, 0.1 * spacing, 0.1 * spacing, unit = 'cm'),
+      size   = rel(1),
+      vjust  = spacing),
+    
     plot.margin   = grid::unit(c(0.625, 0.625, 0.625, 0.625) * spacing, 'cm'),
     complete      = TRUE
   )
