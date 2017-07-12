@@ -6,5 +6,5 @@ preview_layout <- function () {
     check.names = FALSE)
   ggplot(blank_data, aes_string(x = 'x', y = 'y')) + geom_blank() +
     scale_y_continuous(label = function(x) format(x, big.mark = ",", scientific = FALSE, trim = TRUE)) +
-    labs(x = 'X Title', y = 'Y Title', title = 'Title')
+    labs(x = 'X Title', y = 'Y Title', title = 'Title', subtitle = 'Subtitle', caption = 'Caption')
 }
