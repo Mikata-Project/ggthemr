@@ -16,7 +16,7 @@
 #'  ggthemr('pale', layout = 'scientific', spacing = 2, type = 'inner')
 ggthemr <- function(palette     = 'dust',
                     layout      = 'clear', 
-                    spacing     = 1.6,
+                    spacing     = 1,
                     text_size   = 12,
                     type        = 'inner', 
                     line_weight = 0.5,
