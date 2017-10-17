@@ -1,6 +1,6 @@
 #' @title Store Theme
 #' @description Store ggthemr theme.
-ggthemr_current <- (function () {
+ggthemr_current <- local({
   themr <- NULL
   list(
     get = function () {
@@ -21,7 +21,7 @@ ggthemr_current <- (function () {
       themr <<- NULL
     }
   )
-})()
+})
 
 
 #' @title Get Current Theme
