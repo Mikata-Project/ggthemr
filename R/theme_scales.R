@@ -3,16 +3,41 @@ theme_scales <- function(palette) {
   
   colours <- palette$swatch[-1]
   
-  new_scale_functions <- list(
-    scale_colour_discrete   = function(...) discrete_scale(  'colour', 'ggthemr', discrete_colours(colours), ...),
-    scale_fill_discrete     = function(...) discrete_scale(  'fill',   'ggthemr', discrete_colours(colours), ...),
-    scale_colour_continuous = function(...) continuous_scale('colour', 'ggthemr', seq_gradient_pal(palette$gradient[['low']], palette$gradient[['high']]), ...),
-    scale_fill_continuous   = function(...) continuous_scale('fill',   'ggthemr', seq_gradient_pal(palette$gradient[['low']], palette$gradient[['high']]), ...),
-    scale_colour_gradient   = function(...) continuous_scale('colour', 'ggthemr', seq_gradient_pal(palette$gradient[['low']], palette$gradient[['high']]), ...),
-    scale_fill_gradient     = function(...) continuous_scale('fill',   'ggthemr', seq_gradient_pal(palette$gradient[['low']], palette$gradient[['high']]), ...)
-  )
+  scale_colour_discrete = function(...) discrete_scale('colour', 'ggthemr', discrete_colours(colours), ...)
   
-  new_scale_functions
+  scale_fill_discrete = function(...) discrete_scale('fill', 'ggthemr', discrete_colours(colours), ...)
+  
+  scale_colour_continuous = function(...,
+                                     low = palette$gradient[['low']],
+                                     high = palette$gradient[['high']],
+                                     space = "Lab",
+                                     guide = "colourbar") {
+    continuous_scale('colour', 'ggthemr',
+                     seq_gradient_pal(low, high, space),
+                     guide = guide, ...)
+  }
+  
+  scale_fill_continuous   = function(...,
+                                     low = palette$gradient[['low']],
+                                     high = palette$gradient[['high']],
+                                     space = "Lab",
+                                     guide = "colourbar") {
+    continuous_scale('fill', 'ggthemr',
+                     seq_gradient_pal(low, high, space),
+                     guide = guide, ...)
+  }
+  
+  list(
+    scale_colour_discrete   = scale_colour_discrete,
+    scale_color_discrete    = scale_colour_discrete,
+    scale_fill_discrete     = scale_fill_discrete,
+    scale_colour_continuous = scale_colour_continuous,
+    scale_color_continuous  = scale_colour_continuous,
+    scale_colour_gradient   = scale_colour_continuous,
+    scale_color_gradient    = scale_colour_continuous,
+    scale_fill_continuous   = scale_fill_continuous,
+    scale_fill_gradient     = scale_fill_continuous
+  )
 }
 
 
