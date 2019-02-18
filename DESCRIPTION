@@ -13,4 +13,4 @@ Suggests:
 License: GPL-3
 LazyData: true
 Maintainer: 'Ciaran Tobin' <cttobin@hotmail.com>
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.1
