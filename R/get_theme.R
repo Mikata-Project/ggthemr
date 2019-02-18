@@ -87,6 +87,7 @@ get_theme <- function (palette, layout, spacing, text_size, type, line_weight) {
     
     panel.background      = element_rect(fill = palette$background, colour = NA),
     panel.border          = element_blank(),
+    panel.grid            = element_line(colour = "white"),
     panel.grid.major      = layout$panel.grid.major(colour = palette$gridline),
     panel.grid.minor      = layout$panel.grid.minor(colour = palette$gridline),
     panel.spacing         = unit(half_line*spacing, "pt"),
@@ -129,12 +130,19 @@ get_theme <- function (palette, layout, spacing, text_size, type, line_weight) {
       hjust  = 0,
       vjust  = spacing),
     
-    plot.caption  = element_text(
+    plot.caption = element_text(
       size   = rel(0.9),
       margin = margin(t = half_line * 0.9 * spacing),
       hjust  = spacing,
       vjust  = spacing),
     
+    plot.tag = element_text(
+      size = rel(1.2),
+      hjust = 0.5,
+      vjust = 0.5),
+
+    plot.tag.position =  'topleft',
+
     plot.margin   = margin(half_line*spacing, half_line*spacing, half_line*spacing, half_line*spacing),
     
     complete      = TRUE
