@@ -12,3 +12,4 @@
 ^scripts/*
 ^misc/*
 ^ggthemr\.Rproj$
+^tic\.R$
