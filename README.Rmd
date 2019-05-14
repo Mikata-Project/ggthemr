@@ -26,6 +26,11 @@ source('scripts/preview_layout.R')
 ggthemr
 ========================================================
 
+<!-- badges: start -->
+[![Travis build status](https://travis-ci.org/krlmlr/ggthemr.svg?branch=master)](https://travis-ci.org/krlmlr/ggthemr)
+[![CRAN status](https://www.r-pkg.org/badges/version/ggthemr)](https://cran.r-project.org/package=ggthemr)
+<!-- badges: end -->
+
 Themes for ggplot2. The idea of this package is that you can just set the theme and then forget about it. You shouldn't have to change any of your existing code. There are several parts to a theme:
 
 * Colour palette for the background, axes, gridlines, text etc. 
