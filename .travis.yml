@@ -27,14 +27,32 @@ after_script: R -q -e 'tic::after_script()'
 
 # Custom parts:
 
+# Header
 language: r
 sudo: false
 dist: xenial
 cache: packages
 latex: false
 
+#env
 env:
   global:
-  - _R_CHECK_FORCE_SUGGESTS_=false
-  - _R_CHECK_SYSTEM_CLOCK_=false
   - MAKEFLAGS="-j 2"
+
+#jobs
+jobs:
+  include:
+  - stage: test
+    r: devel
+    env:
+    - INSTALL_DEV_VERSIONS=true
+  - r: release
+    env:
+    - BUILD_PKGDOWN=true
+
+#matrix: Early abortion of failed builds
+matrix:
+  fast_finish: true
+
+#services
+services:
