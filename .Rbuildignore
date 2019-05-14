@@ -11,3 +11,4 @@
 ^appveyor\.yml$
 ^scripts/*
 ^misc/*
+^ggthemr\.Rproj$
