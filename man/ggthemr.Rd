@@ -8,7 +8,8 @@
 \usage{
 ggthemr(palette = "dust", layout = "clear", spacing = 1,
   text_size = 12, type = "inner", line_weight = 0.5, pos = 1,
-  envir = as.environment(pos), set_theme = TRUE)
+  envir = as.environment(pos), set_theme = TRUE,
+  geom_updates = list())
 }
 \arguments{
 \item{palette}{Colour scheme by name or ggtheme object.}
@@ -28,6 +29,8 @@ ggthemr(palette = "dust", layout = "clear", spacing = 1,
 \item{envir}{The environment where the new scales are stored.}
 
 \item{set_theme}{If TRUE (default), the default theme, geoms and scales are updated.}
+
+\item{geom_updates}{A named list of geom updates where the names of the list values represent the geom function name to update (e.g. "geom_bar") and the values represent a named list of default values to update.}
 }
 \value{
 Returns a list with a ggplot2 theme object, aesthetic parameters for geoms, scale functions and input parameters

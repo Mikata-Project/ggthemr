@@ -9,6 +9,7 @@
 #' @param pos Where the new scales are stored.
 #' @param envir The environment where the new scales are stored.
 #' @param set_theme If TRUE (default), the default theme, geoms and scales are updated.
+#' @param geom_updates A named list of geom updates where the names of the list values represent the geom function name to update (e.g. "geom_bar") and the values represent a named list of default values to update.
 #' @return Returns a list with a ggplot2 theme object, aesthetic parameters for geoms, scale functions and input parameters
 #' @export
 #' @author Ciaran Tobin
