@@ -14,15 +14,16 @@
 #' @author Ciaran Tobin
 #' @examples 
 #'  ggthemr('pale', layout = 'scientific', spacing = 2, type = 'inner')
-ggthemr <- function(palette     = 'dust',
-                    layout      = 'clear', 
-                    spacing     = 1,
-                    text_size   = 12,
-                    type        = 'inner', 
-                    line_weight = 0.5,
-                    pos         = 1,
-                    envir       = as.environment(pos),
-                    set_theme   = TRUE) {
+ggthemr <- function(palette      = 'dust',
+                    layout       = 'clear', 
+                    spacing      = 1,
+                    text_size    = 12,
+                    type         = 'inner', 
+                    line_weight  = 0.5,
+                    pos          = 1,
+                    envir        = as.environment(pos),
+                    set_theme    = TRUE,
+                    geom_updates = list()) {
   
   palette <- load_palette(palette)
   layout  <- load_layout(layout)
@@ -51,14 +52,35 @@ ggthemr <- function(palette     = 'dust',
   theme_set(this_theme)
   
   # setting the geoms
-  for (one_geom_defaults in this_geoms$new) do.call(what = update_geom_defaults, args = one_geom_defaults)
+  for (one_geom_defaults in this_geoms$new) {
+    geom_name <- sprintf("geom_%s", one_geom_defaults$geom)
+    geom_f    <- getExportedValue("ggplot2", geom_name)
+    
+    # add modified arguments to geom_updates for modifying ggplot function calls
+    if (geom_name %in% names(geom_updates)) {
+      updated_defaults <- geom_updates[[geom_name]]
+      
+      # modify formal argument defaults by masking in environment
+      update_is_fml <- names(updated_defaults) %in% names(formals(geom_f))
+      updated_fmls <- updated_defaults[which(update_is_fml)]
+      formals(geom_f)[names(updated_fmls)] <- updated_fmls
+      assign(geom_name, geom_f, envir = envir)
+      
+      # modify default aesthetics with update_geom_defaults
+      updated_aes <- updated_defaults[which(!update_is_fml)]
+      one_geom_defaults$new[names(updated_aes)] <- updated_aes
+      
+    } else if (exists(geom_name, envir = envir)) {
+      suppressWarnings(remove(list = geom_name, envir = envir))
+    }
+    
+    do.call(what = update_geom_defaults, args = one_geom_defaults)
+  }
   
   # setting the scales
-  Map(
-    function (name, f) assign(name, f, envir = envir), 
+  Map(function(name, f) assign(name, f, envir = envir),
     names(this_scales),
-    this_scales
-  )
+    this_scales)
   
   # saving the inputs for future reference
   set_themr(themr)
