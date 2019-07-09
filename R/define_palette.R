@@ -3,7 +3,17 @@
 #' 
 #' Default colours for the background, text, axes lines and gridlines have been provided, but it is recommended that you overwrite these to make a nice theme.
 #' @param swatch Vector of colours used for plotting data i.e. the main colours used for the points in geom_point(), bars in geom_bar() etc.
-#' @param gradient Vector of length two specifiying the lower and upper colours used for gradients.
+#' @param gradient A character vector of sequential colours, or a list of
+#'   arguments to be used with a specific gradient function. If a list is
+#'   provided, it should minimally specify one of the following sets of
+#'   arguments:
+#'   
+#'   \itemize{
+#'     \item{\code{\link[ggplot2]{scale_colour_continuous}}: \code{colour} or \code{color}}
+#'     \item{\code{\link[ggplot2]{scale_colour_gradient2}}: \code{low}, \code{mid} and \code{high}}
+#'     \item{\code{\link[ggplot2]{scale_colour_gradient}}: \code{low} and \code{high}}
+#'   }
+#'   
 #' @param background Background colour.
 #' @param text Text colour. This should be either a single colour or a vector of two colours (see details). 
 #' @param line Axes line colour. This should be either a single colour or a vector of two colours (see details).
