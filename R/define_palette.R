@@ -61,7 +61,11 @@ define_palette <- function(swatch, gradient,
       
   if (any(duplicated(sapply(swatch, unname_colour)))) warning('Duplicate plot colours.')
   clash_warning_any('Some plot colours are the same as the background.', swatch, background)
-  clash_warning_any('Some gradient colours are the same as the background.', gradient, background)  
+  
+  gradient_colors <- if (is.character(gradient)) gradient 
+    else unlist(gradient[c("colors", "colours", "low", "mid", "high")])
+  
+  clash_warning_any('Some gradient colours are the same as the background.', gradient_colors, background)  
   
   clash_error("The inner text colour is the same as the background colour. Text will not be visible.", background, text_inner)
   clash_error("The outer text colour is the same as the background colour. Text will not be visible.", background, text_outer)
@@ -115,22 +119,18 @@ clash_warning <- function(warning_message, ...)
 clash_error <- function(stop_message, ...)
   if (colour_clash(...)) stop(stop_message, call. = FALSE)
 
-define_gradient <- function (x) {
+define_gradient <- function (dots) {
+  # handle compatibility for single unnamed arg of "low" ("mid") and "high"
+  if (is.character(dots)) dots <- list(colours = dots)
   
-  if (length(x) < 2L)
-    stop("You must provide two gradient colours (low and high respectively).", call. = FALSE)
+  is_valid <- any(
+    validate_gradientn_args(dots), 
+    validate_gradient2_args(dots),
+    validate_gradient_args(dots))
   
-  if (length(x) > 2L) 
-    warning('You have supplied too many colours for the gradient. Taking only the first two or those named "low" and "high".', call. = FALSE)
+  if (!is_valid)
+    stop('gradient argument list must include arguments "colours", or ',
+      'arguments "low" ("mid") and "high"', call. = FALSE)
   
-  if (x[[1L]] == x[[2L]])
-    stop("The gradient colours are the same.", call. = FALSE)
-  
-  nm <- names(x)
-  if (length(nm) == 2L & all(c('low', 'high') %in% nm)) {
-    return (c(low = x[['low']], high = x[['high']]))
-  } else {
-    return (c(low = x[[1L]], high = x[[2L]]))
-  }
-  
+  dots
 }
