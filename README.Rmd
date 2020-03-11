@@ -39,10 +39,10 @@ There are a number of preset palettes and layouts, and methods to create your ow
 Installation
 -------------------------
 
-This package is still under development, but can be installed using `remotes`.
+This package is still under development, but can be installed using [devtools](http://cran.r-project.org/web/packages/devtools/index.html).
 
 ```{r eval=FALSE}
-remotes::install_github('cttobin/ggthemr')
+devtools::install_github('cttobin/ggthemr')
 ```
 
 Usage
