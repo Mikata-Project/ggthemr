@@ -1,3 +1,5 @@
+**This package is no longer maintained.** Unfortunately I stopped using R several years ago so can no longer work on this package. If anybody is willing to become a maintainer or fork this and I can link to their fork(s). Whatever people would like to do I'm happy with. Currently this seems to be broken for the current version of R.
+
 -   [ggthemr](#ggthemr)
     -   [Installation](#installation)
     -   [Usage](#usage)
