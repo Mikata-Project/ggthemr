@@ -6,7 +6,7 @@ Date: 2020-11-01
 Authors@R: c(
     person("Ciaran", "Tobin", , "cttobin@hotmail.com", "aut"),
     person("Amy Tzu-Yu", "Chen", , "amy17519@gmail.com", role = "cre"),
-    person("Gergely", "Daróczi", , "daroczig@rapporter.net", role = c("cre"),
+    person("Gergely", "Daróczi", , "daroczig@rapporter.net", role = "aut",
            comment = c(ORCID = "0000-0003-3149-8537")),
     person("Mikata", role = c("fnd"))
     )
