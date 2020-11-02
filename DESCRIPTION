@@ -15,7 +15,7 @@ Imports:
     scales
 Depends:
     R (>= 3.0.0),
-    'ggplot2'
+    ggplot2
 Suggests:
     testthat
 License: GPL-3
