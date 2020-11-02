@@ -13,5 +13,6 @@ Suggests:
 License: GPL-3
 LazyData: true
 Encoding: UTF-8
+Language: en-US
 Maintainer: 'Ciaran Tobin' <cttobin@hotmail.com>
 RoxygenNote: 7.1.1
