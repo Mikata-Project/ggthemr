@@ -88,7 +88,7 @@ preview_theme()
 ### camouflage
 
 ```{r fig.width=10, fig.height=6, echo=FALSE}
-ggthemr('camoflauge', spacing = 0.5, type = 'inner')
+ggthemr('camouflage', spacing = 0.5, type = 'inner')
 preview_theme()
 ```
 
