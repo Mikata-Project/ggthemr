@@ -1,6 +1,6 @@
 Package: ggthemr
 Title: Themes for ggplot2
-Description: Colour schemes and layouts for ggplot2.
+Description: Colour schemes and layouts for 'ggplot2'
 Version: 1.1.0
 Date: 2020-11-01
 Authors@R: c(
@@ -15,7 +15,7 @@ Imports:
     scales
 Depends:
     R (>= 3.0.0),
-    ggplot2
+    'ggplot2'
 Suggests:
     testthat
 License: GPL-3
