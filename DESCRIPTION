@@ -4,7 +4,7 @@ Description: Colour schemes and layouts for ggplot2.
 Version: 1.1.0
 Date: 2020-11-01
 Authors@R: c(
-    person("Ciaran", "Tobin", , "hadley@rstudio.com", "aut"),
+    person("Ciaran", "Tobin", , "cttobin@hotmail.com", "aut"),
     person("Amy Tzu-Yu", "Chen", , "amy17519@gmail.com", role = "cre"),
     person("Gergely", "Daróczi", , "daroczig@rapporter.net", role = c("cre"),
            comment = c(ORCID = "0000-0003-3149-8537")),
