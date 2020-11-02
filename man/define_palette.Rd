@@ -5,13 +5,23 @@
 \alias{ggthemr_palette}
 \title{Create ggthemr palette}
 \usage{
-define_palette(swatch, gradient, background = "#ffffff",
-  text = c("#444444", "#444444"), line = c("#6e6e6e", "#6e6e6e"),
-  gridline = "#c3c3c3")
+define_palette(
+  swatch,
+  gradient,
+  background = "#ffffff",
+  text = c("#444444", "#444444"),
+  line = c("#6e6e6e", "#6e6e6e"),
+  gridline = "#c3c3c3"
+)
 
-ggthemr_palette(swatch, gradient, background = "#ffffff",
-  text = c("#444444", "#444444"), line = c("#6e6e6e", "#6e6e6e"),
-  gridline = "#c3c3c3")
+ggthemr_palette(
+  swatch,
+  gradient,
+  background = "#ffffff",
+  text = c("#444444", "#444444"),
+  line = c("#6e6e6e", "#6e6e6e"),
+  gridline = "#c3c3c3"
+)
 }
 \arguments{
 \item{swatch}{Vector of colours used for plotting data i.e. the main colours used for the points in geom_point(), bars in geom_bar() etc.}

@@ -3,12 +3,19 @@
 \docType{package}
 \name{ggthemr}
 \alias{ggthemr}
-\alias{ggthemr-package}
 \title{Style ggplot2}
 \usage{
-ggthemr(palette = "dust", layout = "clear", spacing = 1,
-  text_size = 12, type = "inner", line_weight = 0.5, pos = 1,
-  envir = as.environment(pos), set_theme = TRUE)
+ggthemr(
+  palette = "dust",
+  layout = "clear",
+  spacing = 1,
+  text_size = 12,
+  type = "inner",
+  line_weight = 0.5,
+  pos = 1,
+  envir = as.environment(pos),
+  set_theme = TRUE
+)
 }
 \arguments{
 \item{palette}{Colour scheme by name or ggtheme object.}

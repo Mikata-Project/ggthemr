@@ -4,7 +4,9 @@
 \name{ggthemr_current}
 \alias{ggthemr_current}
 \title{Store Theme}
-\format{An object of class \code{list} of length 4.}
+\format{
+An object of class \code{list} of length 4.
+}
 \usage{
 ggthemr_current
 }
