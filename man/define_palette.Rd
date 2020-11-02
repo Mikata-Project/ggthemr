@@ -26,7 +26,7 @@ ggthemr_palette(
 \arguments{
 \item{swatch}{Vector of colours used for plotting data i.e. the main colours used for the points in geom_point(), bars in geom_bar() etc.}
 
-\item{gradient}{Vector of length two specifiying the lower and upper colours used for gradients.}
+\item{gradient}{Vector of length two specifying the lower and upper colours used for gradients.}
 
 \item{background}{Background colour.}
 

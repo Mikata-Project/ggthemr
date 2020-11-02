@@ -3,7 +3,7 @@
 #' 
 #' Default colours for the background, text, axes lines and gridlines have been provided, but it is recommended that you overwrite these to make a nice theme.
 #' @param swatch Vector of colours used for plotting data i.e. the main colours used for the points in geom_point(), bars in geom_bar() etc.
-#' @param gradient Vector of length two specifiying the lower and upper colours used for gradients.
+#' @param gradient Vector of length two specifying the lower and upper colours used for gradients.
 #' @param background Background colour.
 #' @param text Text colour. This should be either a single colour or a vector of two colours (see details). 
 #' @param line Axes line colour. This should be either a single colour or a vector of two colours (see details).
