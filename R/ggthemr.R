@@ -7,7 +7,8 @@
 #' @param type Set to 'inner' where the background colour should not extend past strictly the plot area (or "panel" in ggplot2 terminology). 'outer' will apply the background colour to the entire plot.
 #' @param line_weight The thickness of axes lines and gridlines. Useful for saving plots at different resolutions.
 #' @param set_theme If TRUE (default), the default theme, geoms and scales are updated.
-#' @importFrom  ggplot2 discrete_scale continuous_scale
+#' @importFrom ggplot2 discrete_scale continuous_scale
+#' @importFrom scales seq_gradient_pal
 #' @return Returns a list with a ggplot2 theme object, aesthetic parameters for geoms, scale functions and input parameters
 #' @export
 #' @author Ciaran Tobin
