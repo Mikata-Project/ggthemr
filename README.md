@@ -1,4 +1,4 @@
-**Mikata Project took over ggthemr and will be the primary maintainer of this wonderful pacakge. We would like to thank @cttobin for creating this package and we also appreciate that he agreed to pass the repo ownership to Mikata Project. The Mikata Team plans to resolve backlog issues and make `ggthemr` available on CRAN as the first step. **
+**[Mikata Project](https://github.com/Mikata-Project) took over ggthemr and will be the primary maintainer of this wonderful pacakge. We would like to thank @cttobin for creating this package and we also appreciate that he agreed to pass the repo ownership to Mikata Project. The Mikata Team plans to resolve backlog issues and make `ggthemr` available on CRAN as the first step.**
 
 -   [ggthemr](#ggthemr)
     -   [Installation](#installation)
