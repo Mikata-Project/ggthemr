@@ -17,19 +17,32 @@
 ggthemr
 =======
 
-Themes for ggplot2. The idea of this package is that you can just set the theme and then forget about it. You shouldn't have to change any of your existing code. There are several parts to a theme:
+<!-- badges: start -->
+[![Travis build
+status](https://travis-ci.org/krlmlr/ggthemr.svg?branch=master)](https://travis-ci.org/krlmlr/ggthemr)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/ggthemr)](https://cran.r-project.org/package=ggthemr)
+<!-- badges: end -->
+
+Themes for ggplot2. The idea of this package is that you can just set
+the theme and then forget about it. You shouldn’t have to change any of
+your existing code. There are several parts to a theme:
 
 -   Colour palette for the background, axes, gridlines, text etc.
 -   Layout of axes lines and gridlines.
--   Spacing around plot and between elements (i.e. axes titles to axes lines etc). You can set the spacing to determine how compact or spread out a plot is.
+-   Spacing around plot and between elements (i.e. axes titles to axes
+    lines etc). You can set the spacing to determine how compact or
+    spread out a plot is.
 -   Text size.
 
-There are a number of preset palettes and layouts, and methods to create your own colour schemes.
+There are a number of preset palettes and layouts, and methods to create
+your own colour schemes.
 
 Installation
 ------------
 
-This package is still under development, but can be installed using [devtools](http://cran.r-project.org/web/packages/devtools/index.html).
+This package is still under development, but can be installed using
+[devtools](http://cran.r-project.org/web/packages/devtools/index.html).
 
 ``` r
 devtools::install_github('cttobin/ggthemr')
@@ -44,7 +57,8 @@ To just set the colour scheme:
 ggthemr('dust')
 ```
 
-That's it. Any ggplot you create from then on will have the theme applied. You can clear the theme and return to ggplot2's default using:
+That’s it. Any ggplot you create from then on will have the theme
+applied. You can clear the theme and return to ggplot2’s default using:
 
 ``` r
 ggthemr_reset()
@@ -53,9 +67,16 @@ ggthemr_reset()
 Palettes
 --------
 
-The palette determines the colours of everything in a plot including the background, layers, gridlines, title text, axes lines, axes text and axes titles. The *swatch* is the the name given to the set of colours strictly used in styling the geoms/layer elements (e.g. the points in `geom_point()`, bars in `geom_bar()` etc.). At least six colours have been supplied in each palette's swatch.
+The palette determines the colours of everything in a plot including the
+background, layers, gridlines, title text, axes lines, axes text and
+axes titles. The *swatch* is the the name given to the set of colours
+strictly used in styling the geoms/layer elements (e.g. the points in
+`geom_point()`, bars in `geom_bar()` etc.). At least six colours have
+been supplied in each palette’s swatch.
 
-There are a wide variety of themes in this package (and more on the way). Some of them serious business... others are delibrately stylish and might not be that good for use in proper publications.
+There are a wide variety of themes in this package (and more on the
+way). Some of them serious business… others are delibrately stylish and
+might not be that good for use in proper publications.
 
 ### flat
 
@@ -132,7 +153,9 @@ There are a wide variety of themes in this package (and more on the way). Some o
 Custom Palettes
 ---------------
 
-`define_palette()` lets you make your own themes that can be passed to `ggthemr()` just like any of the palettes above. Here's an example of a (probably ugly) palette using random colours:
+`define_palette()` lets you make your own themes that can be passed to
+`ggthemr()` just like any of the palettes above. Here’s an example of a
+(probably ugly) palette using random colours:
 
 ``` r
 # Random colours that aren't white.
@@ -151,12 +174,16 @@ example_plot + ggtitle(':(')
 
 ![](README_files/figure-markdown_github/unnamed-chunk-22-1.png)
 
-You can define all elements of a palette using `define_palette()` including colours for the background, text, axes lines, swatch and gradients.
+You can define all elements of a palette using `define_palette()`
+including colours for the background, text, axes lines, swatch and
+gradients.
 
 Layouts
 -------
 
-The layout of a theme controls the appearance and position of the axes, gridlines and text. Some folk prefer both major and minor gridlines, others prefer none or something in between.
+The layout of a theme controls the appearance and position of the axes,
+gridlines and text. Some folk prefer both major and minor gridlines,
+others prefer none or something in between.
 
 ### Clean
 
@@ -181,7 +208,10 @@ The layout of a theme controls the appearance and position of the axes, gridline
 Spacing
 -------
 
-Plot margins and space between axes titles and lines etc. is controlled with the *spacing* parameter. Lower values will make plots more compact, higher values will give them more padding. Compare the plots below where the spacing has been set to 0, 1 and 2 respectively.
+Plot margins and space between axes titles and lines etc. is controlled
+with the *spacing* parameter. Lower values will make plots more compact,
+higher values will give them more padding. Compare the plots below where
+the spacing has been set to 0, 1 and 2 respectively.
 
 ![](README_files/figure-markdown_github/unnamed-chunk-28-1.png)
 
@@ -192,7 +222,9 @@ Plot margins and space between axes titles and lines etc. is controlled with the
 Type
 ----
 
-The *type* parameter can be set to either *inner* or *outer*. When *inner*, the background colour of a plot will not extend past the plot area. *outer* will colour the entire plot and background.
+The *type* parameter can be set to either *inner* or *outer*. When
+*inner*, the background colour of a plot will not extend past the plot
+area. *outer* will colour the entire plot and background.
 
 ``` r
 ggthemr('earth', type = 'inner')
@@ -211,7 +243,8 @@ example_plot
 Tweaking Themes
 ---------------
 
-Squinting at a chart? Low on printer ink? ggthemr includes some methods to tweak charts to make them lighter or darker. Here's a standard theme:
+Squinting at a chart? Low on printer ink? ggthemr includes some methods
+to tweak charts to make them lighter or darker. Here’s a standard theme:
 
 ``` r
 ggthemr('dust')
@@ -220,7 +253,8 @@ example_plot
 
 ![](README_files/figure-markdown_github/unnamed-chunk-33-1.png)
 
-Maybe that plot comes out a bit pale looking when you print it. Here's how you can add a bit more contrast to the swatch:
+Maybe that plot comes out a bit pale looking when you print it. Here’s
+how you can add a bit more contrast to the swatch:
 
 ``` r
 darken_swatch(amount = 0.3)
@@ -229,18 +263,25 @@ example_plot
 
 ![](README_files/figure-markdown_github/unnamed-chunk-34-1.png)
 
-The second parameter to `darken_swatch()` controls the degree to which the colours are made darker. Full list of methods with similar functionality:
+The second parameter to `darken_swatch()` controls the degree to which
+the colours are made darker. Full list of methods with similar
+functionality:
 
--   `darken_swatch()` / `lighten_swatch()`: darker/lighter swatch colours.
--   `darken_gradient()` / `lighten_gradient()`: darker/lighter gradient colours.
+-   `darken_swatch()` / `lighten_swatch()`: darker/lighter swatch
+    colours.
+-   `darken_gradient()` / `lighten_gradient()`: darker/lighter gradient
+    colours.
 -   `darken_palette()` / `lighten_palette()`: darker/lighter everything.
 
-I'll add methods to darken/lighten the axes lines and text soon too.
+I’ll add methods to darken/lighten the axes lines and text soon too.
 
 Plot Adjustments
 ----------------
 
-Most of the time you'll probably just want to set the theme and not worry about it. There may be times though where you'll want to make some small adjustment, or manually change what items appear as what colour in a plot.
+Most of the time you’ll probably just want to set the theme and not
+worry about it. There may be times though where you’ll want to make some
+small adjustment, or manually change what items appear as what colour in
+a plot.
 
 ``` r
 ggthemr('dust')
@@ -252,7 +293,12 @@ mpg_plot
 
 ![](README_files/figure-markdown_github/unnamed-chunk-35-1.png)
 
-For some reason you decide you want to change those colours. Front-wheel drive vehicles should be orange. Rear-wheelers should be that red colour. You could change the order of the levels of your fill variable, but you shouldn't have to do that. You just want to switch those colours but you have no idea what they are. `swatch()` will give you the colours in the currently active ggthemr palette.
+For some reason you decide you want to change those colours. Front-wheel
+drive vehicles should be orange. Rear-wheelers should be that red
+colour. You could change the order of the levels of your fill variable,
+but you shouldn’t have to do that. You just want to switch those colours
+but you have no idea what they are. `swatch()` will give you the colours
+in the currently active ggthemr palette.
 
 ``` r
 swatch()
@@ -272,18 +318,25 @@ mpg_plot + scale_fill_manual(values = rev(to_swap))
 
 ![](README_files/figure-markdown_github/unnamed-chunk-37-1.png)
 
-**Note:** the first colour in a swatch is a special one. It is reserved for outlining boxplots, text etc. So that's why the second and third colours were swapped.
+**Note:** the first colour in a swatch is a special one. It is reserved
+for outlining boxplots, text etc. So that’s why the second and third
+colours were swapped.
 
 A note about theme setting
 --------------------------
 
 ggthemr does three different things while setting a theme.
 
-1.  It updates the default ggplot2 theme with the specified ggthemr theme by using the `ggplot2::theme_set()` function.
-2.  It modifies the aesthetic defaults for all geoms using the `ggplot2::update_geom_defaults()` function.
-3.  It creates functions for all the different scales in the global environment.
+1.  It updates the default ggplot2 theme with the specified ggthemr
+    theme by using the `ggplot2::theme_set()` function.
+2.  It modifies the aesthetic defaults for all geoms using the
+    `ggplot2::update_geom_defaults()` function.
+3.  It creates functions for all the different scales in the global
+    environment.
 
-In case, if you do not want to set the theme this way, use the `set_theme = FALSE` option while using the `ggthemr` function. An example of setting theme, geom aesthetic defaults and scales manually:
+In case, if you do not want to set the theme this way, use the
+`set_theme = FALSE` option while using the `ggthemr` function. An
+example of setting theme, geom aesthetic defaults and scales manually:
 
 ``` r
 ggthemr_reset()
