@@ -1,4 +1,4 @@
-**This package is no longer maintained.** Unfortunately I stopped using R several years ago so can no longer work on this package. If anybody is willing to become a maintainer or fork this and I can link to their fork(s). Whatever people would like to do I'm happy with. Feel free to contact me with suggestions. Currently this seems to be broken for the current version of R.
+**Mikata Project took over ggthemr and will be the primary maintainer of this wonderful pacakge. We would like to thank @cttobin for creating this package and we also appreciate that he agreed to pass the repo ownership to Mikata Project. The Mikata Team plans to resolve backlog issues and make `ggthemr` available on CRAN as the first step. **
 
 -   [ggthemr](#ggthemr)
     -   [Installation](#installation)
