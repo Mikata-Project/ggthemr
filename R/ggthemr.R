@@ -4,11 +4,11 @@
 #' @param layout The layout of gridlines, axes etc.
 #' @param spacing A numeric value of how much space should exist on any given plot. Low values will result in more cramped plots, higher values will have more whitespace.
 #' @param text_size base text size.
-#' @param type Set to 'inner' where the background colour should not extend past strictly the plot area (or "panel" in ggplot2 terminology). 'outer' will apply the background colour to the entire plot.
+#' @param type Set to 'inner' where the background colour should not extend past strictly the plot area (or 'panel' in ggplot2 terminology). 'outer' will apply the background colour to the entire plot.
 #' @param line_weight The thickness of axes lines and gridlines. Useful for saving plots at different resolutions.
-#' @param pos Where the new scales are stored.
-#' @param envir The environment where the new scales are stored.
 #' @param set_theme If TRUE (default), the default theme, geoms and scales are updated.
+#' @importFrom ggplot2 discrete_scale continuous_scale
+#' @importFrom scales seq_gradient_pal
 #' @return Returns a list with a ggplot2 theme object, aesthetic parameters for geoms, scale functions and input parameters
 #' @export
 #' @author Ciaran Tobin
@@ -20,8 +20,6 @@ ggthemr <- function(palette     = 'dust',
                     text_size   = 12,
                     type        = 'inner', 
                     line_weight = 0.5,
-                    pos         = 1,
-                    envir       = as.environment(pos),
                     set_theme   = TRUE) {
   
   palette <- load_palette(palette)
@@ -32,12 +30,10 @@ ggthemr <- function(palette     = 'dust',
   
   this_theme  <- get_theme(palette, layout, spacing, text_size, type, line_weight)
   this_geoms  <- theme_geoms(palette, line_weight)
-  this_scales <- theme_scales(palette)
   
   themr <- structure(list(
     theme         = this_theme,
     geom_defaults = this_geoms,
-    scales        = this_scales,
     palette       = palette,
     layout        = layout,
     text_size     = text_size,
@@ -54,12 +50,16 @@ ggthemr <- function(palette     = 'dust',
   for (one_geom_defaults in this_geoms$new) do.call(what = update_geom_defaults, args = one_geom_defaults)
   
   # setting the scales
-  Map(
-    function (name, f) assign(name, f, envir = envir), 
-    names(this_scales),
-    this_scales
-  )
-  
+  colours <- palette$swatch[-1]
+  options('ggplot2.discrete.fill' = function(...) discrete_scale('fill', 'ggthemr', discrete_colours(colours), ...))
+  options('ggplot2.discrete.color' = function(...) discrete_scale('colour', 'ggthemr', discrete_colours(colours), ...))
+  options('ggplot2.continuous.fill' = function(...) continuous_scale('fill', 'ggthemr',
+                                                                     seq_gradient_pal(palette$gradient[['low']], palette$gradient[['high']], 'Lab'),
+                                                                     guide = 'colourbar', ...))
+  options('ggplot2.continuous.color' = function(...) continuous_scale('colour', 'ggthemr',
+                                                                      seq_gradient_pal(palette$gradient[['low']], palette$gradient[['high']], 'Lab'),
+                                                                      guide = 'colourbar', ...))
+
   # saving the inputs for future reference
   set_themr(themr)
   

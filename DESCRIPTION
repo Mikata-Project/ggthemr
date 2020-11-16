@@ -1,16 +1,25 @@
 Package: ggthemr
-Title: Themes for ggplot2
-Description: Colour schemes and layouts for ggplot2.
+Title: Themes for 'ggplot2'
+Description: Colour schemes and layouts for 'ggplot2'.
 Version: 1.1.0
-Author: Ciaran Tobin
+Date: 2020-11-01
+Authors@R: c(
+    person('Ciaran', 'Tobin', , 'cttobin@hotmail.com', 'aut'),
+    person('Amy Tzu-Yu', 'Chen', , 'amy17519@gmail.com', role = 'cre',
+           comment = c(ORCID = '0000-0002-4085-572X')),
+    person('Gergely', 'Daróczi', , 'daroczig@rapporter.net', role = 'ctb',
+           comment = c(ORCID = '0000-0003-3149-8537')),
+    person('Mikata', role = c('fnd'))
+    )
 Imports:
     scales
 Depends:
     R (>= 3.0.0),
-    ggplot2
+    ggplot2 (>= 3.3.2)
 Suggests:
     testthat
 License: GPL-3
 LazyData: true
-Maintainer: 'Ciaran Tobin' <cttobin@hotmail.com>
-RoxygenNote: 6.1.1
+Encoding: UTF-8
+Language: en-US
+RoxygenNote: 7.1.1

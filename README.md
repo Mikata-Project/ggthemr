@@ -55,7 +55,7 @@ Palettes
 
 The palette determines the colours of everything in a plot including the background, layers, gridlines, title text, axes lines, axes text and axes titles. The *swatch* is the the name given to the set of colours strictly used in styling the geoms/layer elements (e.g. the points in `geom_point()`, bars in `geom_bar()` etc.). At least six colours have been supplied in each palette's swatch.
 
-There are a wide variety of themes in this package (and more on the way). Some of them serious business... others are delibrately stylish and might not be that good for use in proper publications.
+There are a wide variety of themes in this package (and more on the way). Some of them serious business... others are deliberately stylish and might not be that good for use in proper publications.
 
 ### flat
 
@@ -69,7 +69,7 @@ There are a wide variety of themes in this package (and more on the way). Some o
 
 ![](README_files/figure-markdown_github/unnamed-chunk-6-1.png)
 
-### camoflauge
+### camouflage
 
 ![](README_files/figure-markdown_github/unnamed-chunk-7-1.png)
 

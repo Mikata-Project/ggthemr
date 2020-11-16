@@ -327,7 +327,7 @@ palettes <- lapply(
       gradient = c(low='#f0f0f0', high='#092639')
     ),
     
-    camoflauge = list(
+    camouflage = list(
       background = '#686848', 
       text = list(inner = '#4f4f4e', outer = '#f6f6f6'), 
       line = list(inner = '#1f201f', outer = '#353525'), 

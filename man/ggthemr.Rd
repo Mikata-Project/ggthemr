@@ -3,12 +3,17 @@
 \docType{package}
 \name{ggthemr}
 \alias{ggthemr}
-\alias{ggthemr-package}
 \title{Style ggplot2}
 \usage{
-ggthemr(palette = "dust", layout = "clear", spacing = 1,
-  text_size = 12, type = "inner", line_weight = 0.5, pos = 1,
-  envir = as.environment(pos), set_theme = TRUE)
+ggthemr(
+  palette = "dust",
+  layout = "clear",
+  spacing = 1,
+  text_size = 12,
+  type = "inner",
+  line_weight = 0.5,
+  set_theme = TRUE
+)
 }
 \arguments{
 \item{palette}{Colour scheme by name or ggtheme object.}
@@ -19,13 +24,9 @@ ggthemr(palette = "dust", layout = "clear", spacing = 1,
 
 \item{text_size}{base text size.}
 
-\item{type}{Set to 'inner' where the background colour should not extend past strictly the plot area (or "panel" in ggplot2 terminology). 'outer' will apply the background colour to the entire plot.}
+\item{type}{Set to 'inner' where the background colour should not extend past strictly the plot area (or 'panel' in ggplot2 terminology). 'outer' will apply the background colour to the entire plot.}
 
 \item{line_weight}{The thickness of axes lines and gridlines. Useful for saving plots at different resolutions.}
-
-\item{pos}{Where the new scales are stored.}
-
-\item{envir}{The environment where the new scales are stored.}
 
 \item{set_theme}{If TRUE (default), the default theme, geoms and scales are updated.}
 }
