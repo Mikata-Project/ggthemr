@@ -32,7 +32,7 @@ Installation
 This package is still under development, but can be installed using [devtools](http://cran.r-project.org/web/packages/devtools/index.html).
 
 ``` r
-devtools::install_github('cttobin/ggthemr')
+devtools::install_github('Mikata-Project/ggthemr')
 ```
 
 Usage
