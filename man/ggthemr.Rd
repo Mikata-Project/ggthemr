@@ -24,7 +24,7 @@ ggthemr(
 
 \item{text_size}{base text size.}
 
-\item{type}{Set to 'inner' where the background colour should not extend past strictly the plot area (or "panel" in ggplot2 terminology). 'outer' will apply the background colour to the entire plot.}
+\item{type}{Set to 'inner' where the background colour should not extend past strictly the plot area (or 'panel' in ggplot2 terminology). 'outer' will apply the background colour to the entire plot.}
 
 \item{line_weight}{The thickness of axes lines and gridlines. Useful for saving plots at different resolutions.}
 

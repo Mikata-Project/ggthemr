@@ -7,10 +7,10 @@ ggthemr_reset <- function () {
   if (is_ggthemr_active()) {
     
     # resetting scales
-    options("ggplot2.discrete.fill" = NULL)
-    options("ggplot2.discrete.color" = NULL)
-    options("ggplot2.continuous.fill" = NULL)
-    options("ggplot2.continuous.color" = NULL)
+    options('ggplot2.discrete.fill' = NULL)
+    options('ggplot2.discrete.color' = NULL)
+    options('ggplot2.continuous.fill' = NULL)
+    options('ggplot2.continuous.color' = NULL)
     
     # resetting geoms
     current_theme_info <- get_themr()

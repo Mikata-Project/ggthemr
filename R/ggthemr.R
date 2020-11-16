@@ -4,7 +4,7 @@
 #' @param layout The layout of gridlines, axes etc.
 #' @param spacing A numeric value of how much space should exist on any given plot. Low values will result in more cramped plots, higher values will have more whitespace.
 #' @param text_size base text size.
-#' @param type Set to 'inner' where the background colour should not extend past strictly the plot area (or "panel" in ggplot2 terminology). 'outer' will apply the background colour to the entire plot.
+#' @param type Set to 'inner' where the background colour should not extend past strictly the plot area (or 'panel' in ggplot2 terminology). 'outer' will apply the background colour to the entire plot.
 #' @param line_weight The thickness of axes lines and gridlines. Useful for saving plots at different resolutions.
 #' @param set_theme If TRUE (default), the default theme, geoms and scales are updated.
 #' @importFrom ggplot2 discrete_scale continuous_scale
@@ -51,14 +51,14 @@ ggthemr <- function(palette     = 'dust',
   
   # setting the scales
   colours <- palette$swatch[-1]
-  options("ggplot2.discrete.fill" = function(...) discrete_scale('fill', 'ggthemr', discrete_colours(colours), ...))
-  options("ggplot2.discrete.color" = function(...) discrete_scale('colour', 'ggthemr', discrete_colours(colours), ...))
-  options("ggplot2.continuous.fill" = function(...) continuous_scale('fill', 'ggthemr',
-                                                                     seq_gradient_pal(palette$gradient[['low']], palette$gradient[['high']], "Lab"),
-                                                                     guide = "colourbar", ...))
-  options("ggplot2.continuous.color" = function(...) continuous_scale('colour', 'ggthemr',
-                                                                      seq_gradient_pal(palette$gradient[['low']], palette$gradient[['high']], "Lab"),
-                                                                      guide = "colourbar", ...))
+  options('ggplot2.discrete.fill' = function(...) discrete_scale('fill', 'ggthemr', discrete_colours(colours), ...))
+  options('ggplot2.discrete.color' = function(...) discrete_scale('colour', 'ggthemr', discrete_colours(colours), ...))
+  options('ggplot2.continuous.fill' = function(...) continuous_scale('fill', 'ggthemr',
+                                                                     seq_gradient_pal(palette$gradient[['low']], palette$gradient[['high']], 'Lab'),
+                                                                     guide = 'colourbar', ...))
+  options('ggplot2.continuous.color' = function(...) continuous_scale('colour', 'ggthemr',
+                                                                      seq_gradient_pal(palette$gradient[['low']], palette$gradient[['high']], 'Lab'),
+                                                                      guide = 'colourbar', ...))
 
   # saving the inputs for future reference
   set_themr(themr)
