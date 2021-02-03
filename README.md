@@ -50,6 +50,21 @@ That's it. Any ggplot you create from then on will have the theme applied. You c
 ggthemr_reset()
 ```
 
+Known issues
+-------------------------
+
+Due to a bug in ggplot2 some `geom`s may return errors such as `Error: Unknown colour name: a`
+
+To avoid this and keep using ggthemr colours in these instances, please add a `scale_colour_ggthemr_d()` layer to your ggplot call.
+
+For example:
+
+```r
+ggplot(mtcars, aes(mpg, disp, colour = factor(am))) +
+    geom_point() +
+    scale_colour_ggthemr_d()
+```
+
 Palettes
 --------
 
