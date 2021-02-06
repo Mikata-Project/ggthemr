@@ -2,12 +2,10 @@
 #'
 #' A utility function for applying the currently selected ggthemr palette to a ggplot object
 #'
-#'
-#'
-#' @export
-#'
 #' @examples
 #' ggplot(mtcars, aes(mpg, disp, colour = factor(am))) + geom_point() + scale_colour_ggthemr_d()
+#'
+#' @export
 
 scale_colour_ggthemr_d <- function(...) {
   ggplot2::discrete_scale(
