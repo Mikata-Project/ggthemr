@@ -2,6 +2,7 @@
 #'
 #' A utility function for applying the currently selected ggthemr palette to a ggplot object
 #'
+#' @param ... optional parameters to be passed through to \link[ggplot2]{discrete_scale}
 #' @examples
 #' ggplot(mtcars, aes(mpg, disp, colour = factor(am))) + geom_point() + scale_colour_ggthemr_d()
 #'

@@ -6,6 +6,9 @@
 \usage{
 scale_colour_ggthemr_d(...)
 }
+\arguments{
+\item{...}{optional parameters to be passed through to \link[ggplot2]{discrete_scale}}
+}
 \description{
 A utility function for applying the currently selected ggthemr palette to a ggplot object
 }
