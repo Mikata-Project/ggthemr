@@ -53,7 +53,7 @@ ggthemr_reset()
 Known issues
 -------------------------
 
-Due to a bug in ggplot2 some `geom`s may return errors such as `Error: Unknown colour name: a`
+Due to a bug in ggplot2 some `geom`s may return errors such as `Error: Unknown colour name: a`. See [here](https://github.com/tidyverse/ggplot2/issues/4149)
 
 To avoid this and keep using ggthemr colours in these instances, please add a `scale_colour_ggthemr_d()` layer to your ggplot call.
 
