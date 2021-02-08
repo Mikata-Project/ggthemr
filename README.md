@@ -34,6 +34,7 @@ This package is still under development, but can be installed using [devtools](h
 ``` r
 devtools::install_github('Mikata-Project/ggthemr')
 ```
+We plan to submit to CRAN soon, but that is currently blocked by an upstream issue now.
 
 Usage
 -----
