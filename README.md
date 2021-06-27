@@ -316,7 +316,7 @@ example_plot + dust_theme$theme
 ![](README_files/figure-markdown_github/unnamed-chunk-38-2.png)
 
 ``` r
-example_plot + dust_theme$theme + dust_theme$scales$scale_fill_discrete()
+example_plot + dust_theme$theme + scale_fill_manual(values = dust_theme$palette$swatch)
 ```
 
 ![](README_files/figure-markdown_github/unnamed-chunk-38-3.png)
