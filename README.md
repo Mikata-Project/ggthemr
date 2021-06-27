@@ -3,6 +3,7 @@
 -   [ggthemr](#ggthemr)
     -   [Installation](#installation)
     -   [Usage](#usage)
+    -   [Known Issues](#known-issues)
     -   [Palettes](#palettes)
     -   [Custom Palettes](#custom-palettes)
     -   [Layouts](#layouts)
@@ -51,7 +52,7 @@ That's it. Any ggplot you create from then on will have the theme applied. You c
 ggthemr_reset()
 ```
 
-Known issues
+Known Issues
 -------------------------
 
 Due to a bug in ggplot2 some `geom`s may return errors such as `Error: Unknown colour name: a`. See [here](https://github.com/tidyverse/ggplot2/issues/4149).
