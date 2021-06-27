@@ -54,7 +54,9 @@ ggthemr_reset()
 Known issues
 -------------------------
 
-Due to a bug in ggplot2 some `geom`s may return errors such as `Error: Unknown colour name: a`. See [here](https://github.com/tidyverse/ggplot2/issues/4149)
+Due to a bug in ggplot2 some `geom`s may return errors such as `Error: Unknown colour name: a`. See [here](https://github.com/tidyverse/ggplot2/issues/4149).
+
+In more recent versions of ggplot2 the error no longer occurs but in some instances the default ggplot colours will be used instead of the set theme.
 
 To avoid this and keep using ggthemr colours in these instances, please add a `scale_colour_ggthemr_d()` layer to your ggplot call.
 
@@ -65,6 +67,8 @@ ggplot(mtcars, aes(mpg, disp, colour = factor(am))) +
     geom_point() +
     scale_colour_ggthemr_d()
 ```
+
+This is the same as adding `scale_colour_manual(fill = some_colours)` but will always use the theme colours in your set theme.
 
 Palettes
 --------
