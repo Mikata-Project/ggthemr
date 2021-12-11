@@ -1,3 +1,7 @@
+# ggthemr (development version) - 2021-12-11
+
+* Fixed default colour scales when specifying `colour=` in `aes()`
+
 # ggthemr (development version) - 2020-11-15
 
 * Use `options()` for scale functions (ggplot2 >= 3.3.2, specifically after this [PR](https://github.com/tidyverse/ggplot2/issues/3827))
