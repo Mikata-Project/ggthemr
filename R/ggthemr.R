@@ -52,11 +52,11 @@ ggthemr <- function(palette     = 'dust',
   # setting the scales
   colours <- palette$swatch[-1]
   options('ggplot2.discrete.fill' = function(...) discrete_scale('fill', 'ggthemr', discrete_colours(colours), ...))
-  options('ggplot2.discrete.color' = function(...) discrete_scale('colour', 'ggthemr', discrete_colours(colours), ...))
+  options('ggplot2.discrete.colour' = function(...) discrete_scale('colour', 'ggthemr', discrete_colours(colours), ...))
   options('ggplot2.continuous.fill' = function(...) continuous_scale('fill', 'ggthemr',
                                                                      seq_gradient_pal(palette$gradient[['low']], palette$gradient[['high']], 'Lab'),
                                                                      guide = 'colourbar', ...))
-  options('ggplot2.continuous.color' = function(...) continuous_scale('colour', 'ggthemr',
+  options('ggplot2.continuous.colour' = function(...) continuous_scale('colour', 'ggthemr',
                                                                       seq_gradient_pal(palette$gradient[['low']], palette$gradient[['high']], 'Lab'),
                                                                       guide = 'colourbar', ...))
 
