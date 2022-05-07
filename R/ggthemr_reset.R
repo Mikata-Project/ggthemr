@@ -11,6 +11,8 @@ ggthemr_reset <- function () {
     options('ggplot2.discrete.color' = NULL)
     options('ggplot2.continuous.fill' = NULL)
     options('ggplot2.continuous.color' = NULL)
+    options('ggplot2.ordinal.colour' = NULL)
+    options('ggplot2.ordinal.fill' = NULL)
     
     # resetting geoms
     current_theme_info <- get_themr()
