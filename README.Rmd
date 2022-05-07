@@ -1,9 +1,10 @@
 ---
 output:
   md_document:
-    variant: markdown_github
+    variant: gfm
     toc: true
     toc_depth: 2
+    pandoc_args: ["--wrap=none"]
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
