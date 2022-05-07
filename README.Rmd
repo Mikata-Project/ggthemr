@@ -29,10 +29,10 @@ source("scripts/preview_layout.R")
 
 Themes for ggplot2. The idea of this package is that you can just set the theme and then forget about it. You shouldn't have to change any of your existing code. There are several parts to a theme:
 
-* Colour palette for the background, axes, gridlines, text etc. 
-* Layout of axes lines and gridlines.
-* Spacing around plot and between elements (i.e. axes titles to axes lines etc). You can set the spacing to determine how compact or spread out a plot is.
-* Text size.
+- Colour palette for the background, axes, gridlines, text etc. 
+- Layout of axes lines and gridlines.
+- Spacing around plot and between elements (i.e. axes titles to axes lines etc). You can set the spacing to determine how compact or spread out a plot is.
+- Text size.
 
 There are a number of preset palettes and layouts, and methods to create your own colour schemes.
 
@@ -304,9 +304,9 @@ example_plot
 
 The second parameter to `darken_swatch()` controls the degree to which the colours are made darker. Full list of methods with similar functionality:
 
-* `darken_swatch()` / `lighten_swatch()`: darker/lighter swatch colours.
-* `darken_gradient()` / `lighten_gradient()`: darker/lighter gradient colours.
-* `darken_palette()` / `lighten_palette()`: darker/lighter everything.
+- `darken_swatch()` / `lighten_swatch()`: darker/lighter swatch colours.
+- `darken_gradient()` / `lighten_gradient()`: darker/lighter gradient colours.
+- `darken_palette()` / `lighten_palette()`: darker/lighter everything.
 
 I'll add methods to darken/lighten the axes lines and text soon too. 
 
