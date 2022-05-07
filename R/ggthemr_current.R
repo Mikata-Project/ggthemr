@@ -1,7 +1,9 @@
+themr <- NULL
+
 #' @title Store Theme
 #' @description Store ggthemr theme.
+#' @importFrom utils assignInMyNamespace
 ggthemr_current <- (function () {
-  themr <- NULL
   list(
     get = function () {
       if (is.null(themr)) {
@@ -12,13 +14,15 @@ ggthemr_current <- (function () {
     },
     set = function (value) {
       verify_ggthemr(value)
-      themr <<- value
+      assignInMyNamespace('themr', value)
+      # themr <<- value
     },
     is_set = function () {
       !is.null(themr)
     },
     clear = function () {
-      themr <<- NULL
+      assignInMyNamespace('themr', NULL)
+      # themr <<- NULL
     }
   )
 })()
