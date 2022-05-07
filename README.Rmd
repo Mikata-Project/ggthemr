@@ -9,19 +9,20 @@ output:
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-```{r echo=FALSE}
+```{r startup, echo=FALSE, messages=FALSE, warnings=FALSE}
 suppressPackageStartupMessages(library(ggplot2))
 suppressPackageStartupMessages(library(gridExtra))
 example_plot <- ggplot(diamonds, aes(price, fill = factor(cut))) +
   geom_histogram(binwidth = 850) +
-  xlab('Price (USD)') +
-  ylab('Count') +
-  scale_x_continuous(label = function(x) paste0(x / 1000, 'k')) +
-  theme(legend.position = 'none') +
-  scale_y_continuous(label = function(x) format(x, big.mark = ",", scientific = FALSE))
+  xlab("Price (USD)") +
+  ylab("Count") +
+  scale_x_continuous(label = function(x) paste0(x / 1000, "k")) +
+  theme(legend.position = "none") +
+  scale_y_continuous(label = function(x) format(x, big.mark = ",",
+                                                scientific = FALSE))
 library(ggthemr)
-source('scripts/preview_theme.R')
-source('scripts/preview_layout.R')
+source("scripts/preview_theme.R")
+source("scripts/preview_layout.R")
 ```
 
 # ggthemr
