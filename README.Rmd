@@ -25,6 +25,8 @@ source("scripts/preview_theme.R")
 source("scripts/preview_layout.R")
 ```
 
+**[Mikata Project](https://github.com/Mikata-Project) took over ggthemr and will be the primary maintainer of this wonderful package.** We would like to thank [@cttobin](https://github.com/cttobin) for creating this package. We also appreciate that he agreed to pass the repo ownership to Mikata Project. The Mikata Team plans to resolve backlog issues and make `ggthemr` available on CRAN as the first step.
+
 # ggthemr
 
 Themes for ggplot2. The idea of this package is that you can just set the theme and then forget about it. You shouldn't have to change any of your existing code. There are several parts to a theme:
@@ -41,9 +43,10 @@ There are a number of preset palettes and layouts, and methods to create your ow
 This package is still under development, but can be installed using [devtools](http://cran.r-project.org/web/packages/devtools/index.html).
 
 ```{r eval=FALSE}
-devtools::install_github('cttobin/ggthemr')
+devtools::install_github('Mikata-Project/ggthemr')
 ```
 
+*We plan to submit to CRAN soon, but that is currently blocked by an upstream issue now*
 
 ## Usage
 
@@ -194,7 +197,7 @@ preview_theme()
 
 `define_palette()` lets you make your own themes that can be passed to `ggthemr()` just like any of the palettes above. Here's an example of a (probably ugly) palette using random colours:
 
-``` {r fig.width=5.5, fig.height=4.5}
+```{r fig.width=5.5, fig.height=4.5}
 # Random colours that aren't white.
 set.seed(12345)
 random_colours <- sample(colors()[-c(1, 253, 361)], 10L)
@@ -207,7 +210,6 @@ ugly <- define_palette(
 ggthemr(ugly)
 
 example_plot + ggtitle(':(')
-
 ```
 
 You can define all elements of a palette using `define_palette()` including colours for the background, text, axes lines, swatch and gradients. 
@@ -347,13 +349,15 @@ ggthemr does three different things while setting a theme.
 3. It creates functions for all the different scales in the global environment.
 
 In case, if you do not want to set the theme this way, use the `set_theme = FALSE` option while using the `ggthemr` function. An example of setting theme, geom aesthetic defaults and scales manually:
+
 ```{r}
 ggthemr_reset()
 dust_theme <- ggthemr('dust', set_theme = FALSE)
 example_plot
 example_plot + dust_theme$theme
-example_plot + dust_theme$theme + dust_theme$scales$scale_fill_discrete()
-do.call(what = ggplot2::update_geom_defaults, args = dust_theme$geom_defaults$new$bar)
+#example_plot + dust_theme$theme + dust_theme$scales$scale_fill_discrete()
+do.call(what = ggplot2::update_geom_defaults,
+        args = dust_theme$geom_defaults$new$bar)
 ggplot(diamonds, aes(price)) + geom_histogram(binwidth = 850) + dust_theme$theme
 ```
 
